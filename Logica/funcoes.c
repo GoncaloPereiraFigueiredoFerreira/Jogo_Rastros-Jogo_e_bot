@@ -15,7 +15,7 @@ ESTADO* inicia(){
 	est->num_jogadas = 0;
 	est->jogador_atual = 1;
 }
-
+// Made by Ganso
 int obter_jogador_atual(ESTADO *est){
 	int a;
 	if (est->num_jogadas % 2 == 0) a=1; 
@@ -23,10 +23,7 @@ int obter_jogador_atual(ESTADO *est){
 	return a;  
 }
 
-//ESTADO atualizaEstado (ESTADO *est){
-//	return est;
 
-//}
  //Função q valida uma Jogada e a aplica
 int jogar(ESTADO *est, COORDENADA c){
 	int x1 = est->pos.x;
@@ -36,12 +33,20 @@ int jogar(ESTADO *est, COORDENADA c){
 	CASA novaCasa = est->tab[x][y];
 	
 	if ( abs(x1-x)<=1 && abs(y1-y)<=1 && novaCasa != BRANCA && novaCasa != PRETA ){
-		est->pos.x = x;
-		est->pos.y = y;
-		est->tab[x1][y1] = PRETA;
-		est->tab[x][y] = BRANCA;
-		est->jogadas[est->num_jogadas++] = c;
+		atualizaEstado (est,c);
 		return 0;
 	}
 	else {printf("N\n");return 1;}  
+}
+
+
+void atualizaEstado (ESTADO *est, COORDENADA c){
+	int x1 = est->pos.x;
+	int y1 = est->pos.y;
+	    est->pos.x = c.x;
+		est->pos.y = c.y;
+		est->tab[x1][y1] = PRETA;
+		est->tab[c.x][c.y] = BRANCA;
+		est->jogadas[est->num_jogadas++] = c;
+		est->jogador_atual = obter_jogador_atual (est);
 }

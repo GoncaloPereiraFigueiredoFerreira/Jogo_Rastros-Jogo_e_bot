@@ -49,8 +49,6 @@ int interpretador(ESTADO *e) {
 int main() {
 	ESTADO* est =inicia();
 	desenha(est);
-	while (1){
-		if (!interpretador(est)) break;
-	}
+	while (interpretador(est));
 	return 0;
 }
