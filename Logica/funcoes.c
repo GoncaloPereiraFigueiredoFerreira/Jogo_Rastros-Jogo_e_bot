@@ -1,5 +1,6 @@
 #include "dados.c"
 #include <stdlib.h>
+#include <math.h>
 
 ESTADO* inicia(){
 	ESTADO *est = (ESTADO *) malloc(sizeof(ESTADO)); 
@@ -26,4 +27,17 @@ int obter_jogador_atual(ESTADO *est){
 ESTADO atualizaEstado (Estado *est){
 
 }
-
+ //Função q valida uma Jogada e a aplica
+int jogar(ESTADO *est, COORDENADA c){
+	int x1 = est->pos.x;
+	int y1 = est->pos.y;
+	int x = c.x;
+	int y = c.y;
+	
+	if ( abs(x1-x)<=1 && abs(y1-y)<=1 && (abs(x1-x)!=0 || abs(y1-y)!=0) ){
+		est->pos.x = x;
+		est->pos.x = y:
+		return 1;
+	}
+	else return 0;  
+}
