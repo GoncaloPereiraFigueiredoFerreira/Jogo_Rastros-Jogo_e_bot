@@ -34,7 +34,7 @@ int jogar(ESTADO *est, COORDENADA c){
 	int x = c.x;
 	int y = c.y;
 	
-	if ( abs(x1-x)<=1 && abs(y1-y)<=1 && (abs(x1-x)!=0 || abs(y1-y)!=0) ){
+	if ( abs(x1-x)<=1 && abs(y1-y)<=1 && est->tab[x][y]!= BRANCA && est->tab[x][y] != PRETA ){
 		est->pos.x = x;
 		est->pos.y = y;
 		est->tab[x1][y1] = PRETA;
