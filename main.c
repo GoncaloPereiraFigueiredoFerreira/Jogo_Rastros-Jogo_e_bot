@@ -10,12 +10,18 @@ void desenhal(){
 }
 
 void desenha(ESTADO *est){
+	char c;
 	printf("    A   B   C   D   E   F   G   H\n");
 	for(int i = 0;i!=8;i++){
 		desenhal();
 		printf("%d ",i+1);
 		for(int j = 0;j!= 8;j++)
-			printf("| %c ",e->tab[i][j]);
+			if (j == 0 && i == 7) c = '2';
+			else if (j == 7 && i == 0) c = '1'; 
+			else if (e->tab[i][j] == BRANCA) c = '*';
+			else if (e->tab[i][j] == PRETA) c = '#';
+			else if (e->tab[i][j] == VAZIA) c = '.';
+			printf("| %c ",c);
 		putchar('|');
 		putchar('\n');
 	}
