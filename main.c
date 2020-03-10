@@ -15,15 +15,15 @@ void desenhal(){
 void desenha(ESTADO *est){
 	char c;
 	printf("    A   B   C   D   E   F   G   H\n");
-	for(int i = 0;i< 8;i++){
+	for(int y = 0;y< 8;y++){
 		desenhal();
-		printf("%d ",i+1);
-		for(int j = 0;j< 8;j++){
-			if (j == 7 && i == 0) c = '2';
-			else if (j == 0 && i == 7) c = '1'; 
-			else if (est->tab[i][j] == BRANCA) c = '*';
-			else if (est->tab[i][j] == PRETA) c = '#';
-			else if (est->tab[i][j] == VAZIO) c = '.';
+		printf("%d ",y+1);
+		for(int x = 0;x< 8;x++){
+			if (x == 7 && y == 0) c = '2';
+			else if (x == 0 && y == 7) c = '1'; 
+			else if (est->tab[x][y] == BRANCA) c = '*';
+			else if (est->tab[x][y] == PRETA) c = '#';
+			else if (est->tab[x][y] == VAZIO) c = '.';
 			printf("| %c ",c);
 		}
 		putchar('|');
@@ -46,7 +46,11 @@ int interpretador(ESTADO *e) {
 
 
 int main() {
-	ESTADO* estIN =inicia();
-	desenha(estIN);
+	ESTADO* est =inicia();
+	desenha(est);
+	while (1){
+		interpretador(est);
+		desenha(est);
+	}
 	return 0;
 }

@@ -9,9 +9,9 @@ ESTADO* inicia(){
 		for(j = 0;j<8;j++){
 			est->tab[i][j] = VAZIO;
 		} 
-	est->pos.x = 3;
-	est->pos.y = 4;
-	est->tab[3][4] = BRANCA;
+	est->pos.x = 4;
+	est->pos.y = 3;
+	est->tab[4][3] = BRANCA;
 	est->num_jogadas = 0;
 	est->jogador_atual = 1;
 }
@@ -37,7 +37,10 @@ int jogar(ESTADO *est, COORDENADA c){
 	if ( abs(x1-x)<=1 && abs(y1-y)<=1 && (abs(x1-x)!=0 || abs(y1-y)!=0) ){
 		est->pos.x = x;
 		est->pos.x = y;
-		return 1;
+		est->tab[x1][y1] = PRETA;
+		est->tab[x][y] = BRANCA;
+		est->jogadas[est->num_jogadas++] = c;
+		return 0;
 	}
-	else return 0;  
+	else {printf("N\n");return 1;}  
 }
