@@ -37,11 +37,12 @@ int interpretador(ESTADO *e) {
 	char col[2], lin[2];
 	if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
 	else if(strlen(linha) == 3 && sscanf(linha, "%[A-H]%[1-8]", col, lin) == 2) {
-		COORDENADA coord = {*col -'a', *lin -'1'};
+		COORDENADA coord = {*col -'A', *lin -'1'};
 		jogar(e, coord);
 		desenha(e);
+	}
+	else if (linha[0] == 'Q') return 0;
 	return 1;
-}
 }
 
 
@@ -49,8 +50,7 @@ int main() {
 	ESTADO* est =inicia();
 	desenha(est);
 	while (1){
-		interpretador(est);
-		desenha(est);
+		if (!interpretador(est)) break;
 	}
 	return 0;
 }
