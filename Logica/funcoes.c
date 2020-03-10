@@ -33,8 +33,9 @@ int jogar(ESTADO *est, COORDENADA c){
 	int y1 = est->pos.y;
 	int x = c.x;
 	int y = c.y;
+	CASA novaCasa = est->tab[x][y];
 	
-	if ( abs(x1-x)<=1 && abs(y1-y)<=1 && est->tab[x][y]!= BRANCA && est->tab[x][y] != PRETA ){
+	if ( abs(x1-x)<=1 && abs(y1-y)<=1 && novaCasa != BRANCA && novaCasa != PRETA ){
 		est->pos.x = x;
 		est->pos.y = y;
 		est->tab[x1][y1] = PRETA;
