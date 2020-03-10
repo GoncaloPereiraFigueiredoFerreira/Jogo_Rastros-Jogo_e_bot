@@ -1,6 +1,9 @@
 #include <stdio.h> 
 #include <string.h>
-#define BUFF_SIZE = 1024
+#define BUF_SIZE 1024
+
+
+#include "Logica/funcoes.c"
 
 void desenhal(){ 
 	printf("  ");
@@ -15,7 +18,7 @@ void desenha(ESTADO *est){
 		desenhal();
 		printf("%d ",i+1);
 		for(int j = 0;j!= 8;j++)
-			printf("| %c ",e->tab[i][j]);
+			printf("| %c ",est->tab[i][j]);
 		putchar('|');
 		putchar('\n');
 	}
@@ -32,20 +35,11 @@ int interpretador(ESTADO *e) {
 		desenha(e);
 	return 1;
 }
+}
 
 
-int main(){
-	struct pos{int x,y;}pos;
-	char m[16];
-	char f[8][8] = {{'.','.','.','.','.','.','.','2'},
-	                {'.','.','.','.','.','.','.','.'},
-	                {'.','.','.','.','.','.','.','.'},
-	                {'.','.','.','.','*','.','.','.'},
-	                {'.','.','.','.','.','.','.','.'},
-	                {'.','.','.','.','.','.','.','.'},
-	                {'.','.','.','.','.','.','.','.'},
-	                {'1','.','.','.','.','.','.','.'}};
-
-	desenha(f);
+int main() {
+	ESTADO* estIN =inicia(); 
+	desenha(estIN);
 	return 0;
 }
