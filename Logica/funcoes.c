@@ -15,3 +15,15 @@ ESTADO* inicia(){
 	est->num_jogadas = 0;
 	est->jogador_atual = 1;
 }
+
+int obter_jogador_atual(ESTADO *est){
+	int a;
+	if (est.num_jogadas % 2 = 0) a=1; 
+	else a= 2;
+	return a;  
+}
+
+ESTADO atualizaEstado (Estado *est){
+
+}
+
