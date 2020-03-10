@@ -40,8 +40,9 @@ int interpretador(ESTADO *e) {
 		COORDENADA coord = {*col -'A', *lin -'1'};
 		jogar(e, coord);
 		desenha(e);
+	}
+	else if (linha[0] == 'Q') return 0;
 	return 1;
-}
 }
 
 
@@ -49,7 +50,7 @@ int main() {
 	ESTADO* est =inicia();
 	desenha(est);
 	while (1){
-		interpretador(est);
+		if (!interpretador(est)) break;
 	}
 	return 0;
 }
