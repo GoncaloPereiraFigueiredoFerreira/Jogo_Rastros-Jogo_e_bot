@@ -1,4 +1,6 @@
 #include <stdio.h> 
+#include <string.h>
+#define BUFF_SIZE = 1024
 
 void desenhal(){ 
 	printf("  ");
@@ -7,18 +9,30 @@ void desenhal(){
 	putchar('\n');
 }
 
-void desenha(char f[8][8]){
+void desenha(ESTADO *est){
 	printf("    A   B   C   D   E   F   G   H\n");
 	for(int i = 0;i!=8;i++){
 		desenhal();
 		printf("%d ",i+1);
 		for(int j = 0;j!= 8;j++)
-			printf("| %c ",f[i][j]);
+			printf("| %c ",e->tab[i][j]);
 		putchar('|');
 		putchar('\n');
 	}
 	desenhal();
 }
+
+int interpretador(ESTADO *e) {
+	char linha[BUF_SIZE];
+	char col[2], lin[2];
+	if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
+	else if(strlen(linha) == 3 && sscanf(linha, "%[A-H]%[1-8]", col, lin) == 2) {
+		COORDENADA coord = {*col -'a', *lin -'1'};
+		jogar(e, coord);
+		desenha(e);
+	return 1;
+}
+
 
 int main(){
 	struct pos{int x,y;}pos;
