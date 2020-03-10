@@ -1,5 +1,5 @@
 //header
-#ifndef Jogo-Rastros-LI2-19-20---MIEI-UM___Logica__Dados_H
-#define Jogo-Rastros-LI2-19-20---MIEI-UM___Logica__Dados_H
+#ifndef Logica_Dados_H
+#define Logica_Dados_H
 void inicia (ESTADO est);
 #endif 
