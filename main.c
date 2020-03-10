@@ -22,8 +22,6 @@ void desenha(char f[8][8]){
 
 int main(){
 	struct pos{int x,y;}pos;
-	pos.x = 4;
-	pos.y = 3;
 	char m[16];
 	char f[8][8] = {{'.','.','.','.','.','.','.','2'},
 	                {'.','.','.','.','.','.','.','.'},
@@ -35,7 +33,5 @@ int main(){
 	                {'1','.','.','.','.','.','.','.'}};
 
 	desenha(f);
-	for(int i = 0; m[i]!='\0';i += 2) printf("%c%c ",m[i],m[i+1]);
-
 	return 0;
 }
