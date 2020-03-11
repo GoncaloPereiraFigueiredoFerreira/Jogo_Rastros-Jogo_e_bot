@@ -32,14 +32,14 @@ void desenha(ESTADO *est){
 	desenhal();
 }
 
-int interpretador(ESTADO *e) {
+int interpretador(ESTADO *est) {
 	char linha[BUF_SIZE];
 	char col[2], lin[2];
 	if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
 	else if(strlen(linha) == 3 && sscanf(linha, "%[A-H]%[1-8]", col, lin) == 2) {
 		COORDENADA coord = {*col -'A', *lin -'1'};
-		jogar(e, coord);
-		desenha(e);
+		jogar(est, coord);
+		desenha(est);
 	}
 	else if (linha[0] == 'Q') return 0;
 	return 1;
@@ -52,3 +52,11 @@ int main() {
 	while (interpretador(est));
 	return 0;
 }
+/*Ideias:
+Regras de GameOver;
+Sans;
+Por tabuleiro a meio do ecran;
+Limpar a consola;
+Interface Melhor;
+
+*/

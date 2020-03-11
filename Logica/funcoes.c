@@ -14,6 +14,7 @@ ESTADO* inicia(){
 	est->tab[4][3] = BRANCA;
 	est->num_jogadas = 0;
 	est->jogador_atual = 1;
+	return est;
 }
 // Made by Ganso
 int obter_jogador_atual(ESTADO *est){
@@ -22,7 +23,16 @@ int obter_jogador_atual(ESTADO *est){
 	else a= 2;
 	return a;  
 }
-
+void atualizaEstado (ESTADO *est, COORDENADA c){
+	int x1 = est->pos.x;
+	int y1 = est->pos.y;
+	    est->pos.x = c.x;
+		est->pos.y = c.y;
+		est->tab[x1][y1] = PRETA;
+		est->tab[c.x][c.y] = BRANCA;
+		est->jogadas[est->num_jogadas++] = c;
+		est->jogador_atual = obter_jogador_atual (est);
+}
 
  //Função q valida uma Jogada e a aplica
 int jogar(ESTADO *est, COORDENADA c){
@@ -40,13 +50,3 @@ int jogar(ESTADO *est, COORDENADA c){
 }
 
 
-void atualizaEstado (ESTADO *est, COORDENADA c){
-	int x1 = est->pos.x;
-	int y1 = est->pos.y;
-	    est->pos.x = c.x;
-		est->pos.y = c.y;
-		est->tab[x1][y1] = PRETA;
-		est->tab[c.x][c.y] = BRANCA;
-		est->jogadas[est->num_jogadas++] = c;
-		est->jogador_atual = obter_jogador_atual (est);
-}
