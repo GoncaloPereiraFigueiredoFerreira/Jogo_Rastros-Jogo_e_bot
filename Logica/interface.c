@@ -11,6 +11,7 @@ void showCOORD (COORDENADA c){
 	int linha = c.y;
 	printf ("%c%d\n",(char)(letra+'A'),8-linha);
 }
+
 void prompt (ESTADO *est){
 	int nJogada= est-> num_jogadas;
 	int jogador= est->jogador_atual;
