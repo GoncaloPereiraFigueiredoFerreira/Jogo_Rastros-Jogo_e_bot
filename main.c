@@ -1,9 +1,7 @@
 #include <stdio.h> 
 #include <string.h>
 #define BUF_SIZE 1024
-#include "interface/interface.h"
-
-
+#include "Logica/interface.h"
 
 int main() {
 	ESTADO* est =inicia();
