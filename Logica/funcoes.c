@@ -17,13 +17,8 @@ ESTADO* inicia(){
 	est->jogador_atual = 1;
 	return est;
 }
-// Made by Ganso
-int obter_jogador_atual(ESTADO *est){
-	int a;
-	if (est->num_jogadas % 2 == 0) a=1; 
-	else a= 2;
-	return a;  
-}
+
+
 void atualizaEstado (ESTADO *est, COORDENADA c){
 	int x1 = est->pos.x;
 	int y1 = est->pos.y;
@@ -32,7 +27,7 @@ void atualizaEstado (ESTADO *est, COORDENADA c){
 		est->tab[x1][y1] = PRETA;
 		est->tab[c.x][c.y] = BRANCA;
 		est->jogadas[est->num_jogadas++] = c;
-		est->jogador_atual = obter_jogador_atual (est);
+		est->jogador_atual = ((est->num_jogadas) % 2 + 1);
 }
 
 int check (ESTADO *est,COORDENADA c){
@@ -67,4 +62,15 @@ int jogar(ESTADO *est, COORDENADA c){
 	else {printf("N\n");return 1;}  
 }
 
+int verificaFim (ESTADO *est){
+	COORDENADA atual = est->pos;
+	int col = atual.x, lin =atual.y;
+	COORDENADA vizinhos[8];
+	int caso=0;
+	if (col == 0 && lin == 7) caso = 1;
+	else if (col == 7 && lin == 0) caso = 2;
+	else if (moves(est,vizinhos)== 0) caso =3;
+	return caso;
+
+}
 
