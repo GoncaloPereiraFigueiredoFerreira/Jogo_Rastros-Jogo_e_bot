@@ -35,7 +35,7 @@ int interpretador(ESTADO *est) {
 	char col[2], lin[2];
 	if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
 	else if(strlen(linha) == 3 && sscanf(linha, "%[A-H]%[1-8]", col, lin) == 2) {
-		COORDENADA coord = {*col -'A', 9-*lin -'1'};
+		COORDENADA coord = {*col -'A',7-(*lin -'1')};
 		jogar(est, coord);
 		desenha(est);
 	}
