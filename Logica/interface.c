@@ -46,11 +46,22 @@ void desenha(ESTADO *est){
 	desenhal();
 	prompt(est);
 }
+int escolheVencedor(ESTADO *est){ 
+	int jogadorAtual = est->jogador_atual;
+	int caso = verificaFim(est);
+	if (caso == 3) caso = jogadorAtual;
+	return caso;
+}
 
 int interpretador(ESTADO *est) {
 	char linha[BUF_SIZE],cam[BUF_SIZE];
 	char col[2], lin[2];
-	if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
+	if (verificaFim(est) != 0){ 
+	printf("Parabens player %d, Ganhaste !!!\n", escolheVencedor(est));
+	return 0;}
+	
+	else if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
+	
 	else if(strlen(linha) == 3 && sscanf(linha, "%[A-H]%[1-8]", col, lin) == 2) {
 		COORDENADA coord = {*col -'A',7-(*lin -'1')};
 		jogar(est, coord);
