@@ -1,6 +1,3 @@
-#include <stdio.h> 
-#include <string.h>
-#define BUF_SIZE 1024
 #include "Logica/interface.h"
 
 int main() {

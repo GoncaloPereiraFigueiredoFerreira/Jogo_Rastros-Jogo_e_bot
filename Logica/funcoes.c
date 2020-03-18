@@ -1,5 +1,6 @@
 #include "dados.h"
 #include <stdlib.h>
+#include <stdio.h>
 #include <math.h>
 
 ESTADO* inicia(){
