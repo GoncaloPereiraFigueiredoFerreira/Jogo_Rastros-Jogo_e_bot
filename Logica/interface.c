@@ -37,9 +37,7 @@ void desenha(ESTADO *est){
 		for(int x = 0;x< 8;x++){
 			if (x == 7 && y == 0) c = '2';
 			else if (x == 0 && y == 7) c = '1'; 
-			else if (est->tab[x][y] == BRANCA) c = '*';
-			else if (est->tab[x][y] == PRETA) c = '#';
-			else if (est->tab[x][y] == VAZIO) c = '.';
+			else c = est->tab[x][y];
 			printf("| %c ",c);
 		}
 		putchar('|');
@@ -50,7 +48,7 @@ void desenha(ESTADO *est){
 }
 
 int interpretador(ESTADO *est) {
-	char linha[BUF_SIZE];
+	char linha[BUF_SIZE],cam[BUF_SIZE];
 	char col[2], lin[2];
 	if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
 	else if(strlen(linha) == 3 && sscanf(linha, "%[A-H]%[1-8]", col, lin) == 2) {
@@ -62,6 +60,9 @@ int interpretador(ESTADO *est) {
 		COORDENADA c[8];
 		int n = moves(est,c);
 		for(int i = 0; i < n;i++) showCOORD(c[i]); 
+	}
+	else if (sscanf(linha,"gr %s",cam) == 1){
+		save(cam,est);
 	}
 	else if (linha[0] == 'Q') return 0;
 	return 1;

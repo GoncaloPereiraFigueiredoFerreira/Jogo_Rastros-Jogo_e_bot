@@ -1,6 +1,6 @@
 //Camada de Dados
 
-typedef enum {VAZIO, BRANCA, PRETA} CASA;
+typedef enum {VAZIO = '.', BRANCA = '*', PRETA = '#'} CASA;
 
 typedef struct {
 int x; // Colunas

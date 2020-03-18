@@ -7,3 +7,8 @@ do
 	echo "rm $i"
 	rm $i
 done
+for i in *.txt
+do
+	echo "rm $i"
+	rm $i
+done
