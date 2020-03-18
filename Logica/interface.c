@@ -58,7 +58,7 @@ int interpretador(ESTADO *est) {
 		jogar(est, coord);
 		desenha(est);
 	}
-	else if (strcmp(linha,"movs\0") == 0){
+	else if (strcmp(linha,"movs\n") == 0){
 		COORDENADA c[8];
 		int n = moves(est,c);
 		for(int i = 0; i < n;i++) showCOORD(c[i]); 
