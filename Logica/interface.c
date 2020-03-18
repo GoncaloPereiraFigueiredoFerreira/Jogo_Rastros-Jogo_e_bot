@@ -3,6 +3,23 @@
 #include <string.h>
 #define BUF_SIZE 1024
 
+
+
+
+void showCOORD (COORDENADA c){
+	int letra = c.x;
+	int linha = c.y;
+	printf ("%c%d\n",(char)(letra+'A'),8-linha);
+}
+void prompt (ESTADO *est){
+	int nJogada= est-> num_jogadas;
+	int jogador= est->jogador_atual;
+	COORDENADA atual = est-> pos;
+	printf ("# %d PL%d (%d)>",nJogada,jogador,(nJogada+1)/2);
+	showCOORD (atual);
+}
+
+
 void desenhal(){ 
 	printf("  ");
 	for(int i = 0;i<8;i++) printf("+---");
@@ -28,6 +45,7 @@ void desenha(ESTADO *est){
 		putchar('\n');
 	}
 	desenhal();
+	prompt(est);
 }
 
 int interpretador(ESTADO *est) {
