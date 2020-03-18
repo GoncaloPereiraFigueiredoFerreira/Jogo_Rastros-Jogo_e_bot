@@ -1,4 +1,4 @@
-#include "Logica/funcoes.h"
+#include "funcoes.h"
 
 void desenhal(){ 
 	printf("  ");

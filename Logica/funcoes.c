@@ -1,4 +1,4 @@
-#include "dados.c"
+#include "dados.h"
 #include <stdlib.h>
 #include <math.h>
 
