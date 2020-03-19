@@ -1,4 +1,4 @@
-#include "Logica/interface.h"
+#include "interface/interface.h"
 int main() {
 	ESTADO* est =inicia();
 	desenha(est);

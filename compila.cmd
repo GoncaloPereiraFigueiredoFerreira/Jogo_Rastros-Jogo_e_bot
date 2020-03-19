@@ -1,6 +1,8 @@
 gcc -c main.c
 cd Logica
-gcc -c interface.c
 gcc -c funcoes.c
 cd..
-gcc -o principal main.o Logica\interface.o Logica\funcoes.o
+cd interface
+gcc -c interface.c
+cd..
+gcc -o principal main.o interface\interface.o Logica\funcoes.o
