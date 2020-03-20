@@ -57,8 +57,8 @@ int interpretador(ESTADO *est) {
 	char linha[BUF_SIZE],cam[BUF_SIZE];
 	char col[2], lin[2];
 	if (verificaFim(est) != 0){ 
-	printf("Parabens player %d, Ganhaste !!!\n", escolheVencedor(est));
-	return 0;}
+		printf("Parabens player %d, Ganhaste !!!\n", escolheVencedor(est));
+		return 0;}
 	
 	else if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
 	
