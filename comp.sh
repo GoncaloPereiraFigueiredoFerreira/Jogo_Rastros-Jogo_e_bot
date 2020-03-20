@@ -1,4 +1,4 @@
-echo "gcc -c Logica/interface.c main.c Logica/funcoes.c"
+echo "gcc -c interface/interface.c main.c Logica/funcoes.c"
 gcc -c Logica/interface.c main.c Logica/funcoes.c
 echo "gcc -o main main.o interface.o funcoes.o"
 gcc -o main main.o interface.o funcoes.o
