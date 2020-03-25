@@ -5,4 +5,7 @@ cd..
 cd interface
 gcc -c interface.c
 cd..
-gcc -o principal main.o interface\interface.o Logica\funcoes.o
+cd dados
+gcc -c dados.c
+cd..
+gcc -o principal main.o interface\interface.o Logica\funcoes.o dados\dados.o
