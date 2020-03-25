@@ -85,6 +85,28 @@ void save(char cam[],ESTADO *est){
 	fclose(f);
 }
 
+
+
+int jogAnt (int jog, ESTADO *est){
+	int i =est->num_jogadas;
+	if (jog*2 > est->num_jogadas || jog < 0) return 0;
+	else {
+	est->num_jogadas = jog*2;
+	for (i;i>est->num_jogadas;i--){
+		est->tab[est->jogadas[i].x] [est->jogadas[i].y] = VAZIO;
+	}
+	est->tab[est->jogadas[i].x] [est->jogadas[i].y]=BRANCA;
+	est->pos.x =est->jogadas[i].x;
+	est->pos.y =est->jogadas[i].y;
+	est->jogador_atual =1;
+	return 1;
+}
+}
+
+
+
+
+
 int verificaFim (ESTADO *est){
 	COORDENADA atual = est->pos;
 	int col = atual.x, lin =atual.y;
@@ -96,5 +118,3 @@ int verificaFim (ESTADO *est){
 	return caso;
 
 }
-
-

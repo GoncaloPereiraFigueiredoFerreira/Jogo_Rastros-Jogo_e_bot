@@ -10,5 +10,6 @@ int moves (ESTADO *est,COORDENADA mvs[8]);
 int jogar(ESTADO *est, COORDENADA c);
 void save(char cam[],ESTADO *est);
 int verificaFim (ESTADO *est);
-
+int jogAnt (int jog, ESTADO *est);
+int escolheVencedor(ESTADO *est);
 #endif
