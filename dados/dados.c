@@ -1,8 +1,6 @@
-#include "dados.h"
 #include <stdlib.h>
 #include <stdio.h>
-
-
+#include "dados.h"
 ESTADO* inicia(){
 	ESTADO *est = (ESTADO *) malloc(sizeof(ESTADO)); 
 	int i,j;
@@ -18,18 +16,6 @@ ESTADO* inicia(){
 	return est;
 }
 
-
-void atualizaEstado (ESTADO *est, COORDENADA c){
-	int x1 = est->pos.x;
-	int y1 = est->pos.y;
-	    est->pos.x = c.x;
-		est->pos.y = c.y;
-		est->tab[x1][y1] = PRETA;
-		est->tab[c.x][c.y] = BRANCA;
-		est->jogadas[est->num_jogadas++] = c;
-		est->jogador_atual = ((est->num_jogadas) % 2 + 1);
-}
-
 int check (ESTADO *est,COORDENADA c){
 	int x1 = est->pos.x;
 	int y1 = est->pos.y;
@@ -39,7 +25,7 @@ int check (ESTADO *est,COORDENADA c){
 	return (abs(x1-x)<=1 && abs(y1-y)<=1 && novaCasa != BRANCA && novaCasa != PRETA);
 }
 
-int moves (ESTADO *est,COORDENADA mvs[8]){
+int jogPoss (ESTADO *est,COORDENADA mvs[8]){
 	int x = est->pos.x, y = est->pos.y;
 	int i,i1,n = 0;
 	COORDENADA c;
@@ -52,31 +38,6 @@ int moves (ESTADO *est,COORDENADA mvs[8]){
 		}
 	return n;
 }
-
- //Função q valida uma Jogada e a aplica
-int jogar(ESTADO *est, COORDENADA c){
-	if (check(est,c)){
-		atualizaEstado (est,c);
-		return 0;
-	}
-	else {printf("N\n");return 1;}  
-}
-
-int jogAnt (int jog, ESTADO *est){
-	int i =est->num_jogadas;
-	if (jog*2 > est->num_jogadas || jog < 0) return 0;
-	else {
-		est->num_jogadas = jog*2;
-		for (i;i>est->num_jogadas;i--)
-			est->tab[est->jogadas[i].x] [est->jogadas[i].y] = VAZIO;
-		est->tab[est->jogadas[i].x] [est->jogadas[i].y]=BRANCA;
-		est->pos.x =est->jogadas[i].x;
-		est->pos.y =est->jogadas[i].y;
-		est->jogador_atual =1;
-		return 1;
-	}
-}
-
 int verificaFim (ESTADO *est){
 	COORDENADA atual = est->pos;
 	int col = atual.x, lin =atual.y;
@@ -84,6 +45,7 @@ int verificaFim (ESTADO *est){
 	int caso=0;
 	if (col == 0 && lin == 7) caso = 1;
 	else if (col == 7 && lin == 0) caso = 2;
-	else if (moves(est,vizinhos)== 0) caso =3;
+	else if (jogPoss(est,vizinhos)== 0) caso =3;
 	return caso;
+
 }

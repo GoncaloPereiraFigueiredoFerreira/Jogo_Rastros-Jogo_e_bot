@@ -18,3 +18,6 @@ int num_jogadas;  // Número de Jogadas Realizadas até agora
 int jogador_atual; // Qual o Jogador a Jogar
 } ESTADO;
 
+ESTADO* inicia();
+int moves (ESTADO *est,COORDENADA mvs[8]);
+int verificaFim (ESTADO *est);
