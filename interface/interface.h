@@ -10,7 +10,7 @@ void showCOORD (COORDENADA c);
 void prompt (ESTADO *est);
 void desenhal();
 void desenha(ESTADO *est);
-void read(char cam[],ESTADO *est);
+int read(char cam[],ESTADO *est);
 int interpretador(ESTADO *est);
 void hist(ESTADO *est,FILE *f);
 void save(char cam[],ESTADO *est);
