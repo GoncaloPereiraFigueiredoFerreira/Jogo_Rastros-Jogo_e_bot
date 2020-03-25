@@ -53,7 +53,7 @@ void hist(ESTADO *est,FILE *f){
 	for(i = 0;i<(est->num_jogadas);i++){
 		c = est->jogadas[i];
 		if (!(i%2)) fprintf(f,"\n%02d: ",i+1);
-		fprintf(f,"%c%d ",c.x+'A',9-c.y);
+		fprintf(f,"%c%d ",c.x+'A',8-c.y);
 	}
 	fputc('\n',f);
 }

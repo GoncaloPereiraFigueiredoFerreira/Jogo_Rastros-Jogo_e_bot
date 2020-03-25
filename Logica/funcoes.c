@@ -34,15 +34,16 @@ int jogar(ESTADO *est, COORDENADA c){
 int jogAnt (int jog, ESTADO *est){
 	int i = est->num_jogadas;
 	if (jog*2 > i || jog < 0) return 0;
+	else if (jog == 0) inicia(est);
 	else {
 		est->num_jogadas = jog*2;
-		for (i;i>est->num_jogadas;i--)
-			est->tab[est->jogadas[i].x] [est->jogadas[i].y] ='*';
+		for (i;i>=est->num_jogadas;i--)
+			est->tab[est->jogadas[i].x] [est->jogadas[i].y] =VAZIO;
 		est->tab[est->jogadas[i].x] [est->jogadas[i].y] = BRANCA;
-		est->pos.x =est->jogadas[i].x;
-		est->pos.y =est->jogadas[i].y;
-		est->jogador_atual =1;
-		return 1;
+		est->pos.x = est->jogadas[i].x;
+		est->pos.y = est->jogadas[i].y;
+		est->jogador_atual = 1;
 	}
+	return 1;
 }
 
