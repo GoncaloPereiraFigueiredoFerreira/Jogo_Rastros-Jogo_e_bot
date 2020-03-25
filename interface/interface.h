@@ -9,7 +9,7 @@ void showCOORD (COORDENADA c);
 void prompt (ESTADO *est);
 void desenhal();
 void desenha(ESTADO *est);
-int escolheVencedor(ESTADO *est);
+
 int interpretador(ESTADO *est);
 
 
