@@ -62,29 +62,6 @@ int jogar(ESTADO *est, COORDENADA c){
 	else {printf("N\n");return 1;}  
 }
 
-
-void save(char cam[],ESTADO *est){
-	FILE *f;
-	int x,y;
-	COORDENADA c;
-	f = fopen(cam,"w");
-	for (x = 0;x<8;x++){
-		for (y = 0;y<8;y++){
-			if (x == 7 && y == 0) fputc('2',f);
-			else if (x == 0 && y == 7) fputc('1',f); 
-			else fputc(est->tab[y][x],f);
-		}
-		fputc('\n',f);
-	}
-	y = est->num_jogadas;
-	for(x = 0;x<y;x++){
-		c = est->jogadas[x];
-		if (!(x%2)) fprintf(f,"\n%d%d: ",((x/2)+1)/10,((x/2)+1)%10);
-		fprintf(f,"%c%d ",c.x+'A',9-c.y);
-	}
-	fclose(f);
-}
-
 int verificaFim (ESTADO *est){
 	COORDENADA atual = est->pos;
 	int col = atual.x, lin =atual.y;
@@ -94,7 +71,4 @@ int verificaFim (ESTADO *est){
 	else if (col == 7 && lin == 0) caso = 2;
 	else if (moves(est,vizinhos)== 0) caso =3;
 	return caso;
-
 }
-
-

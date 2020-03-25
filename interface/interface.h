@@ -11,6 +11,8 @@ void desenhal();
 void desenha(ESTADO *est);
 int escolheVencedor(ESTADO *est);
 int interpretador(ESTADO *est);
+void hist(ESTADO *est,FILE *f);
+void save(char cam[],ESTADO *est);
 
 
 #endif

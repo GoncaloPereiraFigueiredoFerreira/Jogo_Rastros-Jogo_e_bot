@@ -45,11 +45,40 @@ void desenha(ESTADO *est){
 	desenhal();
 	prompt(est);
 }
+
 int escolheVencedor(ESTADO *est){ 
 	int jogadorAtual = est->jogador_atual;
 	int caso = verificaFim(est);
 	if (caso == 3) caso = jogadorAtual;
 	return caso;
+}
+
+void hist(ESTADO *est,FILE *f){
+	int i;
+	COORDENADA c;
+	for(i = 0;i<(est->num_jogadas);i++){
+		c = est->jogadas[x];
+		if (!(x%2)) fprintf(f,"\n%d%d: ",((x/2)+1)/10,((x/2)+1)%10);
+		fprintf(f,"%c%d ",c.x+'A',9-c.y);
+	}
+}
+
+void save(char cam[],ESTADO *est){
+	FILE *f;
+	int x,y;
+	COORDENADA c;
+	f = fopen(cam,"w");
+	for (x = 0;x<8;x++){
+		for (y = 0;y<8;y++){
+			if (x == 7 && y == 0) fputc('2',f);
+			else if (x == 0 && y == 7) fputc('1',f); 
+			else fputc(est->tab[y][x],f);
+		}
+		fputc('\n',f);
+	}
+	y = est->num_jogadas;
+	hist(est,f);
+	fclose(f);
 }
 
 int interpretador(ESTADO *est) {
