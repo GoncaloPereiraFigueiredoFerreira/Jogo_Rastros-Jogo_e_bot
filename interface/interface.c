@@ -77,6 +77,50 @@ void save(char cam[],ESTADO *est){
 	fclose(f);
 }
 
+int read (char cam[],ESTADO *est){	
+	FILE *f;
+	char linha[10];
+	COORDENADA c;
+	int i=0,i2=0;
+	f = fopen (cam,"r");
+	if (f != NULL){
+		while (i!=8){
+			fscanf(f,"%s",linha);
+			while (i2!=8){
+				if (linha[i2] == '#')
+					est->tab[i][i2] = linha[i2];
+				else if (linha[i2]== '*')
+					est->tab[i][i2] = linha[i2];
+				else est->tab[i][i2]=VAZIO;
+					i2++;
+			}
+			i++;
+			fscanf(f,"\n");
+		}
+		i=0;
+		fscanf(f,"\n");
+		fscanf(f,"%s",linha);
+		while (!feof(f)) {
+			fscanf(f,"\n");
+			fscanf(f,"%s",linha);
+			c = est->jogadas[i];
+			if (linha[5]!=EOF) {
+				c.x = linha[5];
+				c.y = linha[6];
+				i++;
+			}
+			if (linha[9]!=EOF){
+				c.x = linha[8];
+				c.y = linha[9];
+				i++;
+			}
+		}
+		fclose(f);
+		return 0;
+	}
+	else return 1;
+}
+
 int interpretador(ESTADO *est) {
 	char linha[BUF_SIZE],cam[BUF_SIZE];
 	char col[2], lin[2];
@@ -96,6 +140,10 @@ int interpretador(ESTADO *est) {
 		int n = jogPoss(est,c);
 		for(int i = 0; i < n;i++) {showCOORD(c[i]);putchar(' ');}
 		putchar('\n'); 
+	}
+	else if (sscanf(linha,"ler %s",cam) == 1){
+		if (read(cam,est)) printf("Ficheiro invalido");
+		else desenha(est);
 	}
 	else if (strcmp(linha,"movs\n") == 0) hist(est,stdout);
 	else if (sscanf(linha,"gr %s",cam) == 1){
