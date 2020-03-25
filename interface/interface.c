@@ -52,7 +52,7 @@ void hist(ESTADO *est,FILE *f){
 	COORDENADA c;
 	for(i = 0;i<(est->num_jogadas);i++){
 		c = est->jogadas[i];
-		if (!(i%2)) fprintf(f,"\n%d%d: ",((i/2)+1)/10,((i/2)+1)%10);
+		if (!(i%2)) fprintf(f,"\n%02d: ",i+1);
 		fprintf(f,"%c%d ",c.x+'A',9-c.y);
 	}
 	fputc('\n',f);
@@ -79,13 +79,12 @@ void save(char cam[],ESTADO *est){
 int interpretador(ESTADO *est) {
 	char linha[BUF_SIZE],cam[BUF_SIZE];
 	char col[2], lin[2];
+	int i;
 	if (verificaFim(est) != 0){ 
 		printf("Parabens player %d, Ganhaste !!!\n", escolheVencedor(est));
 		return 0;
-	}
-	
-	else if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
-	
+	}	
+	else if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;	
 	else if(strlen(linha) == 3 && sscanf(linha, "%[A-H]%[1-8]", col, lin) == 2) {
 		COORDENADA coord = {*col -'A',7-(*lin -'1')};
 		if (jogar(est, coord)) printf("Jogada invalida\n");
@@ -94,12 +93,17 @@ int interpretador(ESTADO *est) {
 	else if (strcmp(linha,"poss\n") == 0){
 		COORDENADA c[8];
 		int n = jogPoss(est,c);
-		for(int i = 0; i < n;i++) showCOORD(c[i]); 
+		for(int i = 0; i < n;i++) {showCOORD(c[i]);putchar(' ');}
+		putchar('\n'); 
 	}
 	else if (strcmp(linha,"movs\n") == 0) hist(est,stdout);
 	else if (sscanf(linha,"gr %s",cam) == 1){
 		save(cam,est);
 		printf("O seu jogo foi salvo\n");
+	}
+	else if (sscanf(linha,"pos %d",&i) == 1) {
+		jogAnt(i,est);
+		desenha(est);
 	}
 	else if (linha[0] == 'Q') return 0;
 	return 1;
