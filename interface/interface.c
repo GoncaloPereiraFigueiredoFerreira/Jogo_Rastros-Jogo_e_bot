@@ -46,13 +46,6 @@ void desenha(ESTADO *est){
 	prompt(est);
 }
 
-int escolheVencedor(ESTADO *est){ 
-	int jogadorAtual = est->jogador_atual;
-	int caso = verificaFim(est);
-	if (caso == 3) caso = jogadorAtual;
-	return caso;
-}
-
 void hist(ESTADO *est,FILE *f){
 	int i;
 	COORDENADA c;
@@ -98,7 +91,7 @@ int interpretador(ESTADO *est) {
 	}
 	else if (strcmp(linha,"movs\n") == 0){
 		COORDENADA c[8];
-		int n = moves(est,c);
+		int n = jogPoss(est,c);
 		for(int i = 0; i < n;i++) showCOORD(c[i]); 
 	}
 	else if (sscanf(linha,"gr %s",cam) == 1){

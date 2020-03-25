@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "dados.h"
+
 ESTADO* inicia(){
 	ESTADO *est = (ESTADO *) malloc(sizeof(ESTADO)); 
 	int i,j;
@@ -37,6 +38,7 @@ int jogPoss (ESTADO *est,COORDENADA mvs[8]){
 				mvs[n++] = c;
 		}
 	return n;
+
 }
 int verificaFim (ESTADO *est){
 	COORDENADA atual = est->pos;

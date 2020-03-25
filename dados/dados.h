@@ -19,5 +19,6 @@ int jogador_atual; // Qual o Jogador a Jogar
 } ESTADO;
 
 ESTADO* inicia();
-int moves (ESTADO *est,COORDENADA mvs[8]);
+int jogPoss (ESTADO *est,COORDENADA mvs[8]);
+int check (ESTADO *est,COORDENADA c);
 int verificaFim (ESTADO *est);
