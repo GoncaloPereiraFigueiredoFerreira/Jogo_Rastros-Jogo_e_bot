@@ -15,7 +15,7 @@ void prompt (ESTADO *est){
 	int nJogada= est-> num_jogadas;
 	int jogador= est->jogador_atual;
 	COORDENADA atual = est-> pos;
-	printf ("# %d PL%d (%d)>",nJogada,jogador,(nJogada+1)/2);
+	printf ("# %d PL%d (%d)>",nJogada,jogador,(nJogada/2)+1);
 	showCOORD (atual);
 	putchar('\n');
 }
@@ -29,7 +29,8 @@ void desenhal(){
 }
 
 void desenha(ESTADO *est){
-	char c;
+	char c;	
+	prompt(est);
 	printf("    A   B   C   D   E   F   G   H\n");
 	for(int y = 0;y< 8;y++){
 		desenhal();
@@ -44,7 +45,7 @@ void desenha(ESTADO *est){
 		putchar('\n');
 	}
 	desenhal();
-	prompt(est);
+
 }
 
 void hist(ESTADO *est,FILE *f){
