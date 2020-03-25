@@ -11,6 +11,9 @@ do
 done
 for i in *.txt
 do
-	echo "rm $i"
-	rm $i
-done
+	if [ "$i" != 'lol.txt' ]
+	then
+		echo "rm $i"
+		rm $i
+	fi
+done 

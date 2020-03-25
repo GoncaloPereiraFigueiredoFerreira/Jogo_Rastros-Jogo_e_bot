@@ -8,7 +8,7 @@
 void showCOORD (COORDENADA c){
 	int letra = c.x;
 	int linha = c.y;
-	printf ("%c%d",(char)(letra+'A'),8-linha);
+	printf ("%c%d",(letra+'A'),8-linha);
 }
 
 void prompt (ESTADO *est){
@@ -52,7 +52,7 @@ void hist(ESTADO *est,FILE *f){
 	COORDENADA c;
 	for(i = 0;i<(est->num_jogadas);i++){
 		c = est->jogadas[i];
-		if (!(i%2)) fprintf(f,"\n%02d: ",i+1);
+		if (!(i%2)) fprintf(f,"\n%02d: ",(i/2)+1);
 		fprintf(f,"%c%d ",c.x+'A',8-c.y);
 	}
 	fputc('\n',f);
@@ -76,46 +76,36 @@ void save(char cam[],ESTADO *est){
 	fclose(f);
 }
 
-int read (char cam[],ESTADO *est){	
+int read(char cam[],ESTADO *est){
 	FILE *f;
-	char linha[10];
-	COORDENADA c;
-	int i=0,i2=0;
-	f = fopen (cam,"r");
+	f = fopen(cam,"r");
+	int i,i1;
+	int x,y,c = 0;
 	if (f != NULL){
-		while (i!=8){
-			fscanf(f,"%s",linha);
-			while (i2!=8){
-				if (linha[i2] == '#')
-					est->tab[i][i2] = linha[i2];
-				else if (linha[i2]== '*')
-					est->tab[i][i2] = linha[i2];
-				else est->tab[i][i2]=VAZIO;
-					i2++;
-			}
-			i++;
-			fscanf(f,"\n");
-		}
-		i=0;
-		fscanf(f,"\n");
-		fscanf(f,"%s",linha);
-		while (!feof(f)) {
-			fscanf(f,"\n");
-			fscanf(f,"%s",linha);
-			c = est->jogadas[i];
-			if (linha[5]!=EOF) {
-				c.x = linha[5];
-				c.y = linha[6];
-				i++;
-			}
-			if (linha[9]!=EOF){
-				c.x = linha[8];
-				c.y = linha[9];
-				i++;
+		for (i = 0;i<8;i++){
+			fgets(cam,MAX,f);
+			for(i1 = 0;cam[i1]!='\n';i1++){
+				if (cam[i1] == '1' || cam[i1] == '2') est->tab[i][i1] = '.';
+				else { est->tab[i1][i] = cam [i1];
+					if (cam[i1] == '*') {
+						est->pos.x = i1;
+						est->pos.y = i;
+					}
+				}
 			}
 		}
-		fclose(f);
+		while (fgets(cam,MAX,f) != NULL){
+			for(i1 = 4;cam[i1]!='\n';i1++){
+				if(cam[i1]>='A'&&cam[i1]<'I'){
+					est->jogadas[c].x = cam[i1]-'A';
+					est->jogadas[c++].y = 7-(cam[++i1]-'1');
+				}
+			}
+		}
+		est->num_jogadas = c;
+		est->jogador_atual = (c%2)+1;
 		return 0;
+		fclose(f);
 	}
 	else return 1;
 }
@@ -141,7 +131,7 @@ int interpretador(ESTADO *est) {
 		putchar('\n'); 
 	}
 	else if (sscanf(linha,"ler %s",cam) == 1){
-		if (read(cam,est)) printf("Ficheiro invalido");
+		if (read(cam,est)) printf("Ficheiro invalido\n");
 		else desenha(est);
 	}
 	else if (strcmp(linha,"movs\n") == 0) hist(est,stdout);

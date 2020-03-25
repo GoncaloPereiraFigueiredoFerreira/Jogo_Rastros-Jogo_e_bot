@@ -4,6 +4,7 @@
 #include "../Logica/funcoes.h"
 #include <stdio.h>
 
+#define MAX 100
 #define BUF_SIZE 1024
 
 void showCOORD (COORDENADA c);
