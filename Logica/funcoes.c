@@ -1,4 +1,4 @@
-#include "dados.h"
+#include "../dados/dados.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -28,7 +28,7 @@ int jogar(ESTADO *est, COORDENADA c){
 		atualizaEstado (est,c);
 		return 0;
 	}
-	else {printf("N\n");return 1;}  
+	else return 1;
 }
 
 int jogAnt (int jog, ESTADO *est){
