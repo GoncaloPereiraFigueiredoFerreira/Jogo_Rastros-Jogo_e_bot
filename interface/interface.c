@@ -66,8 +66,8 @@ void save(char cam[],ESTADO *est){
 	f = fopen(cam,"w");
 	for (x = 0;x<8;x++){
 		for (y = 0;y<8;y++){
-			if (x == 7 && y == 0) fputc('2',f);
-			else if (x == 0 && y == 7) fputc('1',f); 
+			if (x == 7 && y == 0) fputc('1',f);
+			else if (x == 0 && y == 7) fputc('2',f); 
 			else fputc(est->tab[y][x],f);
 		}
 		fputc('\n',f);
@@ -99,6 +99,10 @@ int read(char cam[],ESTADO *est){
 			for(i1 = 4;cam[i1]!='\n';i1++){
 				if(cam[i1]>='A'&&cam[i1]<'I'){
 					est->jogadas[c].x = cam[i1]-'A';
+					est->jogadas[c++].y = 7-(cam[++i1]-'1');
+				}
+				else if(cam[i1]>='a'&&cam[i1]<'i'){
+					est->jogadas[c].x = cam[i1]-'a';
 					est->jogadas[c++].y = 7-(cam[++i1]-'1');
 				}
 			}
@@ -176,5 +180,6 @@ int interpretador(ESTADO *est) {
 		desenha(est);
 	}
 	else if (linha[0] == 'Q') return 0;
+	else printf("Nao e comando valido!\n");
 	return 1;
 }
