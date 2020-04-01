@@ -11,11 +11,11 @@ int y; // Linhas
 typedef COORDENADA JOGADAS[64];
 
 typedef struct {
-CASA tab[8][8]; // Estado Do Tabuleiro
-COORDENADA pos; // Posicção da Peça Branca
-JOGADAS jogadas; // Lista de Jogadas ja Feitas || Peças Pretas 
-int num_jogadas;  // Número de Jogadas Realizadas até agora
-int jogador_atual; // Qual o Jogador a Jogar
+	CASA tab[8][8]; // Estado Do Tabuleiro
+	COORDENADA pos; // Posicção da Peça Branca
+	JOGADAS jogadas; // Lista de Jogadas ja Feitas || Peças Pretas 
+	int num_jogadas;  // Número de Jogadas Realizadas até agora
+	int jogador_atual; // Qual o Jogador a Jogar
 } ESTADO;
 
 void inicia(ESTADO *est);
