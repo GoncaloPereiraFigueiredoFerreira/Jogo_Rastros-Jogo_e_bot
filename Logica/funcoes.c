@@ -7,7 +7,7 @@
 int escolheVencedor(ESTADO *est){ 
 	int jogadorAtual = est->jogador_atual;
 	int caso = verificaFim(est);
-	if (caso == 3) caso = jogadorAtual;
+	if (caso == 3) caso = (jogadorAtual % 2) +1;
 	return caso;
 }
 

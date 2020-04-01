@@ -5,6 +5,7 @@ int main() {
 	inicia(est);
 	desenha(est);
 	while (interpretador(est));
+	system ("pause");
 	return 0;
 }
 /*Ideias:
