@@ -1,5 +1,6 @@
 #include "../Logica/funcoes.h"
 #include "interface.h"
+#include "../bot/bot.h"
 #include <stdio.h> 
 #include <string.h>
 
@@ -181,6 +182,10 @@ int interpretador(ESTADO *est) {
 	else if (sscanf(linha,"pos %d",&i) == 1) {
 		jogAnt(i,est);
 		desenha(est);
+	}
+	else if (strcmp(linha,"bot\n") == 0){ 
+		showCOORD(bot(est));
+		putchar('\n');
 	}
 	else if (linha[0] == 'Q') return 0;
 	else printf("Nao e comando valido!\n");

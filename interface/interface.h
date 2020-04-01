@@ -2,6 +2,7 @@
 #define PL6_4_IMPRIMIR_H
 
 #include "../Logica/funcoes.h"
+#include "../bot/bot.h"
 #include <stdio.h>
 
 #define MAX 100
