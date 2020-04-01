@@ -7,6 +7,6 @@
 void atualizaEstado (ESTADO *est, COORDENADA c);
 int jogar(ESTADO *est, COORDENADA c);
 int jogAnt (int jog, ESTADO *est);
-int escolheVencedor(ESTADO *est);
+
 
 #endif

@@ -155,7 +155,7 @@ int interpretador(ESTADO *est) {
 	char col[2], lin[2];
 	int i;
 	if (verificaFim(est) != 0){ 
-		printf("Parabens player %d, Ganhaste !!!\n", escolheVencedor(est));
+		printf("Parabens player %d, Ganhaste !!!\n", verificaFim(est));
 		return 0;
 	}	
 	else if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;	
