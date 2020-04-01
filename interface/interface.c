@@ -95,8 +95,9 @@ int read(char cam[],ESTADO *est){
 				}
 			}
 		}
+
 		while (fgets(cam,BUF_SIZE,f) != NULL){
-			for(i1 = 0;cam[i1]!='\0';i1++){
+			for(i1 = 3;cam[i1]!='\0';i1++){
 				if(cam[i1]>='A'&&cam[i1]<'I'){
 					est->jogadas[c].x = cam[i1]-'A';
 					est->jogadas[c++].y = 7-(cam[++i1]-'1');
@@ -111,7 +112,6 @@ int read(char cam[],ESTADO *est){
 		est->jogador_atual = (c%2)+1;
 		fclose(f);
 		return 0;
-		
 	}
 	else return 1;
 }
