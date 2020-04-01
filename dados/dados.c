@@ -38,13 +38,14 @@ int jogPoss (ESTADO *est,COORDENADA mvs[8]){
 
 }
 int verificaFim (ESTADO *est){
+	int jogadorAtual = est->jogador_atual;
 	COORDENADA atual = est->pos;
 	int col = atual.x, lin =atual.y;
 	COORDENADA vizinhos[8];
 	int caso=0;
 	if (col == 0 && lin == 7) caso = 1;
 	else if (col == 7 && lin == 0) caso = 2;
-	else if (jogPoss(est,vizinhos)== 0) caso =3;
+	else if (jogPoss(est,vizinhos)== 0) caso = (jogadorAtual % 2) +1;
 	return caso;
 
 }

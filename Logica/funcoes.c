@@ -4,13 +4,6 @@
 
 
 
-int escolheVencedor(ESTADO *est){ 
-	int jogadorAtual = est->jogador_atual;
-	int caso = verificaFim(est);
-	if (caso == 3) caso = (jogadorAtual % 2) +1;
-	return caso;
-}
-
 void atualizaEstado (ESTADO *est, COORDENADA c){
 	int x1 = est->pos.x;
 	int y1 = est->pos.y;
