@@ -95,7 +95,6 @@ int read(char cam[],ESTADO *est){
 				}
 			}
 		}
-
 		while (fgets(cam,BUF_SIZE,f) != NULL){
 			for(i1 = 3;cam[i1]!='\0';i1++){
 				if(cam[i1]>='A'&&cam[i1]<'I'){
