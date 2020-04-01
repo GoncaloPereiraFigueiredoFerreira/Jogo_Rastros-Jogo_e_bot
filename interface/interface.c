@@ -54,7 +54,7 @@ void hist(ESTADO *est,FILE *f){
 	for(i = 0;i<(est->num_jogadas);i++){
 		c = est->jogadas[i];
 		if (!(i%2)) fprintf(f,"\n%02d: ",(i/2)+1);
-		fprintf(f,"%c%d ",c.x+'A',8-c.y);
+		fprintf(f,"%c%d ",c.x+'a',8-c.y);
 	}
 	fputc('\n',f);
 }
@@ -97,11 +97,7 @@ int read(char cam[],ESTADO *est){
 		}
 		while (fgets(cam,BUF_SIZE,f) != NULL){
 			for(i1 = 3;cam[i1]!='\0';i1++){
-				if(cam[i1]>='A'&&cam[i1]<'I'){
-					est->jogadas[c].x = cam[i1]-'A';
-					est->jogadas[c++].y = 7-(cam[++i1]-'1');
-				}
-				else if(cam[i1]>='a'&&cam[i1]<'i'){
+				if(cam[i1]>='a'&&cam[i1]<'i'){
 					est->jogadas[c].x = cam[i1]-'a';
 					est->jogadas[c++].y = 7-(cam[++i1]-'1');
 				}
