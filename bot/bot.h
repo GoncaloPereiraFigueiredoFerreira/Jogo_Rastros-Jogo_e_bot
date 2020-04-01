@@ -2,7 +2,6 @@
 #define PL6_4_BOT_H
 
 #include "../Logica/funcoes.h"
-#include <stdlib.h>
 #define DEPTH 1
 
 ESTADO* cpEst(ESTADO *est);
