@@ -110,6 +110,37 @@ int read(char cam[],ESTADO *est){
 	}
 	else return 1;
 }
+/*
+int read(char cam[],ESTADO *est){
+	FILE *f;
+	f = fopen(cam,"r");
+	int i,x = 4,y = 3,c = 0;
+	if (f != NULL){
+		if (est->num_jogadas == 0) est->tab[4][3] = '#';
+		for(i = 0;i<est->num_jogadas;i++) 
+			est->tab[est->jogadas[i].x][est->jogadas[i].y] = '.';
+		for(;cam[0]!='\n';fgets(cam,MAX,f));
+		while (fgets(cam,MAX,f) != NULL){
+			for(i = 4;cam[i]!='\n';i++){
+				if(cam[i]>='A' && cam[i]<'I'){
+					x=cam[i]-'A';
+					y=7-(cam[++i]-'1');
+					est->jogadas[c].x = x;
+					est->jogadas[c++].y = y;
+					est->tab[x][y] = '#';
+				}
+			}
+		}
+		est->pos.x = x;
+		est->pos.y = y;
+		est->tab[x][y] = '*';
+		est->jogador_atual = (c%2)+1;
+		est->num_jogadas = c;
+		fclose(f);
+		return 0;
+	}
+	else return 1;
+}*/
 
 int interpretador(ESTADO *est) {
 	char linha[BUF_SIZE],cam[BUF_SIZE];
