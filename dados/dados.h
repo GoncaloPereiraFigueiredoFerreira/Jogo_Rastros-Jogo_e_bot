@@ -5,6 +5,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "../Listas Ligadas/listasligadas.h"
 
 typedef enum {VAZIO = '.', BRANCA = '*', PRETA = '#'} CASA;
 
@@ -25,8 +26,10 @@ typedef struct {
 } ESTADO;
 
 void inicia(ESTADO *est);
-int jogPoss (ESTADO *est,COORDENADA mvs[8]);
+LISTA jogPoss (ESTADO *est);
+int movs(ESTADO *est,COORDENADA mvs[8]);
 int check (ESTADO *est,COORDENADA c);
 int verificaFim (ESTADO *est);
+COORDENADA jog(ESTADO *est);
 
 #endif

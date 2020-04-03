@@ -160,7 +160,7 @@ int interpretador(ESTADO *est) {
 	}
 	else if (strcmp(linha,"poss\n") == 0){
 		COORDENADA c[8];
-		int n = jogPoss(est,c);
+		int n = movs(est,c);
 		for(int i = 0; i < n;i++) {showCOORD(c[i]);putchar(' ');}
 		putchar('\n'); 
 	}
@@ -181,6 +181,7 @@ int interpretador(ESTADO *est) {
 		showCOORD(bot(est));
 		putchar('\n');
 	}
+	else if (strcmp(linha,"jog\n") == 0) {jogar(est,jog(est));desenha(est);}
 	else if (linha[0] == 'Q') return 0;
 	else printf("Nao e comando valido!\n");
 	return 1;

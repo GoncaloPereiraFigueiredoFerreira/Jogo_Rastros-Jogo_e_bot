@@ -36,7 +36,7 @@ int minmax(ESTADO *est,int jog,int depth){
 	else if(!depth) i = 0;
 	else{
 		ESTADO *est1 = cpEst(est);
-		n = jogPoss(est,m);
+		n = movs(est,m);
 		for (i = 0;i<n;i++){
 			jogar(est1,m[i]);
 			v[i] = minmax(est1,-jog,depth-1);
@@ -54,7 +54,7 @@ COORDENADA bot (ESTADO *est){
 	COORDENADA m[8];
 	ESTADO *est1;
 	est1 = cpEst(est);
-	n = jogPoss(est,m);
+	n = movs(est,m);
 	for(i = 0;i<n;i++){
 		jogar(est1,m[i]);
 		v[i] = minmax(est1,jog,DEPTH);
