@@ -9,6 +9,7 @@
 #define MAX 100
 #define BUF_SIZE 1024
 
+
 void showCOORD (COORDENADA c);
 void prompt (ESTADO *est);
 void desenhal();
