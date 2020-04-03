@@ -1,5 +1,11 @@
 //Camada de Dados
 
+#ifndef _DADOS
+#define _DADOS
+
+#include <stdlib.h>
+#include <stdio.h>
+
 typedef enum {VAZIO = '.', BRANCA = '*', PRETA = '#'} CASA;
 
 typedef struct {
@@ -22,3 +28,5 @@ void inicia(ESTADO *est);
 int jogPoss (ESTADO *est,COORDENADA mvs[8]);
 int check (ESTADO *est,COORDENADA c);
 int verificaFim (ESTADO *est);
+
+#endif

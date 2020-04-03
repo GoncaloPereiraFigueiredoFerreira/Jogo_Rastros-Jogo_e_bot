@@ -4,6 +4,7 @@
 #include "../Logica/funcoes.h"
 #include "../bot/bot.h"
 #include <stdio.h>
+#include <string.h>
 
 #define MAX 100
 #define BUF_SIZE 1024

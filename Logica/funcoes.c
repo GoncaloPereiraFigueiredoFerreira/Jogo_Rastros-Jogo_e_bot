@@ -1,8 +1,4 @@
-#include "../dados/dados.h"
-#include <stdlib.h>
-#include <stdio.h>
-
-
+#include "funcoes.h"
 
 void atualizaEstado (ESTADO *est, COORDENADA c){
 	int x1 = est->pos.x;

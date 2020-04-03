@@ -1,10 +1,4 @@
-#include "../Logica/funcoes.h"
 #include "interface.h"
-#include "../bot/bot.h"
-#include <stdio.h> 
-#include <string.h>
-
-
 
 void showCOORD (COORDENADA c){
 	int letra = c.x;

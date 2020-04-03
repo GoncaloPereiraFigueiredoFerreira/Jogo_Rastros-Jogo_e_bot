@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "dados.h"
 
 void inicia(ESTADO *est){ 
