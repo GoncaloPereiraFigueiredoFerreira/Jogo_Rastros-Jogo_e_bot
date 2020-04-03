@@ -8,7 +8,6 @@ LISTA criarL(){
 }
 
 LISTA insereH(LISTA L, void *val){
-	
 	if (L->prox || L->valor){
 		LISTA x= criarL(); 
 		x->valor=val;

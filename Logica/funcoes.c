@@ -11,7 +11,6 @@ void atualizaEstado (ESTADO *est, COORDENADA c){
 		est->jogador_atual = ((est->num_jogadas) % 2 + 1);
 }
 
- //Função q valida uma Jogada e a aplica
 int jogar(ESTADO *est, COORDENADA c){
 	if (check(est,c)){
 		atualizaEstado (est,c);

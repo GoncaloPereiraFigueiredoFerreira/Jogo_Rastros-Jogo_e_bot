@@ -25,11 +25,12 @@ typedef struct {
 	int jogador_atual; // Qual o Jogador a Jogar
 } ESTADO;
 
-void inicia(ESTADO *est);
-LISTA jogPoss (ESTADO *est);
-int movs(ESTADO *est,COORDENADA mvs[8]);
-int check (ESTADO *est,COORDENADA c);
-int verificaFim (ESTADO *est);
-COORDENADA jog(ESTADO *est);
+
+void inicia(ESTADO *est);//Função que coloca o estado na sua posição inicial
+LISTA jogPoss (ESTADO *est);//Função que cria uma lista ligada das possiveis jogadas
+int movs(ESTADO *est,COORDENADA mvs[8]);//Dá o numero de jogadas possiveis e enche o array com essas jogadas
+int check (ESTADO *est,COORDENADA c);//Vê se é possivél fazer uma jogada
+int verificaFim (ESTADO *est);//Verifica se algum dos jogadores já ganhou
+COORDENADA jog(ESTADO *est);//Função que retorna um jogada possivel 
 
 #endif
