@@ -2,7 +2,7 @@
 #define PL6_4_BOT_H
 
 #include "../Logica/funcoes.h"
-#define DEPTH 1
+#define DEPTH 10000
 
 ESTADO* cpEst(ESTADO *est);
 int max(int v[],int n,int jog);

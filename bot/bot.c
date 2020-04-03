@@ -1,6 +1,7 @@
 #include "../Logica/funcoes.h"
 #include "../interface/interface.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include "bot.h"
 
 ESTADO* cpEst(ESTADO *est){
@@ -17,29 +18,32 @@ ESTADO* cpEst(ESTADO *est){
 }
 
 int max(int v[],int n,int jog){
-	int i = --n;
-	for(--n;n!=0;n--)
+	int i = n-1;
+	for(n-=2;n>=0;n--){
 		if (v[n]*jog>v[i]*jog) i = n;
+	}
 	return i;
 }
 
 int minmax(ESTADO *est,int jog,int depth){
 	int v[8],n,i;
 	COORDENADA m[8];
-	n = escolheVencedor(est);
+	n = verificaFim(est);
 	if (n){
-		if(jog*(est->jogador_atual) == n) i = 1;
-		else i = 0; 
+		if(jog*(est->jogador_atual) == n) i = -1;
+		else i = 1; 
 	}
-	else if(!depth) i = -1;
+	else if(!depth) i = 0;
 	else{
 		ESTADO *est1 = cpEst(est);
 		n = jogPoss(est,m);
 		for (i = 0;i<n;i++){
 			jogar(est1,m[i]);
 			v[i] = minmax(est1,-jog,depth-1);
+			free(est1);
 			est1 = cpEst(est);
 		}
+		free(est1);
 		i = (v[max(v,n,jog)]);
 	}
 	return i;
@@ -52,11 +56,11 @@ COORDENADA bot (ESTADO *est){
 	est1 = cpEst(est);
 	n = jogPoss(est,m);
 	for(i = 0;i<n;i++){
-		showCOORD(m[i]);
 		jogar(est1,m[i]);
-		v[i] = minmax(est1,-jog,DEPTH);
+		v[i] = minmax(est1,jog,DEPTH);
+		free(est1);
 		est1 = cpEst(est);
-		printf("-%d\n",v[i]);
 	}
+	free(est1);
 	return m[max(v,n,jog)];
 }
