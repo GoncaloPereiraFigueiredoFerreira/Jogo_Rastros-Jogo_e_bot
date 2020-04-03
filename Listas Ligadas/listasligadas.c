@@ -3,14 +3,14 @@
 LISTA criarL(){
 	LISTA l = malloc (sizeof(Nodo));
 	l->valor =NULL;
-	l->prox = NUll;
+	l->prox = NULL;
 	return l;
 }
 
 LISTA insereH(LISTA L, void *val){
 	
 	if (L->prox){
-		LISTA x= criar_lista(); 
+		LISTA x= criarL(); 
 		x->valor=val;
 		x->prox=L;
 		return x;
@@ -28,9 +28,9 @@ LISTA proximo(LISTA L){
 }
 LISTA removeH(LISTA L){
 	LISTA a=L->prox;
-	free (l);
+	free (L);
 	return a;
 }
 int vazia(LISTA L){
-	return (int)(L->valor);
+	return (L->valor)?1:0;
 }
