@@ -32,5 +32,5 @@ LISTA removeH(LISTA L){
 	return a;
 }
 int vazia(LISTA L){
-	return (L->valor)?1:0;
+	return (L)?1:0;
 }

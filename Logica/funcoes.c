@@ -37,3 +37,9 @@ int jogAnt (int jog, ESTADO *est){
 	return 1;
 }
 
+
+void delay(float msegundos) { 
+    int segundos = 1000 * msegundos;
+    clock_t inicio = clock();
+    while (clock() < inicio + segundos); 
+}
