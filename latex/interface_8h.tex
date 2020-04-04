@@ -1,0 +1,154 @@
+\hypertarget{interface_8h}{}\section{interface/interface.h File Reference}
+\label{interface_8h}\index{interface/interface.\+h@{interface/interface.\+h}}
+{\ttfamily \#include \char`\"{}../\+Logica/funcoes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../bot/bot.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for interface.\+h\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_8h_a392fb874e547e582e9c66a08a1f23326}\label{interface_8h_a392fb874e547e582e9c66a08a1f23326}} 
+\#define {\bfseries M\+AX}~100
+\item 
+\mbox{\Hypertarget{interface_8h_a6821bafc3c88dfb2e433a095df9940c6}\label{interface_8h_a6821bafc3c88dfb2e433a095df9940c6}} 
+\#define {\bfseries B\+U\+F\+\_\+\+S\+I\+ZE}~1024
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interface_8h_a2a87baa757d573a3680b9876d670618c}{show\+C\+O\+O\+RD} (\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Escreve na consola a cordenada dada à função. \end{DoxyCompactList}\item 
+void \hyperlink{interface_8h_ad385a66804c133d5c5cdea4fcf616147}{prompt} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
+\begin{DoxyCompactList}\small\item\em Dá a informação atual do jogo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_8h_a6783d2c9529dc1b939b88c3a2ac88887}\label{interface_8h_a6783d2c9529dc1b939b88c3a2ac88887}} 
+void \hyperlink{interface_8h_a6783d2c9529dc1b939b88c3a2ac88887}{desenhal} ()
+\begin{DoxyCompactList}\small\item\em Desenha as linhas horizontais do tabuleiro. \end{DoxyCompactList}\item 
+void \hyperlink{interface_8h_af8f213930dd748165466fb2c6fd5743f}{desenha} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
+\begin{DoxyCompactList}\small\item\em Desenha o estado. \end{DoxyCompactList}\item 
+int \hyperlink{interface_8h_a55f2f48c114580af4ce030e94b717a5e}{read} (char cam\mbox{[}$\,$\mbox{]}, \hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
+\begin{DoxyCompactList}\small\item\em Lê um ficheiro de texto onde se encontre um estado do jogo e recomeça o jogo com esse estado. \end{DoxyCompactList}\item 
+int \hyperlink{interface_8h_ac4418f2830ec7ff843aa763cf3f92a95}{interpretador} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
+\begin{DoxyCompactList}\small\item\em Responsável por aceitar os comandos do utilizador. \end{DoxyCompactList}\item 
+void \hyperlink{interface_8h_ac4304c60a7bbb3e48aa2b8f650a61089}{hist} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est, F\+I\+LE $\ast$f)
+\begin{DoxyCompactList}\small\item\em Escreve no ficheiro o histórico de jogadas de um determinado estado. \end{DoxyCompactList}\item 
+void \hyperlink{interface_8h_aecc55dc24cb746ce18fabeafe4da16e0}{save} (char cam\mbox{[}$\,$\mbox{]}, \hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
+\begin{DoxyCompactList}\small\item\em Guarda o estado do jogo atual num ficheiro de texto. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_8h_a1318510ca4827045197f9ae29e18a4ff}\label{interface_8h_a1318510ca4827045197f9ae29e18a4ff}} 
+void \hyperlink{interface_8h_a1318510ca4827045197f9ae29e18a4ff}{desenho\+Inicial} ()
+\begin{DoxyCompactList}\small\item\em Função que trata de criar a parte inicial do jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{interface_8h_af8f213930dd748165466fb2c6fd5743f}\label{interface_8h_af8f213930dd748165466fb2c6fd5743f}} 
+\index{interface.\+h@{interface.\+h}!desenha@{desenha}}
+\index{desenha@{desenha}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{desenha()}{desenha()}}
+{\footnotesize\ttfamily void desenha (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
+
+
+
+Desenha o estado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_8h_ac4304c60a7bbb3e48aa2b8f650a61089}\label{interface_8h_ac4304c60a7bbb3e48aa2b8f650a61089}} 
+\index{interface.\+h@{interface.\+h}!hist@{hist}}
+\index{hist@{hist}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{hist()}{hist()}}
+{\footnotesize\ttfamily void hist (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est,  }\item[{F\+I\+LE $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Escreve no ficheiro o histórico de jogadas de um determinado estado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para o estado \\
+\hline
+{\em f} & Apontador para o ficheiro onde será escrito o histórico de jogadas \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_8h_ac4418f2830ec7ff843aa763cf3f92a95}\label{interface_8h_ac4418f2830ec7ff843aa763cf3f92a95}} 
+\index{interface.\+h@{interface.\+h}!interpretador@{interpretador}}
+\index{interpretador@{interpretador}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{interpretador()}{interpretador()}}
+{\footnotesize\ttfamily int interpretador (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
+
+
+
+Responsável por aceitar os comandos do utilizador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_8h_ad385a66804c133d5c5cdea4fcf616147}\label{interface_8h_ad385a66804c133d5c5cdea4fcf616147}} 
+\index{interface.\+h@{interface.\+h}!prompt@{prompt}}
+\index{prompt@{prompt}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{prompt()}{prompt()}}
+{\footnotesize\ttfamily void prompt (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
+
+
+
+Dá a informação atual do jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_8h_a55f2f48c114580af4ce030e94b717a5e}\label{interface_8h_a55f2f48c114580af4ce030e94b717a5e}} 
+\index{interface.\+h@{interface.\+h}!read@{read}}
+\index{read@{read}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily int read (\begin{DoxyParamCaption}\item[{char}]{cam\mbox{[}$\,$\mbox{]},  }\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
+
+
+
+Lê um ficheiro de texto onde se encontre um estado do jogo e recomeça o jogo com esse estado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cam} & Nome do ficheiro \\
+\hline
+{\em est} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_8h_aecc55dc24cb746ce18fabeafe4da16e0}\label{interface_8h_aecc55dc24cb746ce18fabeafe4da16e0}} 
+\index{interface.\+h@{interface.\+h}!save@{save}}
+\index{save@{save}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void save (\begin{DoxyParamCaption}\item[{char}]{cam\mbox{[}$\,$\mbox{]},  }\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
+
+
+
+Guarda o estado do jogo atual num ficheiro de texto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cam} & Nome do ficheiro \\
+\hline
+{\em est} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_8h_a2a87baa757d573a3680b9876d670618c}\label{interface_8h_a2a87baa757d573a3680b9876d670618c}} 
+\index{interface.\+h@{interface.\+h}!show\+C\+O\+O\+RD@{show\+C\+O\+O\+RD}}
+\index{show\+C\+O\+O\+RD@{show\+C\+O\+O\+RD}!interface.\+h@{interface.\+h}}
+\subsubsection{\texorpdfstring{show\+C\+O\+O\+R\+D()}{showCOORD()}}
+{\footnotesize\ttfamily void show\+C\+O\+O\+RD (\begin{DoxyParamCaption}\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Escreve na consola a cordenada dada à função. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Coordenada \\
+\hline
+\end{DoxyParams}
