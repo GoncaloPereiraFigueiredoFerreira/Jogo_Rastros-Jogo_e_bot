@@ -4,10 +4,12 @@
 #include "../dados/dados.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
-void atualizaEstado (ESTADO *est, COORDENADA c); //Atualiza o estado após uma jogada ter sido feita
-int jogar(ESTADO *est, COORDENADA c); // Função que valida uma Jogada e a aplica
-int jogAnt (int jog, ESTADO *est); //Volta a trás no jogo para uma jogada escolhida
 
+void atualizaEstado (ESTADO *est, COORDENADA c);
+int jogar(ESTADO *est, COORDENADA c);
+int jogAnt (int jog, ESTADO *est);
+void delay(float msegundos);
 
 #endif

@@ -5,6 +5,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "../Listas Ligadas/listasligadas.h"
 
 typedef enum {VAZIO = '.', BRANCA = '*', PRETA = '#'} CASA;
 
@@ -24,9 +25,12 @@ typedef struct {
 	int jogador_atual; // Qual o Jogador a Jogar
 } ESTADO;
 
-void inicia(ESTADO *est); //Função que coloca o estado na sua posição inicial
-int jogPoss (ESTADO *est,COORDENADA mvs[8]); //Dá o numero de jogadas possiveis e enche o array com essas jogadas
-int check (ESTADO *est,COORDENADA c); //Vê se é possivél fazer uma jogada
-int verificaFim (ESTADO *est); //Verifica se algum dos jogadores já ganhou 
+
+void inicia(ESTADO *est);//Função que coloca o estado na sua posição inicial
+LISTA jogPoss (ESTADO *est);//Função que cria uma lista ligada das possiveis jogadas
+int movs(ESTADO *est,COORDENADA mvs[8]);//Dá o numero de jogadas possiveis e enche o array com essas jogadas
+int check (ESTADO *est,COORDENADA c);//Vê se é possivél fazer uma jogada
+int verificaFim (ESTADO *est);//Verifica se algum dos jogadores já ganhou
+COORDENADA jog(ESTADO *est);//Função que retorna um jogada possivel 
 
 #endif

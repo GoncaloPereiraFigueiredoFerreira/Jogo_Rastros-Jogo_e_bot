@@ -8,7 +8,7 @@ LISTA criarL(){
 }
 
 LISTA insereH(LISTA L, void *val){
-	if (L->prox){
+	if (L->prox || L->valor){
 		LISTA x= criarL(); 
 		x->valor=val;
 		x->prox=L;
@@ -31,5 +31,5 @@ LISTA removeH(LISTA L){
 	return a;
 }
 int vazia(LISTA L){
-	return (L->valor)?1:0;
+	return (L)?1:0;
 }

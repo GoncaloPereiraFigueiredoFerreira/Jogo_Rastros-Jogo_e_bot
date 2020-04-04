@@ -1,4 +1,5 @@
 #include "dados.h"
+#include <stdio.h>
 
 void inicia(ESTADO *est){ 
 	int i,j;
@@ -21,7 +22,26 @@ int check (ESTADO *est,COORDENADA c){
 	return (abs(x1-x)<=1 && abs(y1-y)<=1 && novaCasa != BRANCA && novaCasa != PRETA);
 }
 
-int jogPoss (ESTADO *est,COORDENADA mvs[8]){
+LISTA jogPoss (ESTADO *est){
+	int x = est->pos.x, y = est->pos.y;
+	int i,i1,x1,y1;
+	COORDENADA c,*c1;
+	LISTA l = criarL();
+	for(i = -1;i < 2;i++)
+		for(i1 = -1; i1 < 2;i1++){
+			c.x = x+i;
+			c.y = y+i1;
+			if (c.x >= 0 && c.y >= 0 && c.x < 8 && c.y < 8 && check(est,c)){
+				c1 = malloc(sizeof(COORDENADA));
+				c1->x = c.x;
+				c1->y = c.y;
+				l = insereH(l,c1);
+			}
+		}
+	return l;
+}
+
+int movs (ESTADO *est,COORDENADA mvs[8]){
 	int x = est->pos.x, y = est->pos.y;
 	int i,i1,n = 0;
 	COORDENADA c;
@@ -33,7 +53,6 @@ int jogPoss (ESTADO *est,COORDENADA mvs[8]){
 				mvs[n++] = c;
 		}
 	return n;
-
 }
 
 int verificaFim (ESTADO *est){
@@ -44,7 +63,19 @@ int verificaFim (ESTADO *est){
 	int caso=0;
 	if (col == 0 && lin == 7) caso = 1;
 	else if (col == 7 && lin == 0) caso = 2;
-	else if (jogPoss(est,vizinhos)== 0) caso = (jogadorAtual % 2) +1;
+	else if (movs(est,vizinhos) == 0) caso = (jogadorAtual % 2) +1;
 	return caso;
+}
 
+COORDENADA jog(ESTADO *est){
+	COORDENADA *c,c1;
+	LISTA l = jogPoss(est);
+	c = (l->valor);
+	c1.x = c->x;
+	c1.y = c->y; 
+	while (vazia(l)){
+		free(l->valor);
+		l = removeH(l);
+	}
+	return c1;
 }

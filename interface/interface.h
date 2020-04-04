@@ -53,6 +53,6 @@ int read(char cam[],ESTADO *est); //
 int interpretador(ESTADO *est); //Responsável por aceitar os comandos do utilizador 
 void hist(ESTADO *est,FILE *f); //Escreve no ficheiro o histórico de jogadas de um determinado estado
 void save(char cam[],ESTADO *est); //Guarda o estado do jogo atual num ficheiro de texto
-
+void desenhoInicial ();
 
 #endif

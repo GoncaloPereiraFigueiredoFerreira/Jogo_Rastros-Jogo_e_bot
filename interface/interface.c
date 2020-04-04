@@ -10,14 +10,26 @@ void prompt (ESTADO *est){
 	int nJogada= est-> num_jogadas;
 	int jogador= est->jogador_atual;
 	COORDENADA atual = est-> pos;
-	printf ("# %d PL%d (%d)>",nJogada,jogador,(nJogada/2)+1);
+	printf ("\n # %d PL%d (%d)>",nJogada,jogador,(nJogada/2)+1);
 	showCOORD (atual);
 	putchar('\n');
+}
+void desenhoInicial (){
+	int i=3;
+	printf("Bem vindo ao nosso Jogo Rastros\n\n");
+	delay(2);
+	printf("A carregar Jogo");
+	for(;i>0;i--){
+		delay(0.5);
+		putchar('.');
+	}
+	delay(0.5);
+	putchar ('\n');
 }
 
 
 void desenhal(){
-	printf("  ");
+	printf("   ");
 	for(int i = 0;i<8;i++) printf("+---");
 	putchar('+');
 	putchar('\n');
@@ -26,10 +38,10 @@ void desenhal(){
 void desenha(ESTADO *est){
 	char c;	
 	prompt(est);
-	printf("    A   B   C   D   E   F   G   H\n");
+	printf("     A   B   C   D   E   F   G   H\n");
 	for(int y = 0;y< 8;y++){
 		desenhal();
-		printf("%d ",8-y);
+		printf(" %d ",8-y);
 		for(int x = 0;x< 8;x++){
 			if (x == 7 && y == 0) c = '2';
 			else if (x == 0 && y == 7) c = '1'; 
@@ -40,6 +52,7 @@ void desenha(ESTADO *est){
 		putchar('\n');
 	}
 	desenhal();
+	putchar('\n');
 
 }
 
@@ -111,29 +124,31 @@ int interpretador(ESTADO *est) {
 	char col[2], lin[2];
 	int i;
 	if (verificaFim(est) != 0){ 
-		printf("Parabens player %d, Ganhaste !!!\n", verificaFim(est));
+		printf("Parab%cns player %d, Ganhaste !!!\n\n",130, verificaFim(est));//130 = é em ASCII
 		return 0;
 	}	
 	else if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;	
-	else if(strlen(linha) == 3 && sscanf(linha, "%[A-H]%[1-8]", col, lin) == 2) {
-		COORDENADA coord = {*col -'A',7-(*lin -'1')};
-		if (jogar(est, coord)) printf("Jogada invalida\n");
+	else if((strlen(linha) == 3 && sscanf(linha, "%[A-H]%[1-8]", col, lin) == 2) || (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2)) {
+		COORDENADA coord; 
+		if (*col<73) {coord.x =*col -'A'; coord.y=7-(*lin -'1');}
+		else {coord.x=*col -'a'; coord.y=7-(*lin -'1');}
+		if (jogar(est, coord)) printf("\nJogada inv%clida...\n\n",160);//160 = á em ASCII
 		else desenha(est);
 	}
 	else if (strcmp(linha,"poss\n") == 0){
 		COORDENADA c[8];
-		int n = jogPoss(est,c);
+		int n = movs(est,c);
 		for(int i = 0; i < n;i++) {showCOORD(c[i]);putchar(' ');}
 		putchar('\n'); 
 	}
 	else if (sscanf(linha,"ler %s",cam) == 1){
-		if (read(cam,est)) printf("Ficheiro invalido\n");
+		if (read(cam,est)) printf("\nFicheiro inv%clido...\n\n",160);//160 = á em ASCII
 		else desenha(est);
 	}
 	else if (strcmp(linha,"movs\n") == 0) hist(est,stdout);
 	else if (sscanf(linha,"gr %s",cam) == 1){
 		save(cam,est);
-		printf("O seu jogo foi salvo\n");
+		printf("\nO teu jogo foi salvo\n\n");
 	}
 	else if (sscanf(linha,"pos %d",&i) == 1) {
 		jogAnt(i,est);
@@ -143,7 +158,8 @@ int interpretador(ESTADO *est) {
 		showCOORD(bot(est));
 		putchar('\n');
 	}
+	else if (strcmp(linha,"jog\n") == 0) {jogar(est,jog(est));desenha(est);}
 	else if (linha[0] == 'Q') return 0;
-	else printf("Nao e comando valido!\n");
+	else printf("\nComando Inv%clido!\n\n",160);//160 = á em ASCII
 	return 1;
 }
