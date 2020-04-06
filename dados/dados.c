@@ -1,5 +1,4 @@
 #include "dados.h"
-#include <stdio.h>
 
 void inicia(ESTADO *est){ 
 	int i,j;
@@ -11,6 +10,12 @@ void inicia(ESTADO *est){
 	est->tab[4][3] = BRANCA;
 	est->num_jogadas = 0;
 	est->jogador_atual = 1;
+}
+void limpaArr(ESTADO *est,int i){
+	for (i;i<64;i++){
+		est->jogadas[i].x = -1;
+		est->jogadas[i].y = -1;
+	}
 }
 
 int check (ESTADO *est,COORDENADA c){

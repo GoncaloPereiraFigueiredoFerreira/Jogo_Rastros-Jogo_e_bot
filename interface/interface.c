@@ -145,14 +145,16 @@ int interpretador(ESTADO *est) {
 		if (read(cam,est)) printf("\nFicheiro inv%clido...\n\n",160);//160 = á em ASCII
 		else desenha(est);
 	}
-	else if (strcmp(linha,"movs\n") == 0) hist(est,stdout);
+	else if (strcmp(linha,"movs\n") == 0) {hist(est,stdout); putchar('\n');}
 	else if (sscanf(linha,"gr %s",cam) == 1){
 		save(cam,est);
 		printf("\nO teu jogo foi salvo\n\n");
 	}
 	else if (sscanf(linha,"pos %d",&i) == 1) {
-		jogAnt(i,est);
-		desenha(est);
+		if (jogAnt(i,est))
+			desenha(est);
+		else printf("Posi%c%co Inv%clida\n\n",135,198,160);
+
 	}
 	else if (strcmp(linha,"bot\n") == 0){ 
 		showCOORD(bot(est));

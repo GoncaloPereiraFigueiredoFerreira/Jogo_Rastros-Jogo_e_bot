@@ -31,6 +31,6 @@ LISTA jogPoss (ESTADO *est);//Função que cria uma lista ligada das possiveis j
 int movs(ESTADO *est,COORDENADA mvs[8]);//Dá o numero de jogadas possiveis e enche o array com essas jogadas
 int check (ESTADO *est,COORDENADA c);//Vê se é possivél fazer uma jogada
 int verificaFim (ESTADO *est);//Verifica se algum dos jogadores já ganhou
-COORDENADA jog(ESTADO *est);//Função que retorna um jogada possivel 
-
+COORDENADA jog(ESTADO *est);//Função que retorna um jogada possivel
+void limpaArr(ESTADO *est,int i);//Função que inicia o array de jogadas
 #endif
