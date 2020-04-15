@@ -2,7 +2,7 @@
 #define PL6_4_BOT_H
 
 #include "../Logica/funcoes.h"
-#define DEPTH 20
+#define DEPTH 17
 #define MSCORE 2
 
 ESTADO* cpEst(ESTADO *est);
