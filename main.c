@@ -3,6 +3,7 @@
 int main() {
 	ESTADO *est = (ESTADO *) malloc(sizeof(ESTADO));
 	inicia(est);
+	limpaArr(est,0);
 	desenhoInicial ();
 	desenha(est);
 	while (interpretador(est));

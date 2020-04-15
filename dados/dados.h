@@ -5,7 +5,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "../Listas Ligadas/listasligadas.h"
+#include "../ListasLigadas/listasligadas.h"
 
 /*! \mainpage Index
 * 
@@ -86,4 +86,6 @@ int verificaFim (ESTADO *est);
 @param est Apontador para o estado
 */
 COORDENADA jog(ESTADO *est);
+
+void limpaArr(ESTADO *est,int i);//Função que inicia o array de jogadas
 #endif
