@@ -1,7 +1,4 @@
-#include "../Logica/funcoes.h"
-#include "../interface/interface.h"
-#include <stdio.h>
-#include <stdlib.h>
+
 #include "bot.h"
 
 ESTADO* cpEst(ESTADO *est){
