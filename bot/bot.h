@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../Logica/funcoes.h"
-#define DEPTH 20
+#define DEPTH 17
 #define MSCORE 2
 
 ESTADO* cpEst(ESTADO *est);
