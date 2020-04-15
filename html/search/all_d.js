@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tab',['tab',['../structESTADO.html#ab56f0f1be16954d3768b4174d14c087d',1,'ESTADO']]]
+  ['save',['save',['../interface_8h.html#aecc55dc24cb746ce18fabeafe4da16e0',1,'interface.c']]],
+  ['showcoord',['showCOORD',['../interface_8h.html#a2a87baa757d573a3680b9876d670618c',1,'interface.c']]]
 ];

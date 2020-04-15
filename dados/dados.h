@@ -5,7 +5,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "../Listas Ligadas/listasligadas.h"
+#include "../ListasLigadas/listasligadas.h"
 
 /*! \mainpage Index
 * 

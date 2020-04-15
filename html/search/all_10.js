@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y',['y',['../structCOORDENADA.html#a5d8fd9d119daf634ccd5ff7b8b37d16b',1,'COORDENADA']]]
+  ['x',['x',['../structCOORDENADA.html#a04df39e5db6a15fc3891becabc22fbe2',1,'COORDENADA']]]
 ];

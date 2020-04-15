@@ -34,7 +34,7 @@ enum \hyperlink{dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} \{ {\bfser
 \item 
 void \hyperlink{dados_8h_a64da8cb7611cf3d5aba6a4414a0abb92}{inicia} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
 \begin{DoxyCompactList}\small\item\em Função que coloca o estado na sua posição inicial. \end{DoxyCompactList}\item 
-L\+I\+S\+TA \hyperlink{dados_8h_ac27ab41d705f6107cf34c5c3fbf8bf2e}{jog\+Poss} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
+\hyperlink{structlligada}{L\+I\+S\+TA} \hyperlink{dados_8h_ac27ab41d705f6107cf34c5c3fbf8bf2e}{jog\+Poss} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
 \begin{DoxyCompactList}\small\item\em Função que cria uma lista ligada das possiveis jogadas. \end{DoxyCompactList}\item 
 int \hyperlink{dados_8h_a74469889c470bfe2bc9d32d65e851313}{movs} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} mvs\mbox{[}8\mbox{]})
 \begin{DoxyCompactList}\small\item\em Dá o numero de jogadas possiveis e enche o array com essas jogadas. \end{DoxyCompactList}\item 
@@ -43,7 +43,10 @@ int \hyperlink{dados_8h_aee107ab0b8442caeaac72be171f20fc1}{check} (\hyperlink{st
 int \hyperlink{dados_8h_a2a73885e5d652f9186c670e43cbc741b}{verifica\+Fim} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
 \begin{DoxyCompactList}\small\item\em Verifica se algum dos jogadores já ganhou. \end{DoxyCompactList}\item 
 \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} \hyperlink{dados_8h_a7c119b132d591342cecf42ca1d64e39b}{jog} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
-\begin{DoxyCompactList}\small\item\em Função que retorna um jogada possivel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Função que retorna um jogada possivel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{dados_8h_a303cbcfe5e2680baf24b96075827b16e}\label{dados_8h_a303cbcfe5e2680baf24b96075827b16e}} 
+void {\bfseries limpa\+Arr} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est, int i)
+\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -98,7 +101,7 @@ Função que retorna um jogada possivel.
 \index{dados.\+h@{dados.\+h}!jog\+Poss@{jog\+Poss}}
 \index{jog\+Poss@{jog\+Poss}!dados.\+h@{dados.\+h}}
 \subsubsection{\texorpdfstring{jog\+Poss()}{jogPoss()}}
-{\footnotesize\ttfamily L\+I\+S\+TA jog\+Poss (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \hyperlink{structlligada}{L\+I\+S\+TA} jog\+Poss (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
 
 
 
