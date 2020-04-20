@@ -120,13 +120,21 @@ int read(char cam[],ESTADO *est){
 	else return 1;
 }
 
+int again (){
+	int x;
+	printf("Queres voltar a jogar?\nPrime 1 se SIM ou 2 para SAIR.\n");
+	scanf("%d",&x);
+	return (x-1);
+}
+
 int interpretador(ESTADO *est) {
 	char linha[BUF_SIZE],cam[BUF_SIZE];
 	char col[2], lin[2];
 	int i;
 	if (verificaFim(est) != 0){ 
 		printf("Parab%cns player %d, Ganhaste !!!\n\n",130, verificaFim(est));//130 = é em ASCII
-		return 0;
+		if (!again()){inicia(est);limpaArr(est,0);desenha(est);delay(0.5);}
+		else return 0;
 	}	
 	else if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;	
 	else if((strlen(linha) == 3 && sscanf(linha, "%[A-H]%[1-8]", col, lin) == 2) || (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2)) {
@@ -165,13 +173,4 @@ int interpretador(ESTADO *est) {
 	else if (linha[0] == 'Q') return 0;
 	else printf("\nComando Inv%clido!\n\n",160);//160 = á em ASCII
 	return 1;
-}
-
-
-
-int again (){
-	int x;
-	printf("Queres voltar a jogar?\nPrime 1 se SIM ou 2 para SAIR.\n");
-	scanf("%d",&x);
-	return (x-1);
 }

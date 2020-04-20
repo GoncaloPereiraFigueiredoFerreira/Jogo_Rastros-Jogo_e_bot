@@ -1,17 +1,13 @@
 #include "interface/interface.h"
 #include <stdlib.h>
 int main() {
-	int x=0;
-	do {
-		ESTADO *est = (ESTADO *) malloc(sizeof(ESTADO));
-		inicia(est);
-		limpaArr(est,0);
-		desenhoInicial ();
-		desenha(est);
-		while (interpretador(est));
-		free(est);
-		x=again();
-	} while (!x);
+	ESTADO *est = (ESTADO *) malloc(sizeof(ESTADO));
+	inicia(est);
+	limpaArr(est,0);
+	desenhoInicial ();
+	desenha(est);
+	while (interpretador(est));
+	free(est);
 	system ("pause");
 	return 0;
 }
