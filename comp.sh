@@ -1,5 +1,5 @@
 
-echo "gcc -c interface/interface.c main.c Logica/funcoes.c dados/dados.c bot/bot.c ListasLigadas/listasligadas.c"
+echo "gcc -c -O2 interface/interface.c main.c Logica/funcoes.c dados/dados.c bot/bot.c ListasLigadas/listasligadas.c"
 gcc -c interface/interface.c main.c Logica/funcoes.c dados/dados.c bot/bot.c ListasLigadas/listasligadas.c
 echo "gcc -o main main.o interface.o funcoes.o dados.o bot.o listasligadas.o"
 gcc -o main main.o interface.o funcoes.o dados.o bot.o listasligadas.o

@@ -5,11 +5,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../Logica/funcoes.h"
-#define DEPTH 17
-#define MSCORE 2
+#define DEPTH 20
+#define MSCORE 100000
 
 ESTADO* cpEst(ESTADO *est);
-int max(int v[],int n,int jog);
+int dist(COORDENADA c,COORDENADA c1);
+int value(ESTADO *est,int jog);
 int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t);
 COORDENADA bot (ESTADO *est);
 
