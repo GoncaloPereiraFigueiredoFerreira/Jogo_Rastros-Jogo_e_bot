@@ -78,7 +78,7 @@ COORDENADA jog(ESTADO *est){
 	c = (l->valor);
 	c1.x = c->x;
 	c1.y = c->y; 
-	while (vazia(l)){
+	while (!vazia(l)){
 		free(l->valor);
 		l = removeH(l);
 	}

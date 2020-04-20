@@ -1,7 +1,5 @@
 #include "../Logica/funcoes.h"
 #include "../interface/interface.h"
-#include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
 #include "bot.h"
 
