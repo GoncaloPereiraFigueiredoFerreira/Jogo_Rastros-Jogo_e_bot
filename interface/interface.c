@@ -45,6 +45,7 @@ void desenha(ESTADO *est){
 		for(int x = 0;x< 8;x++){
 			if (x == 7 && y == 0) c = '2';
 			else if (x == 0 && y == 7) c = '1'; 
+			else if (est->tab[x][y] == '.') c= ' ';
 			else c = est->tab[x][y];
 			printf("| %c ",c);
 		}
@@ -94,7 +95,7 @@ int read(char cam[],ESTADO *est){
 		for (i = 0;i<8;i++){
 			fgets(cam,MAX,f);
 			for(i1 = 0;cam[i1]!='\n';i1++){
-				if (cam[i1] == '1' || cam[i1] == '2') est->tab[i][i1] = '.';
+				if (cam[i1] == '1' || cam[i1] == '2') est->tab[i][i1] = '.'; // atençao a isto em caso de mudar vazia
 				else { est->tab[i1][i] = cam [i1];
 					if (cam[i1] == '*') {
 						est->pos.x = i1;
@@ -164,4 +165,13 @@ int interpretador(ESTADO *est) {
 	else if (linha[0] == 'Q') return 0;
 	else printf("\nComando Inv%clido!\n\n",160);//160 = á em ASCII
 	return 1;
+}
+
+
+
+int again (){
+	int x;
+	printf("Queres voltar a jogar?\nPrime 1 se SIM ou 2 para SAIR.\n");
+	scanf("%d",&x);
+	return (x-1);
 }

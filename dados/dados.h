@@ -23,7 +23,7 @@
 /**
 \brief Dados das varias casas 
 */
-typedef enum {VAZIO = ' ', BRANCA = '*', PRETA = '#'} CASA;
+typedef enum {VAZIO = '.', BRANCA = '*', PRETA = '#'} CASA;
 
 /**
 \brief Dados das coordenadas 
