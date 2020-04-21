@@ -68,6 +68,8 @@ int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t){
 	mscore = -MSCORE*jog*2;
 	ESTADO *est1 = cpEst(est);
 	if(n){
+		showCOORD(est->pos);
+		printf("-%d,%d,%d\n",jog,est->jogador_atual,n);
 		if(est->jogador_atual == n) mscore = jog*MSCORE;
 		else mscore = -jog*MSCORE;
 		//printf("Final-%d   jog-%d   depth-%d  winner-%d\n",mscore,jog,depth,n);
@@ -76,17 +78,19 @@ int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t){
 	else{
 		n = movs(est,m);
 		if (n == 1){atualizaEstado(est1,m[0]);mscore = minmax(est1,-jog,depth,max,min,t);}
-		for(i = 0;i<n;i++){
-			atualizaEstado(est1,m[i]);
-			score = minmax(est1,-jog,depth-1,max,min,t);
-//			printf("%d<%d\n",score*jog,mscore*jog);
-			if (score*jog > mscore*jog) mscore = score;
-			if (jog > 0) {if (max < score) max = score;}
-			else if (min > score) min = score;
-			if (max >= min) i = n; 
-			free(est1);
-			est1 = cpEst(est);
-			(*t)++;
+		else{
+			for(i = 0;i<n;i++){
+				atualizaEstado(est1,m[i]);
+				score = minmax(est1,-jog,depth-1,max,min,t);
+	//			printf("%d<%d\n",score*jog,mscore*jog);
+				if (score*jog > mscore*jog) mscore = score;
+				if (jog > 0) {if (max < score) max = score;}
+				else if (min > score) min = score;
+				if (max >= min) i = n; 
+				free(est1);
+				est1 = cpEst(est);
+				(*t)++;
+			}
 		}
 		free(est1);
 	}

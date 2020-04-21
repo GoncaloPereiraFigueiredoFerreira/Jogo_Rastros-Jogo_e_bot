@@ -13,7 +13,7 @@ do
 done
 for i in *.txt
 do
-	if [ "$i" != 'test.txt' ] && [ "$i" != 'test1.txt' ]
+	if [ "$i" != 'test.txt' ] && [ "$i" != 'test1.txt' ] && [ "$i" != 'bug.txt' ]
 	then
 		echo "rm $i"
 		rm $i
