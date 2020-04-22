@@ -60,14 +60,16 @@ int value(ESTADO *est,int jog){
 	}
 	else {total += (f+1)%2 * 10;}
 	if (player == 1){
-		if(tab[0][7] == 64) total -= 10;
-		if(tab[7][0] == 64) total += 10;
-		else if(tab[0][7] != 64)total += tab[7][0]-tab[0][7];
+		if(tab[0][7] == 64) total += 10;
+		else total -= tab[0][7];
+		if(tab[7][0] == 64) total -= 10;
+		else total += tab[7][0];
 	}
 	else {
-		if(tab[7][0] == 64) total -= 10;
-		if(tab[0][7] == 64) total += 10;
-		else if(tab[7][0] != 64)total += tab[0][7]-tab[7][0];
+		if(tab[7][0] == 64) total += 10;
+		else total -= tab[7][0];
+		if(tab[0][7] == 64) total -= 10;
+		else total += tab[0][7];
 	}
 	return total;
 }
@@ -118,15 +120,17 @@ COORDENADA bot (ESTADO *est){
 	min = MSCORE;
 	i = fill(est,tab);
 	printf("%d\n",i);
-	if (i>55) depth = DEPTH * 0.55;
-	else if (i>45) depth = DEPTH * 0.6;
-	else if (i>40) depth = DEPTH * 0.65;
-	else if (i>35) depth = DEPTH * 0.80;
-	else depth = DEPTH; 
+	if (i == 63) depth = DEPTH *0.45;
+	else if (i>55) depth = DEPTH * 0.5;
+	else if (i>45) depth = DEPTH * 0.55;
+	else if (i>35) depth = DEPTH * 0.60;
+	else if (i>30) depth = DEPTH * 0.70;
+	else depth = DEPTH;
+	printf("%d\n",depth); 
 	if (n == 1){free(est1);return m[0];}
 	for(i = 0;i<n;i++){
 		atualizaEstado(est1,m[i]);
-		score = minmax(est1,-1,DEPTH,max,min,&t);
+		score = minmax(est1,-1,depth,max,min,&t);
 		if (score > mscore) {mscore = score;r = i;}
 		if (max < score) max = score;
 		showCOORD(m[i]);
