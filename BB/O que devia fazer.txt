@@ -1,0 +1,22 @@
+#1
+Chamada bot indica f5
+// Fixed ///
+
+#2- Fixed (Não jogava e7)
+
+#3 (arguable)
+Chamada bot deveria indicar d1 (cheque mate)
+O jogador um seguinte joga d2 (a seguir de d1)
+
+
+#4
+Bot 2 não fecha o jogo por alguma razão
+
+#5 (continuação jogo #4)
+Bot 1 entrega o jogo quando poderia ganhar 50/50
+
+#6
+Bot perde ao jogar b2
+
+#7
+Bot escolhe jogada sem hipotese de vitoria (desiste)
