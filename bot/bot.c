@@ -52,7 +52,7 @@ int dist(COORDENADA c,COORDENADA c1){
 int value(ESTADO *est,int jog){
 	int player = est->jogador_atual;
 	int tab[8][8],f,total = 0;
-	COORDENADA c;
+	//COORDENADA c;
 	f = fill(est,tab);
 	if (jog < 0) {
 		player = (player)%2+1;
@@ -134,7 +134,7 @@ COORDENADA bot (ESTADO *est){
 		if (score > mscore) {mscore = score;r = i;}
 		if (max < score) max = score;
 		showCOORD(m[i]);
-		printf("-%d, min = %d,max = %d,nodos = %d\n",score,min,max,t);
+		//printf("-%d, min = %d,max = %d,nodos = %d\n",score,min,max,t);
 		if (max >= min) i = n; 
 		t = 0;
 		free(est1);
@@ -142,6 +142,6 @@ COORDENADA bot (ESTADO *est){
 	}
 	free(est1);
 	clock_t diff = (clock()-time);
-	printf("tempo-%dms\n",diff*1000/CLOCKS_PER_SEC);
+	printf("tempo-%ldms\n",diff*1000/CLOCKS_PER_SEC);
 	return m[r];
 }

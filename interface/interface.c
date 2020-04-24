@@ -71,7 +71,7 @@ void hist(ESTADO *est,FILE *f){
 void save(char cam[],ESTADO *est){
 	FILE *f;
 	int x,y;
-	COORDENADA c;
+	//COORDENADA c;
 	f = fopen(cam,"w");
 	for (x = 0;x<8;x++){
 		for (y = 0;y<8;y++){
@@ -90,7 +90,7 @@ int read(char cam[],ESTADO *est){
 	FILE *f;
 	f = fopen(cam,"r");
 	int i,i1;
-	int x,y,c = 0;
+	int c = 0;
 	if (f != NULL){
 		for (i = 0;i<8;i++){
 			fgets(cam,MAX,f);

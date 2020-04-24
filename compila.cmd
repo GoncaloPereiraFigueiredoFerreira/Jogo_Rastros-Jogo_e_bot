@@ -9,7 +9,7 @@ cd dados
 gcc -c dados.c
 cd..
 cd bot
-gcc -c bot.c
+gcc -c -O2 bot.c
 cd..
 cd ListasLigadas
 gcc -c listasligadas.c
