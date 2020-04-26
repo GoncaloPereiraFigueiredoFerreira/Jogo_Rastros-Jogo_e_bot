@@ -4,5 +4,5 @@ digraph "interface" {
   edge [ labelfontsize="10", labelfontname="Helvetica"];
   dir_b31d54d5631803016a26f28213a41162 [shape=box, label="interface", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_b31d54d5631803016a26f28213a41162.html"];
   dir_cdaaa67d38676051154f8f8978881cf2 [shape=box label="Logica" URL="dir_cdaaa67d38676051154f8f8978881cf2.html"];
-  dir_b31d54d5631803016a26f28213a41162->dir_cdaaa67d38676051154f8f8978881cf2 [headlabel="1", labeldistance=1.5 headhref="dir_000001_000003.html"];
+  dir_b31d54d5631803016a26f28213a41162->dir_cdaaa67d38676051154f8f8978881cf2 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000004.html"];
 }

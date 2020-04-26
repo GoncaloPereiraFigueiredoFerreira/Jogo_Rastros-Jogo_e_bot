@@ -75,7 +75,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &quot;../Listas Ligadas/listasligadas.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="listasligadas_8h_source.html">../ListasLigadas/listasligadas.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for dados.h:</div>
 <div class="dyncontent">
@@ -138,8 +138,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a7c119b132d591342cecf42ca1d64e39b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCOORDENADA.html">COORDENADA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dados_8h.html#a7c119b132d591342cecf42ca1d64e39b">jog</a> (<a class="el" href="structESTADO.html">ESTADO</a> *est)</td></tr>
 <tr class="memdesc:a7c119b132d591342cecf42ca1d64e39b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que retorna um jogada possivel.  <a href="#a7c119b132d591342cecf42ca1d64e39b">More...</a><br /></td></tr>
 <tr class="separator:a7c119b132d591342cecf42ca1d64e39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a303cbcfe5e2680baf24b96075827b16e"><td class="memItemLeft" align="right" valign="top"><a id="a303cbcfe5e2680baf24b96075827b16e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>limpaArr</b> (<a class="el" href="structESTADO.html">ESTADO</a> *est, int i)</td></tr>
+<tr class="memitem:aea7a5f8f2b2fca969f836448ea8a469c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCOORDENADA.html">COORDENADA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dados_8h.html#aea7a5f8f2b2fca969f836448ea8a469c">jog2</a> (<a class="el" href="structESTADO.html">ESTADO</a> *est)</td></tr>
+<tr class="memdesc:aea7a5f8f2b2fca969f836448ea8a469c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que retorna uma jogada possivél com uma estratégia diferente à jog.  <a href="#aea7a5f8f2b2fca969f836448ea8a469c">More...</a><br /></td></tr>
+<tr class="separator:aea7a5f8f2b2fca969f836448ea8a469c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a303cbcfe5e2680baf24b96075827b16e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dados_8h.html#a303cbcfe5e2680baf24b96075827b16e">limpaArr</a> (<a class="el" href="structESTADO.html">ESTADO</a> *est, int i)</td></tr>
+<tr class="memdesc:a303cbcfe5e2680baf24b96075827b16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que inicia o array de jogadas.  <a href="#a303cbcfe5e2680baf24b96075827b16e">More...</a><br /></td></tr>
 <tr class="separator:a303cbcfe5e2680baf24b96075827b16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -232,6 +235,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>limpaArr</b> (<a clas
 
 </div>
 </div>
+<a id="aea7a5f8f2b2fca969f836448ea8a469c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7a5f8f2b2fca969f836448ea8a469c">&#9670;&nbsp;</a></span>jog2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCOORDENADA.html">COORDENADA</a> jog2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structESTADO.html">ESTADO</a> *&#160;</td>
+          <td class="paramname"><em>est</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que retorna uma jogada possivél com uma estratégia diferente à jog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">est</td><td>Apontador para o estado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ac27ab41d705f6107cf34c5c3fbf8bf2e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac27ab41d705f6107cf34c5c3fbf8bf2e">&#9670;&nbsp;</a></span>jogPoss()</h2>
 
@@ -252,6 +281,43 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>limpaArr</b> (<a clas
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Apontador</td><td>para o estado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a303cbcfe5e2680baf24b96075827b16e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a303cbcfe5e2680baf24b96075827b16e">&#9670;&nbsp;</a></span>limpaArr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void limpaArr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structESTADO.html">ESTADO</a> *&#160;</td>
+          <td class="paramname"><em>est</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que inicia o array de jogadas. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">est</td><td>Apontador para o estado </td></tr>
+    <tr><td class="paramname">i</td><td>Local a partir do qual a função limpa o array </td></tr>
   </table>
   </dd>
 </dl>
