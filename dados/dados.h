@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "../ListasLigadas/listasligadas.h"
+#include <math.h>
 
 /*! \mainpage Index
 * 
@@ -100,4 +101,5 @@ COORDENADA jog2(ESTADO *est);
 */
 void limpaArr(ESTADO *est,int i);
 
+double dist1 (COORDENADA *a);
 #endif
