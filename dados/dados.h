@@ -87,7 +87,17 @@ int verificaFim (ESTADO *est);
 */
 COORDENADA jog(ESTADO *est);
 
+/**
+\brief Função que retorna uma jogada possivél com uma estratégia diferente à jog
+@param est Apontador para o estado
+*/
+COORDENADA jog2(ESTADO *est);
 
+/**
+\brief Função que inicia o array de jogadas
+@param est Apontador para o estado
+@param i Local a partir do qual a função limpa o array
+*/
+void limpaArr(ESTADO *est,int i);
 
-void limpaArr(ESTADO *est,int i);//Função que inicia o array de jogadas
 #endif

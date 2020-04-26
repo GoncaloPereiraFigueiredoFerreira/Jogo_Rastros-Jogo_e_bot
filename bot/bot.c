@@ -3,6 +3,18 @@
 #include <time.h>
 #include "bot.h"
 
+ESTADO* cpEst(ESTADO *est){
+	ESTADO *est1 = malloc(sizeof(ESTADO));
+	int i,i1;
+	for(i=0;i<8;i++)
+		for(i1=0;i1<8;i1++)
+			est1->tab[i][i1] = est->tab[i][i1];
+	est1->pos.x = est->pos.x;
+	est1->pos.y = est->pos.y;
+	est1->num_jogadas = est->num_jogadas;
+	est1->jogador_atual = est->jogador_atual;
+	return est1;
+}
 
 int fill(ESTADO *est1,int tab[8][8]){
 	ESTADO *est = cpEst(est1);
