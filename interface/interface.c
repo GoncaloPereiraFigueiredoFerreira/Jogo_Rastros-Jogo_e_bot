@@ -45,6 +45,7 @@ void desenha(ESTADO *est){
 		for(int x = 0;x< 8;x++){
 			if (x == 7 && y == 0) c = '2';
 			else if (x == 0 && y == 7) c = '1'; 
+			else if (est->tab[x][y] == '.') c= ' ';
 			else c = est->tab[x][y];
 			printf("| %c ",c);
 		}
@@ -70,7 +71,7 @@ void hist(ESTADO *est,FILE *f){
 void save(char cam[],ESTADO *est){
 	FILE *f;
 	int x,y;
-	COORDENADA c;
+	//COORDENADA c;
 	f = fopen(cam,"w");
 	for (x = 0;x<8;x++){
 		for (y = 0;y<8;y++){
@@ -89,12 +90,12 @@ int read(char cam[],ESTADO *est){
 	FILE *f;
 	f = fopen(cam,"r");
 	int i,i1;
-	int x,y,c = 0;
+	int c = 0;
 	if (f != NULL){
 		for (i = 0;i<8;i++){
 			fgets(cam,MAX,f);
 			for(i1 = 0;cam[i1]!='\n';i1++){
-				if (cam[i1] == '1' || cam[i1] == '2') est->tab[i][i1] = '.';
+				if (cam[i1] == '1' || cam[i1] == '2') est->tab[i][i1] = '.'; // atençao a isto em caso de mudar vazia
 				else { est->tab[i1][i] = cam [i1];
 					if (cam[i1] == '*') {
 						est->pos.x = i1;
@@ -119,13 +120,21 @@ int read(char cam[],ESTADO *est){
 	else return 1;
 }
 
+int again (){
+	int x;
+	printf("Queres voltar a jogar?\nPrime 1 se SIM ou 2 para SAIR.\n");
+	scanf("%d",&x);
+	return (x-1);
+}
+
 int interpretador(ESTADO *est) {
 	char linha[BUF_SIZE],cam[BUF_SIZE];
 	char col[2], lin[2];
 	int i;
 	if (verificaFim(est) != 0){ 
 		printf("Parab%cns player %d, Ganhaste !!!\n\n",130, verificaFim(est));//130 = é em ASCII
-		return 0;
+		if (!again()){inicia(est);limpaArr(est,0);desenha(est);delay(0.5);}
+		else return 0;
 	}	
 	else if(fgets(linha, BUF_SIZE, stdin) == NULL) return 0;	
 	else if((strlen(linha) == 3 && sscanf(linha, "%[A-H]%[1-8]", col, lin) == 2) || (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2)) {

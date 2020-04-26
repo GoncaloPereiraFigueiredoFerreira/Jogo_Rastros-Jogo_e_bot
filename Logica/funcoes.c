@@ -26,11 +26,11 @@ int jogAnt (int jog, ESTADO *est){
 	else if (jog == 0) {inicia(est);return 1;}
 	else if (jog*2 >i) {
 		est->num_jogadas= jog*2;
-		for (i;i<(est->num_jogadas)-1;i++)
+		for (;i<(est->num_jogadas)-1;i++)
 			est->tab[est->jogadas[i].x] [est->jogadas[i].y] =PRETA;}
 	else if (jog*2 <=i){
 		est->num_jogadas = jog*2;
-		for (i;i>=(est->num_jogadas);i--)
+		for (;i>=(est->num_jogadas);i--)
 			est->tab[est->jogadas[i].x] [est->jogadas[i].y] =VAZIO;}
 
 		est->tab[est->jogadas[i].x] [est->jogadas[i].y] = BRANCA;

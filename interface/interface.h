@@ -68,4 +68,8 @@ void save(char cam[],ESTADO *est);
 */
 void desenhoInicial ();
 
+
+
+int again ();
+
 #endif

@@ -12,7 +12,7 @@ void inicia(ESTADO *est){
 	est->jogador_atual = 1;
 }
 void limpaArr(ESTADO *est,int i){
-	for (i;i<64;i++){
+	for (;i<64;i++){
 		est->jogadas[i].x = -1;
 		est->jogadas[i].y = -1;
 	}
@@ -29,7 +29,7 @@ int check (ESTADO *est,COORDENADA c){
 
 LISTA jogPoss (ESTADO *est){
 	int x = est->pos.x, y = est->pos.y;
-	int i,i1,x1,y1;
+	int i,i1;
 	COORDENADA c,*c1;
 	LISTA l = criarL();
 	for(i = -1;i < 2;i++)
@@ -78,7 +78,7 @@ COORDENADA jog(ESTADO *est){
 	c = (l->valor);
 	c1.x = c->x;
 	c1.y = c->y; 
-	while (vazia(l)){
+	while (!vazia(l)){
 		free(l->valor);
 		l = removeH(l);
 	}

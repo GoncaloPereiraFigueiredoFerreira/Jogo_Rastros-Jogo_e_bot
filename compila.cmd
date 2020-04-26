@@ -9,10 +9,10 @@ cd dados
 gcc -c dados.c
 cd..
 cd bot
-gcc -c bot.c
+gcc -c -O2 bot.c
 cd..
-cd "Listas Ligadas"
+cd ListasLigadas
 gcc -c listasligadas.c
 cd..
-gcc -o principal main.o interface\interface.o Logica\funcoes.o dados\dados.o bot\bot.o "Listas Ligadas"\listasligadas.o
+gcc -o principal main.o interface\interface.o Logica\funcoes.o dados\dados.o bot\bot.o ListasLigadas\listasligadas.o
 
