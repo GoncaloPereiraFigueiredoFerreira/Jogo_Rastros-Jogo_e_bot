@@ -47,3 +47,63 @@ void delay(float msegundos) {
     clock_t inicio = clock();
     while (clock() < inicio + segundos); 
 }
+
+ESTADO* cpEst(ESTADO *est){
+	ESTADO *est1 = malloc(sizeof(ESTADO));
+	int i,i1;
+	for(i=0;i<8;i++)
+		for(i1=0;i1<8;i1++)
+			est1->tab[i][i1] = est->tab[i][i1];
+	est1->pos.x = est->pos.x;
+	est1->pos.y = est->pos.y;
+	est1->num_jogadas = est->num_jogadas;
+	est1->jogador_atual = est->jogador_atual;
+	return est1;
+}
+
+COORDENADA jog2(ESTADO *est){
+	LISTA l = jogPoss(est);
+	int v[sizeL(l)],i=0,i2;
+	LISTA l2,l3=l;
+	COORDENADA *c,c1;
+	ESTADO *est2=cpEst(est);
+	while (l3){
+		c = (l3->valor);
+		c1.x = c->x;
+		c1.y = c->y;
+		jogar(est2,c1);
+		l2 =jogPoss(est2);
+		v[i]=sizeL(l2);
+		while (!vazia(l2)){
+			free(l2->valor);
+			l2 = removeH(l2);
+		}
+		l3= l3->prox;
+		jogAnt(((est2->num_jogadas)-1),est2);
+		i++;
+	}
+	i2=i;
+	while (i!=1){
+		if (v[i-1]<=v[i]) i2=i-1;
+		i--;
+	}
+	while (i2!=0 && l) {
+		l=l->prox;
+		i2--;
+	}
+    if (l->valor) {
+    	c = (l->valor);
+		c1.x = c->x;
+		c1.y = c->y;
+    }
+    while (!vazia(l)){
+		free(l->valor);
+		l = removeH(l);
+	}
+	while (!vazia(l3)){
+		free(l3->valor);
+		l3 = removeH(l3);
+	}
+	return c1;
+}
+

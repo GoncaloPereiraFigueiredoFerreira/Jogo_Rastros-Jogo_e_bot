@@ -36,5 +36,13 @@ int jogAnt (int jog, ESTADO *est);
 @param msegundos Quantidade de segundos a que se pretende dar delay
 */
 void delay(float msegundos);
+///////////////////
+/**
+\brief Função que retorna uma jogada possivél com uma estratégia diferente à jog
+@param est Apontador para o estado
+*/
+COORDENADA jog2(ESTADO *est);
 
+ESTADO* cpEst(ESTADO *est);
+/////////////////////
 #endif

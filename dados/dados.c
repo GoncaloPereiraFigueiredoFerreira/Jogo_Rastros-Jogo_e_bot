@@ -82,5 +82,8 @@ COORDENADA jog(ESTADO *est){
 		free(l->valor);
 		l = removeH(l);
 	}
+	printf("xd\n");
 	return c1;
 }
+
+

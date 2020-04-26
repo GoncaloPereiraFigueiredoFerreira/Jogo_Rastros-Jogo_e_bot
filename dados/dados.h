@@ -87,5 +87,7 @@ int verificaFim (ESTADO *est);
 */
 COORDENADA jog(ESTADO *est);
 
+
+
 void limpaArr(ESTADO *est,int i);//Função que inicia o array de jogadas
 #endif
