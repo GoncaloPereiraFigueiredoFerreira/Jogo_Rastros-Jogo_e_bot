@@ -1,10 +1,10 @@
 
-echo "gcc -c -O2 interface/interface.c main.c Logica/funcoes.c dados/dados.c bot/bot.c ListasLigadas/listasligadas.c"
-gcc -c interface/interface.c main.c Logica/funcoes.c dados/dados.c bot/bot.c ListasLigadas/listasligadas.c
+echo "gcc -c -O2 interface/interface.c main.c Logica/funcoes.c dados/dados.c bot/bot.c ListasLigadas/listasligadas.c gen.c"
+gcc -c interface/interface.c main.c Logica/funcoes.c dados/dados.c bot/bot.c ListasLigadas/listasligadas.c gen.c
 echo "gcc -o main main.o interface.o funcoes.o dados.o bot.o listasligadas.o"
 gcc -o main main.o interface.o funcoes.o dados.o bot.o listasligadas.o
-#echo "gcc -o bot bot.o interface.o funcoes.o dados.o"
-#gcc -o b bot.o interface.o funcoes.o dados.o
+echo "gcc -o gen gen.o interface.o funcoes.o dados.o bot.o listasligadas.o"
+gcc -o gen gen.o interface.o funcoes.o dados.o bot.o listasligadas.o
 
 for i in *.o
 do 

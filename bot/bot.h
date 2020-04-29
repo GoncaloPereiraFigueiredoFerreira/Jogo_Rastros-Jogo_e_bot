@@ -10,9 +10,9 @@
 
 ESTADO* cpEst(ESTADO *est);
 int dist(COORDENADA c,COORDENADA c1);
-int value(ESTADO *est,int jog);
-int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t);
+int value(ESTADO *est,int jog,int gen[]);
+int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t,int gen[]);
 int fill(ESTADO *est1,int tab[8][8]);
-COORDENADA bot (ESTADO *est);
+COORDENADA bot (ESTADO *est,int gen[]);
 
 #endif
