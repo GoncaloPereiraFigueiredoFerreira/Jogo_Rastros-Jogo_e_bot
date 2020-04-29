@@ -84,3 +84,79 @@ COORDENADA jog(ESTADO *est){
 	}
 	return c1;
 }
+
+double dist1 (COORDENADA *a){
+	return (sqrt ( pow(7-(a->x),2) + pow(0-(a->y),2))); 
+}
+
+COORDENADA jog2 (ESTADO *est){
+	LISTA L = jogPoss(est);
+	COORDENADA *c, c1;
+	c = (L->valor);
+	c1=*c;
+	double a = dist1 (&est->pos);
+	while (L){
+		if (est->jogador_atual == 1 && dist1(c)>a){
+			c1=*c;
+			a=dist1(c);
+		}
+		if (est->jogador_atual == 2 && dist1(c)<a){
+			c1=*c;
+			a=dist1(c);
+		}
+		L=L->prox;
+		if (L) c=L->valor;
+	}
+	return c1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+COORDENADA jog2(ESTADO *est){
+	LISTA L = jogPoss(est);
+	int i = sizeL(L);
+	COORDENADA *c,c1,c2;
+	c = L->valor;
+	c1.x = c2.x = c->x;
+	c1.y = c2.y = c->y;
+	if (est->jogador_atual==1){
+		while (L->prox){
+			if (c1.x + c1.y <= c2.x + c2.y) {
+				c2.x = c1.x;
+				c2.y = c1.y;
+			}
+			L = L->prox;
+			c = L->valor;
+			c1.x=c->x;
+			c1.y=c->y;
+		}
+	}
+	else {
+		while (L->prox){
+			if ((c1.x+c1.y)>=(c2.x+c2.y)){
+				c2.x = c1.x;
+				c2.y = c1.y;
+			} 
+			L = L->prox;
+			c = L->valor;
+			c1.x=c->x;
+			c1.y=c->y;
+		}
+	}
+	while (!vazia(L)){
+		free(L->valor);
+		L = removeH(L);
+	}
+	return c2;
+}
+
+*/

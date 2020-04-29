@@ -30,6 +30,16 @@ LISTA removeH(LISTA L){
 	free (L);
 	return a;
 }
+
+int sizeL(LISTA L){
+	int i=0;
+	while (L) {
+	i++;
+	L=L->prox;
+	}
+	return i;
+}
+
 int vazia(LISTA L){
 	return (L)?0:1;
 }

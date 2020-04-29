@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['num_5fjogadas',['num_jogadas',['../structESTADO.html#a261495728744647e618b4e623f5a4b7a',1,'ESTADO']]]
+  ['movs',['movs',['../dados_8h.html#a74469889c470bfe2bc9d32d65e851313',1,'dados.c']]]
 ];

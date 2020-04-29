@@ -44,6 +44,12 @@ LISTA proximo(LISTA L);
 LISTA removeH(LISTA L);
 
 /**
+\brief Devolve a tamanho da lista
+@param L lista
+*/
+int sizeL(LISTA L);
+
+/**
 \brief Verifica se a lista está vazia
 @param L Lista
 */

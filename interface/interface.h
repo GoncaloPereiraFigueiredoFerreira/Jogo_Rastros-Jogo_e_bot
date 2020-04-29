@@ -68,8 +68,9 @@ void save(char cam[],ESTADO *est);
 */
 void desenhoInicial ();
 
-
-
+/**
+\brief Função que pergunta ao utilizador se deseja jogar novamente
+*/
 int again ();
 
 #endif

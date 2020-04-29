@@ -171,6 +171,7 @@ int interpretador(ESTADO *est) {
 		putchar('\n');
 	}
 	else if (strcmp(linha,"jog\n") == 0) {jogar(est,jog(est));desenha(est);}
+	else if (strcmp(linha,"jog2\n") == 0) {jogar(est,jog2(est));desenha(est);}
 	else if (linha[0] == 'Q') return 0;
 	else printf("\nComando Inv%clido!\n\n",160);//160 = á em ASCII
 	return 1;
