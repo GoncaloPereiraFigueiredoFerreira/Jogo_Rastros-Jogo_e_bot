@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 #define POP 100
-#define CAR 8
+#define CAR 2
 
 int jogo(int gen[],int gen1[]){
 	clock_t diff,t = clock();
@@ -54,7 +54,7 @@ int main(){
 	int gen[POP*CAR],score[POP];
 	FILE *f;
 	srand(time(0));
-	for(i = 0;i<(POP)*CAR;i++) gen[i] = 15;//rand()%101;
+	for(i = 0;i<(POP)*CAR;i++) gen[i] = rand()%31;
 	for(t = 0;t<100;t++){
 		for(i1 = 0;i1<POP;i1++) score[i1] = 0;
 		for(i = 0;i<POP;i++){

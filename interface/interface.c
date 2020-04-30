@@ -166,8 +166,7 @@ int interpretador(ESTADO *est) {
 
 	}
 	else if (strcmp(linha,"bot\n") == 0){ 
-		int gen[] = {6,0,21,15,4,30,1,19};
-		showCOORD(bot(est,gen));
+		showCOORD(bot(est));
 		putchar('\n');
 	}
 	else if (strcmp(linha,"jog\n") == 0) {jogar(est,jog(est));desenha(est);}

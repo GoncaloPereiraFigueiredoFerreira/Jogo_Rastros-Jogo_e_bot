@@ -1,6 +1,5 @@
 #include "../Logica/funcoes.h"
 #include "../interface/interface.h"
-#include <time.h>
 #include "bot.h"
 
 ESTADO* cpEst(ESTADO *est){
@@ -36,7 +35,6 @@ int fill(ESTADO *est1,int tab[8][8]){
 					t++;
 					empty++;
 					if (tab[x][y]+1<tab[c.x][c.y]) tab[c.x][c.y] = tab[x][y] + 1;
-//	for (x1 = 0;x1<8;x1++){for(y1 = 0;y1<8;y1++) printf("%2d,",tab[y1][x1]);putchar('\n');}putchar('\n');}
 				}
 			}
 		est->pos = q[i];
@@ -47,35 +45,31 @@ int fill(ESTADO *est1,int tab[8][8]){
 	return empty;
 }
 
-int dist(COORDENADA c,COORDENADA c1){
-	return (c.x - c1.x)*(c.x - c1.x)+(c.y - c1.y)*(c.y - c1.y);}
-
-int value(ESTADO *est,int jog,int gen[]){
+int value(ESTADO *est,int jog){
 	int player = est->jogador_atual;
 	int tab[8][8],f,total = 0;
-	//COORDENADA c;
 	f = fill(est,tab);
 	if (jog < 0) {
 		player = (player)%2+1;
-		total += f%2*(gen[0]+gen[7]*f);
+		total += f%2*(50/f);
 	}
-	else {total += (f+1)%2*(gen[0]+gen[7]*f);}
+	else total += (f+1)%2*(50/f);
 	if (player == 1){
-		if(tab[0][7] == 64) total += gen[1];
-		else total -= tab[0][7]*gen[3]+gen[4];
-		if(tab[7][0] == 64) total -= gen[2];
-		else total += tab[7][0]*gen[5]+gen[6];
+		if(tab[0][7] == 64) total += 10;
+		else total -= tab[0][7];
+		if(tab[7][0] == 64) total -= 15;
+		else total += tab[7][0]+5;
 	}
 	else {
-		if(tab[7][0] == 64) total += gen[1];
-		else total -= tab[7][0]*gen[3]+gen[4];
-		if(tab[0][7] == 64) total -= gen[2];
-		else total += tab[0][7]*gen[5]+gen[6];
+		if(tab[7][0] == 64) total += 10;
+		else total -= tab[7][0];
+		if(tab[0][7] == 64) total -= 15;
+		else total += tab[0][7]+5;
 	}
 	return total;
 }
 
-int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t,int gen[]){
+int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t){
 	int n,score,mscore,i = 0;
 	COORDENADA m[8];
 	n = verificaFim(est);
@@ -84,16 +78,15 @@ int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t,int gen[]){
 	if(n){
 		if(est->jogador_atual == n) mscore = jog*MSCORE;
 		else mscore = -jog*MSCORE;
-		//printf("Final-%d   jog-%d   depth-%d  winner-%d\n",mscore,jog,depth,n);
 	}
-	else if(!depth) mscore = value(est,jog,gen);
+	else if(!depth) mscore = value(est,jog);
 	else{
 		n = movs(est,m);
-		if (n == 1){atualizaEstado(est1,m[0]);mscore = minmax(est1,-jog,depth,max,min,t,gen);}
+		if (n == 1){atualizaEstado(est1,m[0]);mscore = minmax(est1,-jog,depth,max,min,t);}
 		else{
 			for(i = 0;i<n;i++){
 				atualizaEstado(est1,m[i]);
-				score = minmax(est1,-jog,depth-1,max,min,t,gen);
+				score = minmax(est1,-jog,depth-1,max,min,t);
 	//			printf("%d<%d\n",score*jog,mscore*jog);
 				if (score*jog > mscore*jog) mscore = score;
 				if (jog > 0) {if (max < score) max = score;}
@@ -109,9 +102,8 @@ int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t,int gen[]){
 	return mscore;
 }
 
-COORDENADA bot (ESTADO *est,int gen[]){
+COORDENADA bot (ESTADO *est){
 	int n,i,score,mscore,min,max,t = 0,r = 0,depth,tab[8][8];
-//	clock_t time = clock();
 	COORDENADA m[8];
 	ESTADO *est1;
 	est1 = cpEst(est);
@@ -121,30 +113,27 @@ COORDENADA bot (ESTADO *est,int gen[]){
 	min = MSCORE;
 	i = fill(est,tab);
 //	printf("%d\n",i);
-/*	
+
 	if (i == 63) depth = DEPTH *0.45;
 	else if (i>55) depth = DEPTH * 0.5;
 	else if (i>45) depth = DEPTH * 0.55;
 	else if (i>35) depth = DEPTH * 0.60;
 	else if (i>30) depth = DEPTH * 0.70;
 	else depth = DEPTH;
-*/
-	depth = 0;
-//	printf("%d\n",depth); 
+
+	printf("%d\n",depth); 
 	if (n == 1){free(est1);return m[0];}
 	for(i = 0;i<n;i++){
 		atualizaEstado(est1,m[i]);
-		score = minmax(est1,-1,depth,max,min,&t,gen);
+		score = minmax(est1,-1,depth,max,min,&t);
 		if (score > mscore) {mscore = score;r = i;}
 		if (max < score) max = score;
-//		showCOORD(m[i]);printf("-%d, min = %d,max = %d,nodos = %d\n",score,min,max,t);
+		showCOORD(m[i]);printf("-%d, min = %d,max = %d,nodos = %d\n",score,min,max,t);
 		if (max >= min) i = n; 
 		t = 0;
 		free(est1);
 		est1 = cpEst(est);
 	}
 	free(est1);
-//	clock_t diff = (clock()-time);
-//	printf("tempo-%ldms\n",diff*1000/CLOCKS_PER_SEC);
 	return m[r];
 }
