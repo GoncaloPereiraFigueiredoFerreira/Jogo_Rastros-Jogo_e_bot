@@ -10,7 +10,7 @@ desenvolvido para o jogo.
 #Bot
 
   No que diz respeito ao nosso bot, utilizamos como algoritmo principal, minmax, e para o otimizar utilizamos
-estrategia alpha-beta pruning, que reduz bastante o tempo de processamente. Para as valorações atribuidas às
-jogadas no algoritmo, criamos um algoritmo baseado no flood fill para nos indicar, as distancias de cada casa e
-se as era possivel alcançar. Por fim a profundidade do minmax, é também adaptativa, aumentando consoante o jogo
+estratégia alpha-beta pruning, que reduz bastante o tempo de processamento. Para as valorações atribuidas às
+jogadas no algoritmo, criamos um algoritmo baseado no flood fill para nos indicar, as distâncias de cada casa ao
+bot e se as era possivel alcançar. Por fim a profundidade do minmax, é também adaptativa, aumentando consoante o jogo
 se desenrola, de forma a ganhar performance.
