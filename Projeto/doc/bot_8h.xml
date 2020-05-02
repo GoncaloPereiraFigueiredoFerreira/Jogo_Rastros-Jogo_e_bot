@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="bot_8h" kind="file" language="C++">
+    <compoundname>bot.h</compoundname>
+    <includes refid="interface_8h" local="yes">../interface/interface.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="funcoes_8h" local="yes">../Logica/funcoes.h</includes>
+    <includedby refid="interface_8h" local="yes">interface/interface.h</includedby>
+    <includedby refid="bot_8c" local="yes">bot/bot.c</includedby>
+    <includedby refid="mainBOTS_8c" local="yes">bot/mainBOTS.c</includedby>
+    <incdepgraph>
+      <node id="18">
+        <label>../ListasLigadas/listasligadas.h</label>
+        <link refid="listasligadas_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../Logica/funcoes.h</label>
+        <link refid="funcoes_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>stdlib.h</label>
+      </node>
+      <node id="15">
+        <label>../dados/dados.h</label>
+        <link refid="dados_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>../interface/interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>bot/bot.h</label>
+        <link refid="bot_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>string.h</label>
+      </node>
+      <node id="20">
+        <label>time.h</label>
+      </node>
+      <node id="19">
+        <label>math.h</label>
+      </node>
+      <node id="17">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="23">
+        <label>interface/interface.h</label>
+        <link refid="interface_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>bot/bot.h</label>
+        <link refid="bot_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="bot_8h_1a50267d552ca6f788254032e40046b770" prot="public" static="no">
+        <name>DEPTH</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bot/bot.h" line="8" column="13" bodyfile="bot/bot.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bot_8h_1a89de230c297d08d8af596441ac24c572" prot="public" static="no">
+        <name>MSCORE</name>
+        <initializer>100000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bot/bot.h" line="9" column="9" bodyfile="bot/bot.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="bot_8h_1ac0fd6f5e226ae2b83bd77a8927ec2b39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+        <definition>ESTADO* cpEst</definition>
+        <argsstring>(ESTADO *est)</argsstring>
+        <name>cpEst</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>est</declname>
+        </param>
+        <briefdescription>
+<para>Função que dado um estado cria um novo e copia a informação do estado dado. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>est</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Estado que se pretende copiar </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bot/bot.h" line="20" column="1" bodyfile="bot/bot.c" bodystart="5" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="bot_8h_1aa2e1e7ebee4e22c3b890cb4d7c926e15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int value</definition>
+        <argsstring>(ESTADO *est, int jog)</argsstring>
+        <name>value</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>est</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>jog</declname>
+        </param>
+        <briefdescription>
+<para>Dá um valor ao estado dado de forma a depois ser escolhido a jogada mais favoravel dependendo se o jog é -1 ou 1. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>est</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>jog</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor que dita se é o jogador adversário a jogar (sendo jog=-1) ou o bot a jogar (1) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bot/bot.h" line="27" column="1" bodyfile="bot/bot.c" bodystart="18" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="bot_8h_1a1b216b79590fa8ebf2b610effa6604bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int minmax</definition>
+        <argsstring>(ESTADO *est, int jog, int depth, int max, int min, int *t)</argsstring>
+        <name>minmax</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>est</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>jog</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Implementação da função MinMax. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>est</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>jog</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor que dita se é o jogador adversário a jogar (sendo jog=-1) ou o bot a jogar (1) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Profundidade máxima da árvore de escolhas </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor máximo atribuido a um estado que a árvore consegui achar </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Menor valor atribuido a um estado que a árvore consegui achar </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bot/bot.h" line="37" column="1" bodyfile="bot/bot.c" bodystart="42" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="bot_8h_1a8952c0a67a49cd25e65ff05b8977a9df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fill</definition>
+        <argsstring>(ESTADO *est1, int tab[8][8])</argsstring>
+        <name>fill</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>est1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tab</declname>
+          <array>[8][8]</array>
+        </param>
+        <briefdescription>
+<para>Implementação da função Floodfill. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>est1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tab</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tabuleiro que contem as distancias reais a cada peça </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bot/bot.h" line="44" column="1" bodyfile="bot/bot.c" bodystart="75" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="bot_8h_1ab26bde8f7658d4f28cb4632f8bda2d9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
+        <definition>COORDENADA bot</definition>
+        <argsstring>(ESTADO *est)</argsstring>
+        <name>bot</name>
+        <param>
+          <type><ref refid="structESTADO" kindref="compound">ESTADO</ref> *</type>
+          <declname>est</declname>
+        </param>
+        <briefdescription>
+<para>Inicialização da função MinMax. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>est</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bot/bot.h" line="50" column="1" bodyfile="bot/bot.c" bodystart="105" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PL6_4_BOT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PL6_4_BOT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../interface/interface.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Logica/funcoes.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEPTH<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MSCORE<sp/>100000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><ref refid="structESTADO" kindref="compound">ESTADO</ref>*<sp/><ref refid="bot_8h_1ac0fd6f5e226ae2b83bd77a8927ec2b39" kindref="member">cpEst</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bot_8h_1aa2e1e7ebee4e22c3b890cb4d7c926e15" kindref="member">value</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dados_8h_1a7c119b132d591342cecf42ca1d64e39b" kindref="member">jog</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bot_8h_1a1b216b79590fa8ebf2b610effa6604bb" kindref="member">minmax</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dados_8h_1a7c119b132d591342cecf42ca1d64e39b" kindref="member">jog</ref>,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>depth,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*t);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bot_8h_1a8952c0a67a49cd25e65ff05b8977a9df" kindref="member">fill</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est1,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tab[8][8]);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="bot_8h_1ab26bde8f7658d4f28cb4632f8bda2d9e" kindref="member">bot</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="bot/bot.h"/>
+  </compounddef>
+</doxygen>

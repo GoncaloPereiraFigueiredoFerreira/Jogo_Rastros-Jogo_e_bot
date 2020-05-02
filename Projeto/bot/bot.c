@@ -15,36 +15,6 @@ ESTADO* cpEst(ESTADO *est){
 	return est1;
 }
 
-int fill(ESTADO *est1,int tab[8][8]){
-	ESTADO *est = cpEst(est1);
-	COORDENADA q[25],c;
-	int x,y,j,j1,i = 0,t = 0,empty = 0;
-	for(x = 0;x<8;x++)
-		for(y = 0;y<8;y++) tab[x][y] = 64;
-	tab[est->pos.x][est->pos.y]=0;
-	while (t >= 0){
-		x = est->pos.x;
-		y = est->pos.y;
-		for(j = -1;j<2;j++)
-			for(j1 = -1;j1<2;j1++){
-				c.x = x+j;
-				c.y = y+j1;
-				if (x+j >= 0 && y+j1 >= 0 && x+j < 8 && y+j1 < 8 && check(est,c)){
-					q[(i+t)%25] = c;
-					est->tab[c.x][c.y] = '*';
-					t++;
-					empty++;
-					if (tab[x][y]+1<tab[c.x][c.y]) tab[c.x][c.y] = tab[x][y] + 1;
-				}
-			}
-		est->pos = q[i];
-		i = (i+1)%25;
-		t--;
-	}
-	free(est);
-	return empty;
-}
-
 int value(ESTADO *est,int jog){
 	int player = est->jogador_atual;
 	int tab[8][8],f,total = 0;
@@ -100,6 +70,36 @@ int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t){
 	}
 	free(est1);
 	return mscore;
+}
+
+int fill(ESTADO *est1,int tab[8][8]){
+	ESTADO *est = cpEst(est1);
+	COORDENADA q[25],c;
+	int x,y,j,j1,i = 0,t = 0,empty = 0;
+	for(x = 0;x<8;x++)
+		for(y = 0;y<8;y++) tab[x][y] = 64;
+	tab[est->pos.x][est->pos.y]=0;
+	while (t >= 0){
+		x = est->pos.x;
+		y = est->pos.y;
+		for(j = -1;j<2;j++)
+			for(j1 = -1;j1<2;j1++){
+				c.x = x+j;
+				c.y = y+j1;
+				if (x+j >= 0 && y+j1 >= 0 && x+j < 8 && y+j1 < 8 && check(est,c)){
+					q[(i+t)%25] = c;
+					est->tab[c.x][c.y] = '*';
+					t++;
+					empty++;
+					if (tab[x][y]+1<tab[c.x][c.y]) tab[c.x][c.y] = tab[x][y] + 1;
+				}
+			}
+		est->pos = q[i];
+		i = (i+1)%25;
+		t--;
+	}
+	free(est);
+	return empty;
 }
 
 COORDENADA bot (ESTADO *est){

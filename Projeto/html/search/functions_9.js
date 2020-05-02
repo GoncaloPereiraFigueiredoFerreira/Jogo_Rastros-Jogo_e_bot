@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['read',['read',['../interface_8h.html#a55f2f48c114580af4ce030e94b717a5e',1,'interface.c']]],
-  ['removeh',['removeH',['../listasligadas_8h.html#a70069e763001b14092476ee48d6aee58',1,'listasligadas.c']]]
+  ['minmax',['minmax',['../bot_8h.html#a1b216b79590fa8ebf2b610effa6604bb',1,'bot.c']]],
+  ['movs',['movs',['../dados_8h.html#a74469889c470bfe2bc9d32d65e851313',1,'dados.c']]]
 ];

@@ -1,0 +1,122 @@
+\hypertarget{bot_8h}{}\section{bot/bot.h File Reference}
+\label{bot_8h}\index{bot/bot.\+h@{bot/bot.\+h}}
+{\ttfamily \#include \char`\"{}../interface/interface.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Logica/funcoes.\+h\char`\"{}}\newline
+Include dependency graph for bot.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{bot_8h_a50267d552ca6f788254032e40046b770}\label{bot_8h_a50267d552ca6f788254032e40046b770}} 
+\#define {\bfseries D\+E\+P\+TH}~20
+\item 
+\mbox{\Hypertarget{bot_8h_a89de230c297d08d8af596441ac24c572}\label{bot_8h_a89de230c297d08d8af596441ac24c572}} 
+\#define {\bfseries M\+S\+C\+O\+RE}~100000
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$ \hyperlink{bot_8h_ac0fd6f5e226ae2b83bd77a8927ec2b39}{cp\+Est} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
+\begin{DoxyCompactList}\small\item\em Função que dado um estado cria um novo e copia a informação do estado dado. \end{DoxyCompactList}\item 
+int \hyperlink{bot_8h_aa2e1e7ebee4e22c3b890cb4d7c926e15}{value} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est, int \hyperlink{dados_8h_a7c119b132d591342cecf42ca1d64e39b}{jog})
+\begin{DoxyCompactList}\small\item\em Dá um valor ao estado dado de forma a depois ser escolhido a jogada mais favoravel dependendo se o jog é -\/1 ou 1. \end{DoxyCompactList}\item 
+int \hyperlink{bot_8h_a1b216b79590fa8ebf2b610effa6604bb}{minmax} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est, int \hyperlink{dados_8h_a7c119b132d591342cecf42ca1d64e39b}{jog}, int depth, int max, int min, int $\ast$t)
+\begin{DoxyCompactList}\small\item\em Implementação da função Min\+Max. \end{DoxyCompactList}\item 
+int \hyperlink{bot_8h_a8952c0a67a49cd25e65ff05b8977a9df}{fill} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est1, int tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]})
+\begin{DoxyCompactList}\small\item\em Implementação da função Floodfill. \end{DoxyCompactList}\item 
+\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} \hyperlink{bot_8h_ab26bde8f7658d4f28cb4632f8bda2d9e}{bot} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
+\begin{DoxyCompactList}\small\item\em Inicialização da função Min\+Max. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{bot_8h_ab26bde8f7658d4f28cb4632f8bda2d9e}\label{bot_8h_ab26bde8f7658d4f28cb4632f8bda2d9e}} 
+\index{bot.\+h@{bot.\+h}!bot@{bot}}
+\index{bot@{bot}!bot.\+h@{bot.\+h}}
+\subsubsection{\texorpdfstring{bot()}{bot()}}
+{\footnotesize\ttfamily \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} bot (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
+
+
+
+Inicialização da função Min\+Max. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bot_8h_ac0fd6f5e226ae2b83bd77a8927ec2b39}\label{bot_8h_ac0fd6f5e226ae2b83bd77a8927ec2b39}} 
+\index{bot.\+h@{bot.\+h}!cp\+Est@{cp\+Est}}
+\index{cp\+Est@{cp\+Est}!bot.\+h@{bot.\+h}}
+\subsubsection{\texorpdfstring{cp\+Est()}{cpEst()}}
+{\footnotesize\ttfamily \hyperlink{structESTADO}{E\+S\+T\+A\+DO}$\ast$ cp\+Est (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
+
+
+
+Função que dado um estado cria um novo e copia a informação do estado dado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Estado que se pretende copiar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bot_8h_a8952c0a67a49cd25e65ff05b8977a9df}\label{bot_8h_a8952c0a67a49cd25e65ff05b8977a9df}} 
+\index{bot.\+h@{bot.\+h}!fill@{fill}}
+\index{fill@{fill}!bot.\+h@{bot.\+h}}
+\subsubsection{\texorpdfstring{fill()}{fill()}}
+{\footnotesize\ttfamily int fill (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est1,  }\item[{int}]{tab\mbox{[}8\mbox{]}\mbox{[}8\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Implementação da função Floodfill. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est1} & Apontador para o estado \\
+\hline
+{\em tab} & Tabuleiro que contem as distancias reais a cada peça \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bot_8h_a1b216b79590fa8ebf2b610effa6604bb}\label{bot_8h_a1b216b79590fa8ebf2b610effa6604bb}} 
+\index{bot.\+h@{bot.\+h}!minmax@{minmax}}
+\index{minmax@{minmax}!bot.\+h@{bot.\+h}}
+\subsubsection{\texorpdfstring{minmax()}{minmax()}}
+{\footnotesize\ttfamily int minmax (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est,  }\item[{int}]{jog,  }\item[{int}]{depth,  }\item[{int}]{max,  }\item[{int}]{min,  }\item[{int $\ast$}]{t }\end{DoxyParamCaption})}
+
+
+
+Implementação da função Min\+Max. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para o estado \\
+\hline
+{\em jog} & Valor que dita se é o jogador adversário a jogar (sendo jog=-\/1) ou o bot a jogar (1) \\
+\hline
+{\em depth} & Profundidade máxima da árvore de escolhas \\
+\hline
+{\em max} & Valor máximo atribuido a um estado que a árvore consegui achar \\
+\hline
+{\em min} & Menor valor atribuido a um estado que a árvore consegui achar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bot_8h_aa2e1e7ebee4e22c3b890cb4d7c926e15}\label{bot_8h_aa2e1e7ebee4e22c3b890cb4d7c926e15}} 
+\index{bot.\+h@{bot.\+h}!value@{value}}
+\index{value@{value}!bot.\+h@{bot.\+h}}
+\subsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily int value (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est,  }\item[{int}]{jog }\end{DoxyParamCaption})}
+
+
+
+Dá um valor ao estado dado de forma a depois ser escolhido a jogada mais favoravel dependendo se o jog é -\/1 ou 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para o estado \\
+\hline
+{\em jog} & Valor que dita se é o jogador adversário a jogar (sendo jog=-\/1) ou o bot a jogar (1) \\
+\hline
+\end{DoxyParams}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['listasligadas_2eh',['listasligadas.h',['../listasligadas_8h.html',1,'']]]
+  ['interface_2eh',['interface.h',['../interface_8h.html',1,'']]]
 ];
