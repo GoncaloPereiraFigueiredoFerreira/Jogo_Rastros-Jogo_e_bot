@@ -1,4 +1,4 @@
-gcc -c main.c
+gcc -c mainBOTS.c
 cd Logica
 gcc -c funcoes.c
 cd..
