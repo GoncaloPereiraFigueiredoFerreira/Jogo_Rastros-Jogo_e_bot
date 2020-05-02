@@ -101,7 +101,7 @@ int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t){
 }
 
 COORDENADA bot (ESTADO *est){
-	int n,i,score,mscore,min,max,t = 0,r = 0,depth,tab[8][8];
+	int n,i,score,mscore,min,max,t = 0,r = 0,depth,tab[8][8],t1=0;
 	COORDENADA m[8];
 	ESTADO *est1;
 	est1 = cpEst(est);
@@ -124,7 +124,8 @@ COORDENADA bot (ESTADO *est){
 	for(i = 0;i<n;i++){
 		atualizaEstado(est1,m[i]);
 		score = minmax(est1,-1,depth,max,min,&t);
-		if (score > mscore) {mscore = score;r = i;}
+		if (score > mscore && score != -MSCORE) {mscore = score;r = i;}
+		else if (score == -MSCORE && t1<t) {r = i;t1 = t;}
 		if (max < score) max = score;
 		//showCOORD(m[i]);printf("-%d, min = %d,max = %d,nodos = %d\n",score,min,max,t);
 		if (max >= min) i = n; 
