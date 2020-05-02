@@ -126,7 +126,7 @@ COORDENADA bot (ESTADO *est){
 		score = minmax(est1,-1,depth,max,min,&t);
 		if (score > mscore) {mscore = score;r = i;}
 		if (max < score) max = score;
-		//showCOORD(m[i]);printf("-%d, min = %d,max = %d,nodos = %d\n",score,min,max,t);
+		showCOORD(m[i]);printf("-%d, min = %d,max = %d,nodos = %d\n",score,min,max,t);
 		if (max >= min) i = n; 
 		t = 0;
 		free(est1);
