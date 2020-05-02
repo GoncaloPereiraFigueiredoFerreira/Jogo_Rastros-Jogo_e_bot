@@ -3,4 +3,181 @@
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}../\+Listas\+Ligadas/listasligadas.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
 Include dependency graph for dados.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}
+\begin{DoxyCompactList}\small\item\em Dados das coordenadas. \end{DoxyCompactList}\item 
+struct \hyperlink{structESTADO}{E\+S\+T\+A\+DO}
+\begin{DoxyCompactList}\small\item\em Informação que o estado contem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{dados_8h_a92f70ff132400975cac8cc88719163e5}\label{dados_8h_a92f70ff132400975cac8cc88719163e5}} 
+typedef \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} \hyperlink{dados_8h_a92f70ff132400975cac8cc88719163e5}{J\+O\+G\+A\+D\+AS}\mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array com todas as posições ocupadas por peças pretas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{dados_8h_aba91601f16d4c485b2d9b8c429f27039}\label{dados_8h_aba91601f16d4c485b2d9b8c429f27039}} 
+enum \hyperlink{dados_8h_aba91601f16d4c485b2d9b8c429f27039}{C\+A\+SA} \{ {\bfseries V\+A\+Z\+IO} = \textquotesingle{}.\textquotesingle{}, 
+{\bfseries B\+R\+A\+N\+CA} = \textquotesingle{}$\ast$\textquotesingle{}, 
+{\bfseries P\+R\+E\+TA} = \textquotesingle{}\#\textquotesingle{}
+ \}\begin{DoxyCompactList}\small\item\em Dados das varias casas. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{dados_8h_a64da8cb7611cf3d5aba6a4414a0abb92}{inicia} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
+\begin{DoxyCompactList}\small\item\em Função que coloca o estado na sua posição inicial. \end{DoxyCompactList}\item 
+\hyperlink{structlligada}{L\+I\+S\+TA} \hyperlink{dados_8h_ac27ab41d705f6107cf34c5c3fbf8bf2e}{jog\+Poss} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
+\begin{DoxyCompactList}\small\item\em Função que cria uma lista ligada das possiveis jogadas. \end{DoxyCompactList}\item 
+int \hyperlink{dados_8h_a74469889c470bfe2bc9d32d65e851313}{movs} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} mvs\mbox{[}8\mbox{]})
+\begin{DoxyCompactList}\small\item\em Dá o numero de jogadas possiveis e enche o array com essas jogadas. \end{DoxyCompactList}\item 
+int \hyperlink{dados_8h_aee107ab0b8442caeaac72be171f20fc1}{check} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est, \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} c)
+\begin{DoxyCompactList}\small\item\em Vê se é possivél fazer uma jogada. \end{DoxyCompactList}\item 
+int \hyperlink{dados_8h_a2a73885e5d652f9186c670e43cbc741b}{verifica\+Fim} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
+\begin{DoxyCompactList}\small\item\em Verifica se algum dos jogadores já ganhou. \end{DoxyCompactList}\item 
+\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} \hyperlink{dados_8h_a7c119b132d591342cecf42ca1d64e39b}{jog} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
+\begin{DoxyCompactList}\small\item\em Função que retorna um jogada possivel. \end{DoxyCompactList}\item 
+\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} \hyperlink{dados_8h_aea7a5f8f2b2fca969f836448ea8a469c}{jog2} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est)
+\begin{DoxyCompactList}\small\item\em Função que retorna uma jogada possivél com uma estratégia diferente à jog. \end{DoxyCompactList}\item 
+void \hyperlink{dados_8h_a303cbcfe5e2680baf24b96075827b16e}{limpa\+Arr} (\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$est, int i)
+\begin{DoxyCompactList}\small\item\em Função que inicia o array de jogadas. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{dados_8h_a75c0c242b6cefa2bfbec1297a3228023}\label{dados_8h_a75c0c242b6cefa2bfbec1297a3228023}} 
+double {\bfseries dist1} (\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} $\ast$a)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{dados_8h_aee107ab0b8442caeaac72be171f20fc1}\label{dados_8h_aee107ab0b8442caeaac72be171f20fc1}} 
+\index{dados.\+h@{dados.\+h}!check@{check}}
+\index{check@{check}!dados.\+h@{dados.\+h}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int check (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{c }\end{DoxyParamCaption})}
+
+
+
+Vê se é possivél fazer uma jogada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para o estado \\
+\hline
+{\em c} & Jogada pretendida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dados_8h_a64da8cb7611cf3d5aba6a4414a0abb92}\label{dados_8h_a64da8cb7611cf3d5aba6a4414a0abb92}} 
+\index{dados.\+h@{dados.\+h}!inicia@{inicia}}
+\index{inicia@{inicia}!dados.\+h@{dados.\+h}}
+\subsubsection{\texorpdfstring{inicia()}{inicia()}}
+{\footnotesize\ttfamily void inicia (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
+
+
+
+Função que coloca o estado na sua posição inicial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dados_8h_a7c119b132d591342cecf42ca1d64e39b}\label{dados_8h_a7c119b132d591342cecf42ca1d64e39b}} 
+\index{dados.\+h@{dados.\+h}!jog@{jog}}
+\index{jog@{jog}!dados.\+h@{dados.\+h}}
+\subsubsection{\texorpdfstring{jog()}{jog()}}
+{\footnotesize\ttfamily \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} jog (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
+
+
+
+Função que retorna um jogada possivel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dados_8h_aea7a5f8f2b2fca969f836448ea8a469c}\label{dados_8h_aea7a5f8f2b2fca969f836448ea8a469c}} 
+\index{dados.\+h@{dados.\+h}!jog2@{jog2}}
+\index{jog2@{jog2}!dados.\+h@{dados.\+h}}
+\subsubsection{\texorpdfstring{jog2()}{jog2()}}
+{\footnotesize\ttfamily \hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA} jog2 (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma jogada possivél com uma estratégia diferente à jog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para o estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dados_8h_ac27ab41d705f6107cf34c5c3fbf8bf2e}\label{dados_8h_ac27ab41d705f6107cf34c5c3fbf8bf2e}} 
+\index{dados.\+h@{dados.\+h}!jog\+Poss@{jog\+Poss}}
+\index{jog\+Poss@{jog\+Poss}!dados.\+h@{dados.\+h}}
+\subsubsection{\texorpdfstring{jog\+Poss()}{jogPoss()}}
+{\footnotesize\ttfamily \hyperlink{structlligada}{L\+I\+S\+TA} jog\+Poss (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
+
+
+
+Função que cria uma lista ligada das possiveis jogadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Apontador} & para o estado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dados_8h_a303cbcfe5e2680baf24b96075827b16e}\label{dados_8h_a303cbcfe5e2680baf24b96075827b16e}} 
+\index{dados.\+h@{dados.\+h}!limpa\+Arr@{limpa\+Arr}}
+\index{limpa\+Arr@{limpa\+Arr}!dados.\+h@{dados.\+h}}
+\subsubsection{\texorpdfstring{limpa\+Arr()}{limpaArr()}}
+{\footnotesize\ttfamily void limpa\+Arr (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Função que inicia o array de jogadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para o estado \\
+\hline
+{\em i} & Local a partir do qual a função limpa o array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dados_8h_a74469889c470bfe2bc9d32d65e851313}\label{dados_8h_a74469889c470bfe2bc9d32d65e851313}} 
+\index{dados.\+h@{dados.\+h}!movs@{movs}}
+\index{movs@{movs}!dados.\+h@{dados.\+h}}
+\subsubsection{\texorpdfstring{movs()}{movs()}}
+{\footnotesize\ttfamily int movs (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est,  }\item[{\hyperlink{structCOORDENADA}{C\+O\+O\+R\+D\+E\+N\+A\+DA}}]{mvs\mbox{[}8\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Dá o numero de jogadas possiveis e enche o array com essas jogadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para o estado \\
+\hline
+{\em mvs} & Array onde as jogadas possivéis ficaram guardadas \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dados_8h_a2a73885e5d652f9186c670e43cbc741b}\label{dados_8h_a2a73885e5d652f9186c670e43cbc741b}} 
+\index{dados.\+h@{dados.\+h}!verifica\+Fim@{verifica\+Fim}}
+\index{verifica\+Fim@{verifica\+Fim}!dados.\+h@{dados.\+h}}
+\subsubsection{\texorpdfstring{verifica\+Fim()}{verificaFim()}}
+{\footnotesize\ttfamily int verifica\+Fim (\begin{DoxyParamCaption}\item[{\hyperlink{structESTADO}{E\+S\+T\+A\+DO} $\ast$}]{est }\end{DoxyParamCaption})}
+
+
+
+Verifica se algum dos jogadores já ganhou. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & Apontador para estado \\
+\hline
+\end{DoxyParams}

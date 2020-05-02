@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vazia',['vazia',['../listasligadas_8h.html#a2d9ffede1de9e074793fbe23bb37ca0a',1,'listasligadas.c']]],
-  ['verificafim',['verificaFim',['../dados_8h.html#a2a73885e5d652f9186c670e43cbc741b',1,'dados.c']]]
+  ['read',['read',['../interface_8h.html#a55f2f48c114580af4ce030e94b717a5e',1,'interface.c']]],
+  ['removeh',['removeH',['../listasligadas_8h.html#a70069e763001b14092476ee48d6aee58',1,'listasligadas.c']]]
 ];

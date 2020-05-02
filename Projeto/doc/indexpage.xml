@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Index</title>
+    <detaileddescription>
+<sect1 id="index_1intro_sec">
+<title>Intruduction</title>
+<para>A interface é responsável por todas as funções que interagem com o jogador humano. A estrutura de dados, devolve a base para o nosso projeto defenindo e verificando o estado do jogo. Lógica é a camada referente as funções principais que definem as regras do Jogo. </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

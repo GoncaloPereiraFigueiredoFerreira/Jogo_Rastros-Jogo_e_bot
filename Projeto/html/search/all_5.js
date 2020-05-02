@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['hist',['hist',['../interface_8h.html#ac4304c60a7bbb3e48aa2b8f650a61089',1,'interface.c']]]
+  ['fill',['fill',['../bot_8h.html#a8952c0a67a49cd25e65ff05b8977a9df',1,'bot.c']]],
+  ['funcoes_2eh',['funcoes.h',['../funcoes_8h.html',1,'']]]
 ];
