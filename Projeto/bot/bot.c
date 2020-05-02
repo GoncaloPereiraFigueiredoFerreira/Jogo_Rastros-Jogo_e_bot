@@ -124,10 +124,10 @@ COORDENADA bot (ESTADO *est){
 	for(i = 0;i<n;i++){
 		atualizaEstado(est1,m[i]);
 		score = minmax(est1,-1,depth,max,min,&t);
-		if (score > mscore && score != -MSCORE) {mscore = score;r = i;}
-		else if (score == -MSCORE && t1<t) {r = i;t1 = t;}
+		if (score > mscore /*&& mscore != -MSCORE*/) {mscore = score;r = i;}
+		else if (mscore == -MSCORE && t1<t) {r = i;t1 = t;}
 		if (max < score) max = score;
-		//showCOORD(m[i]);printf("-%d, min = %d,max = %d,nodos = %d\n",score,min,max,t);
+		showCOORD(m[i]);printf("-%d, min = %d,max = %d,nodos = %d\n",score,min,max,t);
 		if (max >= min) i = n; 
 		t = 0;
 		free(est1);
