@@ -53,15 +53,15 @@ int value(ESTADO *est,int jog){
 	}
 	else total += (f+1)%2*(50/f);
 	if (player == 1){
-		if(tab[0][7] == 64) total += 10;
+		if(tab[0][7] == 64) total -= 10;
 		else total -= tab[0][7];
-		if(tab[7][0] == 64) total -= 15;
+		if(tab[7][0] == 64) total += 15;
 		else total += tab[7][0]+5;
 	}
 	else {
-		if(tab[7][0] == 64) total += 10;
+		if(tab[7][0] == 64) total -= 10;
 		else total -= tab[7][0];
-		if(tab[0][7] == 64) total -= 15;
+		if(tab[0][7] == 64) total += 15;
 		else total += tab[0][7]+5;
 	}
 	return total;
