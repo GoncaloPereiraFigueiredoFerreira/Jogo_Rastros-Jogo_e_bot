@@ -53,9 +53,9 @@ int value(ESTADO *est,int jog){
 	}
 	else total += (f+1)%2*(50/f); // 1-50 se f impar, 0 se par
 	if (player == 1){
-		if(tab[0][7] == 64) total -= 30; // adiciona 10 de value ao facto de n poder alcançar a peça do adversario
+		if(tab[0][7] == 64) total -= 30; 
 		else total -= tab[0][7];
-		if(tab[7][0] == 64) total += 45; // retira 15 de value ao facto de n poder alcançar a sua peça
+		if(tab[7][0] == 64) total += 45; 
 		else total += tab[7][0]+5;
 	}
 	else {
@@ -102,7 +102,7 @@ int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t){
 }
 
 COORDENADA bot (ESTADO *est){
-	int n,i,score,mscore,min,max,t = 0,r = 0,depth,tab[8][8],t1=0;
+	int n,i,score,mscore,min,max,t = 0,r = 0,depth,tab[8][8];
 	COORDENADA m[8];
 	ESTADO *est1;
 	est1 = cpEst(est);
@@ -119,17 +119,14 @@ COORDENADA bot (ESTADO *est){
 	else if (i>35) depth = DEPTH * 0.60;
 	else if (i>30) depth = DEPTH * 0.70;
 	else depth = DEPTH;
-
-	printf("%d\n",depth); 
 	if (n == 1){free(est1);return m[0];}
 	for(i = 0;i<n;i++){
 		atualizaEstado(est1,m[i]);
 		score = minmax(est1,-1,depth,max,min,&t);
-		if (score > mscore /*&& mscore != -MSCORE*/) {mscore = score;r = i;}
-		else if (mscore == -MSCORE && t1<t) {r = i;t1 = t;}
+		if (score > mscore) {mscore = score;r = i;}
 		if (max < score) max = score;
-		showCOORD(m[i]);printf("-%d, min = %d,max = %d,nodos = %d\n",score,min,max,t);
 		if (max >= min) i = n; 
+		showCOORD(m[i]);printf("-%d, min = %d,max = %d,nodos = %d\n",score,min,max,t); // usado no debug
 		t = 0;
 		free(est1);
 		est1 = cpEst(est);
