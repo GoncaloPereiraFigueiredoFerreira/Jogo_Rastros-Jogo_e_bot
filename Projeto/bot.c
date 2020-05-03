@@ -67,7 +67,7 @@ int value(ESTADO *est,int jog){
 	return total;
 }
 
-int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t){
+int minmax (ESTADO *est,int jog,int depth,int max,int min){
 	int n,score,mscore,i = 0;
 	COORDENADA m[8];
 	n = verificaFim(est); // retribui o nº do jogador q ganha, ou 0 se nenhum ganhar
@@ -80,11 +80,11 @@ int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t){
 	else if(!depth) mscore = value(est,jog); // if depth==0 value da jogada
 	else{
 		n = movs(est,m);
-		if (n == 1){atualizaEstado(est1,m[0]);mscore = minmax(est1,-jog,depth,max,min,t);}
+		if (n == 1){atualizaEstado(est1,m[0]);mscore = minmax(est1,-jog,depth,max,min);}
 		else{
 			for(i = 0;i<n;i++){
 				atualizaEstado(est1,m[i]);
-				score = minmax(est1,-jog,depth-1,max,min,t);
+				score = minmax(est1,-jog,depth-1,max,min);
 	//			printf("%d<%d\n",score*jog,mscore*jog);
 				if (score*jog > mscore*jog) mscore = score;
 				if (jog > 0) {if (max < score) max = score;}
@@ -92,7 +92,6 @@ int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t){
 				if (max >= min) i = n; 
 				free(est1);
 				est1 = cpEst(est);
-				(*t)++;
 			}
 		}
 	}
@@ -102,7 +101,7 @@ int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t){
 }
 
 COORDENADA bot (ESTADO *est){
-	int n,i,score,mscore,min,max,t = 0,r = 0,depth,tab[8][8];
+	int n,i,score,mscore,min,max,r = 0,depth,tab[8][8];
 	COORDENADA m[8];
 	ESTADO *est1;
 	est1 = cpEst(est);
@@ -122,12 +121,11 @@ COORDENADA bot (ESTADO *est){
 	if (n == 1){free(est1);return m[0];}
 	for(i = 0;i<n;i++){
 		atualizaEstado(est1,m[i]);
-		score = minmax(est1,-1,depth,max,min,&t);
+		score = minmax(est1,-1,depth,max,min);
 		if (score > mscore) {mscore = score;r = i;}
 		if (max < score) max = score;
 		if (max >= min) i = n; 
-		showCOORD(m[i]);printf("-%d, min = %d,max = %d,nodos = %d\n",score,min,max,t); // usado no debug
-		t = 0;
+		showCOORD(m[i]);printf("-%d, min = %d,max = %d,nodos = %d\n",score,min,max); // usado no debug
 		free(est1);
 		est1 = cpEst(est);
 	}

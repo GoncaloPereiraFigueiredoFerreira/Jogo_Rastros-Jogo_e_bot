@@ -34,7 +34,7 @@ int value(ESTADO *est,int jog);
 @param max Valor máximo atribuido a um estado que a árvore consegui achar 
 @param min Menor valor atribuido a um estado que a árvore consegui achar 
 */
-int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t);
+int minmax (ESTADO *est,int jog,int depth,int max,int min);
 
 /**
 \brief Implementação da função Floodfill
