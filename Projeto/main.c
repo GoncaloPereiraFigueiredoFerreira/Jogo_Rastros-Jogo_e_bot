@@ -1,4 +1,4 @@
-#include "interface/interface.h"
+#include "interface.h"
 #include <stdlib.h>
 int main() {
 	ESTADO *est = (ESTADO *) malloc(sizeof(ESTADO));
