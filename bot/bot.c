@@ -53,9 +53,9 @@ int value(ESTADO *est,int jog){
 	}
 	else total += (f+1)%2*(50/f); // 1-50 se f impar, 0 se par
 	if (player == 1){
-		if(tab[0][7] == 64) total -= 30; // adiciona 10 de value ao facto de n poder alcançar a peça do adversario
+		if(tab[0][7] == 64) total -= 30; 
 		else total -= tab[0][7];
-		if(tab[7][0] == 64) total += 45; // retira 15 de value ao facto de n poder alcançar a sua peça
+		if(tab[7][0] == 64) total += 45; 
 		else total += tab[7][0]+5;
 	}
 	else {
