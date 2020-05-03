@@ -97,6 +97,7 @@ int minmax (ESTADO *est,int jog,int depth,int max,int min,int *t){
 		}
 	}
 	free(est1);
+	if (mscore < -MSCORE+30) mscore ++;
 	return mscore;
 }
 
