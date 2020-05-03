@@ -1,7 +1,7 @@
 #ifndef PL6_4_FUNCOES_H
 #define PL6_4_FUNCOES_H
 
-#include "../dados/dados.h"
+#include "dados.h"
 
 /**
 @file funcoes.h

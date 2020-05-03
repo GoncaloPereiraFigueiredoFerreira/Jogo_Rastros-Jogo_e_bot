@@ -113,7 +113,7 @@ COORDENADA bot (ESTADO *est){
 	i = fill(est,tab);
 //	printf("%d\n",i);
 
-	if (i == 63) depth = DEPTH *0.45;
+	if (i > 57) depth = DEPTH *0.45;
 	else if (i>55) depth = DEPTH * 0.5;
 	else if (i>45) depth = DEPTH * 0.55;
 	else if (i>35) depth = DEPTH * 0.60;

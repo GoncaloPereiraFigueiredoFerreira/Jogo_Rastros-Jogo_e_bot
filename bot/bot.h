@@ -1,10 +1,10 @@
 #ifndef PL6_4_BOT_H
 #define PL6_4_BOT_H
 
-#include "interface/interface.h"
+#include "interface.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "Logica/funcoes.h"
+#include "funcoes.h"
 #define DEPTH 20
 #define MSCORE 100000
 

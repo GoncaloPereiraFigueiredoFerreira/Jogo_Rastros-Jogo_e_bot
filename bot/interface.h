@@ -1,7 +1,7 @@
 #ifndef PL6_4_IMPRIMIR_H
 #define PL6_4_IMPRIMIR_H
 
-#include "../Logica/funcoes.h"
+#include "funcoes.h"
 #include <stdio.h>
 #include <string.h>
 
