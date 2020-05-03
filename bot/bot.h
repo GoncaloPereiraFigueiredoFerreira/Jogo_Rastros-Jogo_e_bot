@@ -15,7 +15,6 @@
 * Aqui podemos encontrar a documentação das nossas funções responsáveis por fazer o nosso bot escolher a melhor jogada possívell
 */
 
-
 /**
 @file bot.h
 */

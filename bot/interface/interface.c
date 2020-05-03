@@ -5,8 +5,8 @@ void hist(ESTADO *est,FILE *f){
 	COORDENADA c;
 	for(i = 0;i<(est->num_jogadas);i++){
 		c = est->jogadas[i];
-		if (!(i%2)) fprintf(f,"\n%02d: ",(i/2)+1);
-		fprintf(f,"%c%d ",c.x+'a',8-c.y);
+		if (!(i%2)) fprintf(f,"\n%02d:",(i/2)+1);
+		fprintf(f," %c%d",c.x+'a',8-c.y);
 	}
 	fputc('\n',f);
 }
@@ -18,8 +18,8 @@ void save(char cam[],ESTADO *est){
 	f = fopen(cam,"w");
 	for (x = 0;x<8;x++){
 		for (y = 0;y<8;y++){
-			if (x == 7 && y == 0) fputc('1',f);
-			else if (x == 0 && y == 7) fputc('2',f); 
+			if (x == 7 && y == 0 && est->tab[y][x] != '*') fputc('1',f);
+			else if (x == 0 && y == 7 && est->tab[y][x] != '*') fputc('2',f); 
 			else fputc(est->tab[y][x],f);
 		}
 		fputc('\n',f);
