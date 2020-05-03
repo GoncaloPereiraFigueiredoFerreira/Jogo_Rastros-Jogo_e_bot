@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_4f188f056c757f68a47c3d063a8173a6" kind="dir">
+    <compoundname>Projeto/bot</compoundname>
+    <innerfile refid="bot_8c">bot.c</innerfile>
+    <innerfile refid="bot_8h">bot.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Projeto/bot/"/>
+  </compounddef>
+</doxygen>

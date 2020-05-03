@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_ee822f23b6211ce733514931d0e44bcc" kind="dir">
+    <compoundname>Projeto/ListasLigadas</compoundname>
+    <innerfile refid="listasligadas_8c">listasligadas.c</innerfile>
+    <innerfile refid="listasligadas_8h">listasligadas.h</innerfile>
+    <innerfile refid="mainListas_8c">mainListas.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Projeto/ListasLigadas/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_fe9702a7a25fe9d13fa1839b12c4c25e" kind="dir">
+    <compoundname>Projeto/interface</compoundname>
+    <innerfile refid="interface_8c">interface.c</innerfile>
+    <innerfile refid="interface_8h">interface.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Projeto/interface/"/>
+  </compounddef>
+</doxygen>

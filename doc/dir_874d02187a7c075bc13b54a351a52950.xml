@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_874d02187a7c075bc13b54a351a52950" kind="dir">
+    <compoundname>Projeto/Logica</compoundname>
+    <innerfile refid="funcoes_8c">funcoes.c</innerfile>
+    <innerfile refid="funcoes_8h">funcoes.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Projeto/Logica/"/>
+  </compounddef>
+</doxygen>
