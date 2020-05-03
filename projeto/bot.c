@@ -36,7 +36,7 @@ int fill(ESTADO *est1,int tab[8][8]){
 				}
 			}
 		est->pos = q[i]; //muda a posiçao da peça branca para uma das preenchidas anteriormente
-		i = (i+1)%25;   /// why 25?
+		i = (i+1)%25;  
 		t--;
 	}
 	free(est);
@@ -124,7 +124,7 @@ COORDENADA bot (ESTADO *est){
 		score = minmax(est1,-1,depth,max,min);
 		if (score > mscore) {mscore = score;r = i;}
 		if (max < score) max = score;
-		showCOORD(m[i]);printf("-%d, min = %d,max = %d",score,min,max); // usado no debug
+		showCOORD(m[i]);printf("-%d, min = %d,max = %d\n",score,min,max); // usado no debug
 		if (max >= min) i = n; 
 
 		free(est1);

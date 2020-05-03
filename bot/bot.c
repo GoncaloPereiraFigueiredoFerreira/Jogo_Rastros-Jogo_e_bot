@@ -32,11 +32,11 @@ int fill(ESTADO *est1,int tab[8][8]){
 					est->tab[c.x][c.y] = '*';//preenche a casa
 					t++;
 					empty++; //contador de casas preenchidas
-					if (tab[x][y]+1<tab[c.x][c.y]) tab[c.x][c.y] = tab[x][y] + 1;//muda valoraçao da casa preenchida na matriz// why
+					if (tab[x][y]+1<tab[c.x][c.y]) tab[c.x][c.y] = tab[x][y] + 1;//muda valoraçao da casa preenchida na matriz
 				}
 			}
 		est->pos = q[i]; //muda a posiçao da peça branca para uma das preenchidas anteriormente
-		i = (i+1)%25;   /// why 25?
+		i = (i+1)%25;   
 		t--;
 	}
 	free(est);
@@ -85,7 +85,6 @@ int minmax (ESTADO *est,int jog,int depth,int max,int min){
 			for(i = 0;i<n;i++){
 				atualizaEstado(est1,m[i]);
 				score = minmax(est1,-jog,depth-1,max,min);
-	//			printf("%d<%d\n",score*jog,mscore*jog);
 				if (score*jog > mscore*jog) mscore = score;
 				if (jog > 0) {if (max < score) max = score;}
 				else if (min > score) min = score;
