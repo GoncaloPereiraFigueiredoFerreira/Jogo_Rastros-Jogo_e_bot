@@ -15,7 +15,7 @@
 <para>Matriz com o estado do tabuleiro </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.h" line="46" column="1" bodyfile="Projeto/dados.h" bodystart="46" bodyend="-1"/>
+        <location file="projeto/dados.h" line="48" column="1" bodyfile="projeto/dados.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structESTADO_1ab1bb13e4a70f2464766c57e64b9c78f9" prot="public" static="no" mutable="no">
         <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
@@ -28,7 +28,7 @@
 <para>Posição da peça branca </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.h" line="47" column="1" bodyfile="Projeto/dados.h" bodystart="47" bodyend="-1"/>
+        <location file="projeto/dados.h" line="49" column="1" bodyfile="projeto/dados.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" prot="public" static="no" mutable="no">
         <type><ref refid="dados_8h_1a92f70ff132400975cac8cc88719163e5" kindref="member">JOGADAS</ref></type>
@@ -41,7 +41,7 @@
 <para>Jogadas </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.h" line="48" column="1" bodyfile="Projeto/dados.h" bodystart="48" bodyend="-1"/>
+        <location file="projeto/dados.h" line="50" column="1" bodyfile="projeto/dados.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structESTADO_1a261495728744647e618b4e623f5a4b7a" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -54,7 +54,7 @@
 <para>Número de Jogadas Realizadas até agora </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.h" line="49" column="1" bodyfile="Projeto/dados.h" bodystart="49" bodyend="-1"/>
+        <location file="projeto/dados.h" line="51" column="1" bodyfile="projeto/dados.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -67,7 +67,7 @@
 <para>Qual o Jogador a Jogar </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.h" line="50" column="1" bodyfile="Projeto/dados.h" bodystart="50" bodyend="-1"/>
+        <location file="projeto/dados.h" line="52" column="1" bodyfile="projeto/dados.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -88,7 +88,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Projeto/dados.h" line="45" column="1" bodyfile="Projeto/dados.h" bodystart="45" bodyend="51"/>
+    <location file="projeto/dados.h" line="47" column="1" bodyfile="projeto/dados.h" bodystart="47" bodyend="53"/>
     <listofallmembers>
       <member refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" prot="public" virt="non-virtual"><scope>ESTADO</scope><name>jogadas</name></member>
       <member refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" prot="public" virt="non-virtual"><scope>ESTADO</scope><name>jogador_atual</name></member>

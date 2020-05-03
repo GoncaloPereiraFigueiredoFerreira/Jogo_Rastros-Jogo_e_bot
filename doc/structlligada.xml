@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="structlligada" kind="struct" language="C++" prot="public">
     <compoundname>lligada</compoundname>
+    <includes refid="listasligadas_8h" local="no">listasligadas.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structlligada_1a64449f0259fb452865ae4989609b7af8" prot="public" static="no" mutable="no">
         <type>void *</type>
@@ -11,10 +12,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Valor </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/listasligadas.h" line="13" column="1" bodyfile="Projeto/listasligadas.h" bodystart="13" bodyend="-1"/>
+        <location file="projeto/listasligadas.h" line="15" column="1" bodyfile="projeto/listasligadas.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structlligada_1ae620cb307892f22905d79e0d5013f9e3" prot="public" static="no" mutable="no">
         <type>struct <ref refid="structlligada" kindref="compound">lligada</ref> *</type>
@@ -24,14 +25,14 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Apontador para a próxima lista </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/listasligadas.h" line="14" column="1" bodyfile="Projeto/listasligadas.h" bodystart="14" bodyend="-1"/>
+        <location file="projeto/listasligadas.h" line="16" column="1" bodyfile="projeto/listasligadas.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Struct das listas. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
@@ -43,7 +44,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Projeto/listasligadas.h" line="12" column="1" bodyfile="Projeto/listasligadas.h" bodystart="12" bodyend="15"/>
+    <location file="projeto/listasligadas.h" line="14" column="1" bodyfile="projeto/listasligadas.h" bodystart="14" bodyend="17"/>
     <listofallmembers>
       <member refid="structlligada_1ae620cb307892f22905d79e0d5013f9e3" prot="public" virt="non-virtual"><scope>lligada</scope><name>prox</name></member>
       <member refid="structlligada_1a64449f0259fb452865ae4989609b7af8" prot="public" virt="non-virtual"><scope>lligada</scope><name>valor</name></member>

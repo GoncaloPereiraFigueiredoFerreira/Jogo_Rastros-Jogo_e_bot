@@ -60,7 +60,7 @@ void inicia(ESTADO *est);
 
 /**
 \brief Função que cria uma lista ligada das possiveis jogadas
-@param Apontador para o estado
+@param est Apontador para o estado
 */
 LISTA jogPoss (ESTADO *est);
 

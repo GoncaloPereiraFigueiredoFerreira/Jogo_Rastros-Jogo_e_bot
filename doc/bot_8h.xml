@@ -6,11 +6,20 @@
     <includes local="no">stdio.h</includes>
     <includes local="no">stdlib.h</includes>
     <includes refid="funcoes_8h" local="yes">funcoes.h</includes>
-    <includedby refid="bot_8c" local="yes">Projeto/bot.c</includedby>
-    <includedby refid="interface_8h" local="yes">Projeto/interface.h</includedby>
+    <includedby refid="bot_8c" local="yes">projeto/bot.c</includedby>
+    <includedby refid="interface_8h" local="yes">projeto/interface.h</includedby>
     <incdepgraph>
-      <node id="16">
-        <label>stdlib.h</label>
+      <node id="14">
+        <label>funcoes.h</label>
+        <link refid="funcoes_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
       </node>
       <node id="15">
         <label>dados.h</label>
@@ -24,8 +33,19 @@
         <childnode refid="19" relation="include">
         </childnode>
       </node>
+      <node id="18">
+        <label>listasligadas.h</label>
+        <link refid="listasligadas_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>stdlib.h</label>
+      </node>
       <node id="12">
-        <label>Projeto/bot.h</label>
+        <label>projeto/bot.h</label>
         <link refid="bot_8h"/>
         <childnode refid="13" relation="include">
         </childnode>
@@ -39,31 +59,11 @@
       <node id="21">
         <label>string.h</label>
       </node>
-      <node id="14">
-        <label>funcoes.h</label>
-        <link refid="funcoes_8h"/>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-      </node>
       <node id="20">
         <label>time.h</label>
       </node>
       <node id="19">
         <label>math.h</label>
-      </node>
-      <node id="18">
-        <label>listasligadas.h</label>
-        <link refid="listasligadas_8h"/>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
       </node>
       <node id="13">
         <label>interface.h</label>
@@ -83,13 +83,13 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="22">
-        <label>Projeto/bot.h</label>
+        <label>projeto/bot.h</label>
         <link refid="bot_8h"/>
         <childnode refid="23" relation="include">
         </childnode>
       </node>
       <node id="23">
-        <label>Projeto/interface.h</label>
+        <label>projeto/interface.h</label>
         <link refid="interface_8h"/>
         <childnode refid="22" relation="include">
         </childnode>
@@ -100,23 +100,23 @@
         <name>DEPTH</name>
         <initializer>20</initializer>
         <briefdescription>
-        </briefdescription>
+<para>Numero de jogadas à frente. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/bot.h" line="8" column="13" bodyfile="Projeto/bot.h" bodystart="8" bodyend="-1"/>
+        <location file="projeto/bot.h" line="16" column="9" bodyfile="projeto/bot.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="bot_8h_1a89de230c297d08d8af596441ac24c572" prot="public" static="no">
         <name>MSCORE</name>
         <initializer>100000</initializer>
         <briefdescription>
-        </briefdescription>
+<para>Score máximo que conseguiu encontrar. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/bot.h" line="9" column="9" bodyfile="Projeto/bot.h" bodystart="9" bodyend="-1"/>
+        <location file="projeto/bot.h" line="21" column="9" bodyfile="projeto/bot.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -143,7 +143,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/bot.h" line="20" column="1" bodyfile="Projeto/bot.c" bodystart="3" bodyend="14"/>
+        <location file="projeto/bot.h" line="27" column="1" bodyfile="projeto/bot.c" bodystart="3" bodyend="14"/>
       </memberdef>
       <memberdef kind="function" id="bot_8h_1aa2e1e7ebee4e22c3b890cb4d7c926e15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -179,7 +179,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/bot.h" line="27" column="1" bodyfile="Projeto/bot.c" bodystart="46" bodyend="68"/>
+        <location file="projeto/bot.h" line="34" column="1" bodyfile="projeto/bot.c" bodystart="46" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="bot_8h_1ac50fb162b7626e600dd9b02f83707f34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -248,7 +248,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/bot.h" line="37" column="1" bodyfile="Projeto/bot.c" bodystart="70" bodyend="101"/>
+        <location file="projeto/bot.h" line="44" column="1" bodyfile="projeto/bot.c" bodystart="70" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="bot_8h_1a8952c0a67a49cd25e65ff05b8977a9df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -285,7 +285,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
 <para>why 25? </para>        </inbodydescription>
-        <location file="Projeto/bot.h" line="44" column="1" bodyfile="Projeto/bot.c" bodystart="16" bodyend="44"/>
+        <location file="projeto/bot.h" line="51" column="1" bodyfile="projeto/bot.c" bodystart="16" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="bot_8h_1ab26bde8f7658d4f28cb4632f8bda2d9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
@@ -310,7 +310,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/bot.h" line="50" column="1" bodyfile="Projeto/bot.c" bodystart="103" bodyend="134"/>
+        <location file="projeto/bot.h" line="57" column="1" bodyfile="projeto/bot.c" bodystart="103" bodyend="135"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -318,29 +318,31 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PL6_4_BOT_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PL6_4_BOT_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interface_8h" kindref="compound">interface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="funcoes_8h" kindref="compound">funcoes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEPTH<sp/>20</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MSCORE<sp/>100000</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><ref refid="structESTADO" kindref="compound">ESTADO</ref>*<sp/><ref refid="bot_8h_1ac0fd6f5e226ae2b83bd77a8927ec2b39" kindref="member">cpEst</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bot_8h_1aa2e1e7ebee4e22c3b890cb4d7c926e15" kindref="member">value</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dados_8h_1a7c119b132d591342cecf42ca1d64e39b" kindref="member">jog</ref>);</highlight></codeline>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="preprocessor">#ifndef<sp/>PL6_4_BOT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PL6_4_BOT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interface_8h" kindref="compound">interface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="funcoes_8h" kindref="compound">funcoes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="bot_8h_1a50267d552ca6f788254032e40046b770" refkind="member"><highlight class="preprocessor">#define<sp/>DEPTH<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="bot_8h_1a89de230c297d08d8af596441ac24c572" refkind="member"><highlight class="preprocessor">#define<sp/>MSCORE<sp/>100000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="structESTADO" kindref="compound">ESTADO</ref>*<sp/><ref refid="bot_8h_1ac0fd6f5e226ae2b83bd77a8927ec2b39" kindref="member">cpEst</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est);</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bot_8h_1ac50fb162b7626e600dd9b02f83707f34" kindref="member">minmax</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dados_8h_1a7c119b132d591342cecf42ca1d64e39b" kindref="member">jog</ref>,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>depth,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bot_8h_1a8952c0a67a49cd25e65ff05b8977a9df" kindref="member">fill</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est1,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tab[8][8]);</highlight></codeline>
+<codeline lineno="34"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bot_8h_1aa2e1e7ebee4e22c3b890cb4d7c926e15" kindref="member">value</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dados_8h_1a7c119b132d591342cecf42ca1d64e39b" kindref="member">jog</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bot_8h_1ac50fb162b7626e600dd9b02f83707f34" kindref="member">minmax</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dados_8h_1a7c119b132d591342cecf42ca1d64e39b" kindref="member">jog</ref>,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>depth,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="bot_8h_1ab26bde8f7658d4f28cb4632f8bda2d9e" kindref="member">bot</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="51"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bot_8h_1a8952c0a67a49cd25e65ff05b8977a9df" kindref="member">fill</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est1,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tab[8][8]);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="bot_8h_1ab26bde8f7658d4f28cb4632f8bda2d9e" kindref="member">bot</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="Projeto/bot.h"/>
+    <location file="projeto/bot.h"/>
   </compounddef>
 </doxygen>

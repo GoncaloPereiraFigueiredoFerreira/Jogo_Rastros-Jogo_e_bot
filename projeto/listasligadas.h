@@ -14,7 +14,7 @@
 typedef struct lligada {
 void* valor; /**< Valor*/
 struct lligada *prox; /**< Apontador para a próxima lista*/
-} *LISTA,Nodo;
+} *LISTA,Nodo; /**< Nodo*/
 
 /**
 \brief Cria uma lista 
@@ -23,13 +23,13 @@ LISTA criarL();
 
 /**
 \brief Insere um valor na cabeça da lista
-@param l Lista
+@param L Lista
 @param val Apontador do valor a ser inserido
 */
 LISTA insereH(LISTA L, void *val);
 /**
 \brief Devolve o valor da cabeça da lista
-@param l Lista
+@param L Lista
 */
 void *devolveH(LISTA L);
 

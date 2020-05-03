@@ -4,8 +4,17 @@
     <compoundname>bot.c</compoundname>
     <includes refid="bot_8h" local="yes">bot.h</includes>
     <incdepgraph>
-      <node id="5">
-        <label>stdlib.h</label>
+      <node id="3">
+        <label>funcoes.h</label>
+        <link refid="funcoes_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>dados.h</label>
@@ -19,8 +28,19 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
+      <node id="7">
+        <label>listasligadas.h</label>
+        <link refid="listasligadas_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
       <node id="0">
-        <label>Projeto/bot.c</label>
+        <label>projeto/bot.c</label>
         <link refid="bot_8c"/>
         <childnode refid="1" relation="include">
         </childnode>
@@ -40,31 +60,11 @@
       <node id="10">
         <label>string.h</label>
       </node>
-      <node id="3">
-        <label>funcoes.h</label>
-        <link refid="funcoes_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
       <node id="9">
         <label>time.h</label>
       </node>
       <node id="8">
         <label>math.h</label>
-      </node>
-      <node id="7">
-        <label>listasligadas.h</label>
-        <link refid="listasligadas_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
       </node>
       <node id="2">
         <label>interface.h</label>
@@ -106,7 +106,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/bot.c" line="3" column="1" bodyfile="Projeto/bot.c" bodystart="3" bodyend="14"/>
+        <location file="projeto/bot.c" line="3" column="1" bodyfile="projeto/bot.c" bodystart="3" bodyend="14"/>
       </memberdef>
       <memberdef kind="function" id="bot_8c_1a8952c0a67a49cd25e65ff05b8977a9df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -143,7 +143,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
 <para>why 25? </para>        </inbodydescription>
-        <location file="Projeto/bot.c" line="16" column="1" bodyfile="Projeto/bot.c" bodystart="16" bodyend="44"/>
+        <location file="projeto/bot.c" line="16" column="1" bodyfile="projeto/bot.c" bodystart="16" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="bot_8c_1aa2e1e7ebee4e22c3b890cb4d7c926e15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -179,7 +179,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/bot.c" line="46" column="1" bodyfile="Projeto/bot.c" bodystart="46" bodyend="68"/>
+        <location file="projeto/bot.c" line="46" column="1" bodyfile="projeto/bot.c" bodystart="46" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="bot_8c_1ac50fb162b7626e600dd9b02f83707f34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -248,7 +248,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/bot.c" line="70" column="1" bodyfile="Projeto/bot.c" bodystart="70" bodyend="101"/>
+        <location file="projeto/bot.c" line="70" column="1" bodyfile="projeto/bot.c" bodystart="70" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="bot_8c_1ab26bde8f7658d4f28cb4632f8bda2d9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
@@ -273,7 +273,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/bot.c" line="103" column="1" bodyfile="Projeto/bot.c" bodystart="103" bodyend="134"/>
+        <location file="projeto/bot.c" line="103" column="1" bodyfile="projeto/bot.c" bodystart="103" bodyend="135"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -354,11 +354,11 @@
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,score,mscore,i<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>m[8];</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/><ref refid="dados_8h_1a2a73885e5d652f9186c670e43cbc741b" kindref="member">verificaFim</ref>(est);<sp/></highlight><highlight class="comment">//<sp/>retribui<sp/>o<sp/>nº<sp/>do<sp/>jogador<sp/>q<sp/>ganha,<sp/>ou<sp/>0<sp/>se<sp/>nenhum<sp/>ganhar</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>mscore<sp/>=<sp/>-MSCORE*jog*2;</highlight><highlight class="comment">//<sp/>define<sp/>score<sp/>minimo<sp/>de<sp/>jogada</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>mscore<sp/>=<sp/>-<ref refid="bot_8h_1a89de230c297d08d8af596441ac24c572" kindref="member">MSCORE</ref>*jog*2;</highlight><highlight class="comment">//<sp/>define<sp/>score<sp/>minimo<sp/>de<sp/>jogada</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est1<sp/>=<sp/><ref refid="bot_8h_1ac0fd6f5e226ae2b83bd77a8927ec2b39" kindref="member">cpEst</ref>(est);</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(n){</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(est-&gt;<ref refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" kindref="member">jogador_atual</ref><sp/>==<sp/>n)<sp/>mscore<sp/>=<sp/>jog*MSCORE;<sp/></highlight><highlight class="comment">//<sp/>acabar<sp/>com<sp/>o<sp/>jogo</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>mscore<sp/>=<sp/>-jog*MSCORE;<sp/></highlight><highlight class="comment">//<sp/>pior<sp/>jogada<sp/>possivel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(est-&gt;<ref refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" kindref="member">jogador_atual</ref><sp/>==<sp/>n)<sp/>mscore<sp/>=<sp/>jog*<ref refid="bot_8h_1a89de230c297d08d8af596441ac24c572" kindref="member">MSCORE</ref>;<sp/></highlight><highlight class="comment">//<sp/>acabar<sp/>com<sp/>o<sp/>jogo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>mscore<sp/>=<sp/>-jog*<ref refid="bot_8h_1a89de230c297d08d8af596441ac24c572" kindref="member">MSCORE</ref>;<sp/></highlight><highlight class="comment">//<sp/>pior<sp/>jogada<sp/>possivel</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!depth)<sp/>mscore<sp/>=<sp/><ref refid="bot_8h_1aa2e1e7ebee4e22c3b890cb4d7c926e15" kindref="member">value</ref>(est,jog);<sp/></highlight><highlight class="comment">//<sp/>if<sp/>depth==0<sp/>value<sp/>da<sp/>jogada</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
@@ -379,7 +379,7 @@
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>free(est1);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mscore<sp/>&lt;<sp/>-MSCORE+30)<sp/>mscore<sp/>++;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mscore<sp/>&lt;<sp/>-<ref refid="bot_8h_1a89de230c297d08d8af596441ac24c572" kindref="member">MSCORE</ref>+30)<sp/>mscore<sp/>++;</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mscore;</highlight></codeline>
 <codeline lineno="101"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"></highlight></codeline>
@@ -389,33 +389,34 @@
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est1;</highlight></codeline>
 <codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>est1<sp/>=<sp/><ref refid="bot_8h_1ac0fd6f5e226ae2b83bd77a8927ec2b39" kindref="member">cpEst</ref>(est);</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/><ref refid="dados_8h_1a74469889c470bfe2bc9d32d65e851313" kindref="member">movs</ref>(est,m);</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>mscore<sp/>=<sp/>-MSCORE;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>max<sp/>=<sp/>-MSCORE;</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>min<sp/>=<sp/>MSCORE;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>mscore<sp/>=<sp/>-<ref refid="bot_8h_1a89de230c297d08d8af596441ac24c572" kindref="member">MSCORE</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>max<sp/>=<sp/>-<ref refid="bot_8h_1a89de230c297d08d8af596441ac24c572" kindref="member">MSCORE</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>min<sp/>=<sp/><ref refid="bot_8h_1a89de230c297d08d8af596441ac24c572" kindref="member">MSCORE</ref>;</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>=<sp/><ref refid="bot_8h_1a8952c0a67a49cd25e65ff05b8977a9df" kindref="member">fill</ref>(est,tab);</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>printf(&quot;%d\n&quot;,i);</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>63)<sp/>depth<sp/>=<sp/>DEPTH<sp/>*0.45;</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&gt;55)<sp/>depth<sp/>=<sp/>DEPTH<sp/>*<sp/>0.5;</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&gt;45)<sp/>depth<sp/>=<sp/>DEPTH<sp/>*<sp/>0.55;</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&gt;35)<sp/>depth<sp/>=<sp/>DEPTH<sp/>*<sp/>0.60;</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&gt;30)<sp/>depth<sp/>=<sp/>DEPTH<sp/>*<sp/>0.70;</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>depth<sp/>=<sp/>DEPTH;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>63)<sp/>depth<sp/>=<sp/><ref refid="bot_8h_1a50267d552ca6f788254032e40046b770" kindref="member">DEPTH</ref><sp/>*0.45;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&gt;55)<sp/>depth<sp/>=<sp/><ref refid="bot_8h_1a50267d552ca6f788254032e40046b770" kindref="member">DEPTH</ref><sp/>*<sp/>0.5;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&gt;45)<sp/>depth<sp/>=<sp/><ref refid="bot_8h_1a50267d552ca6f788254032e40046b770" kindref="member">DEPTH</ref><sp/>*<sp/>0.55;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&gt;35)<sp/>depth<sp/>=<sp/><ref refid="bot_8h_1a50267d552ca6f788254032e40046b770" kindref="member">DEPTH</ref><sp/>*<sp/>0.60;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i&gt;30)<sp/>depth<sp/>=<sp/><ref refid="bot_8h_1a50267d552ca6f788254032e40046b770" kindref="member">DEPTH</ref><sp/>*<sp/>0.70;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>depth<sp/>=<sp/><ref refid="bot_8h_1a50267d552ca6f788254032e40046b770" kindref="member">DEPTH</ref>;</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>==<sp/>1){free(est1);</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m[0];}</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;i&lt;n;i++){</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="funcoes_8h_1aaddc8a7b9788aa1b3296c3109434eeff" kindref="member">atualizaEstado</ref>(est1,m[i]);</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>score<sp/>=<sp/><ref refid="bot_8h_1ac50fb162b7626e600dd9b02f83707f34" kindref="member">minmax</ref>(est1,-1,depth,max,min);</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(score<sp/>&gt;<sp/>mscore)<sp/>{mscore<sp/>=<sp/>score;r<sp/>=<sp/>i;}</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(max<sp/>&lt;<sp/>score)<sp/>max<sp/>=<sp/>score;</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(max<sp/>&gt;=<sp/>min)<sp/>i<sp/>=<sp/>n;<sp/></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_8h_1a2a87baa757d573a3680b9876d670618c" kindref="member">showCOORD</ref>(m[i]);printf(</highlight><highlight class="stringliteral">&quot;-%d,<sp/>min<sp/>=<sp/>%d,max<sp/>=<sp/>%d,nodos<sp/>=<sp/>%d\n&quot;</highlight><highlight class="normal">,score,min,max);<sp/></highlight><highlight class="comment">//<sp/>usado<sp/>no<sp/>debug</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(est1);</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est1<sp/>=<sp/><ref refid="bot_8h_1ac0fd6f5e226ae2b83bd77a8927ec2b39" kindref="member">cpEst</ref>(est);</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>free(est1);</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m[r];</highlight></codeline>
-<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_8h_1a2a87baa757d573a3680b9876d670618c" kindref="member">showCOORD</ref>(m[i]);printf(</highlight><highlight class="stringliteral">&quot;-%d,<sp/>min<sp/>=<sp/>%d,max<sp/>=<sp/>%d&quot;</highlight><highlight class="normal">,score,min,max);<sp/></highlight><highlight class="comment">//<sp/>usado<sp/>no<sp/>debug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(max<sp/>&gt;=<sp/>min)<sp/>i<sp/>=<sp/>n;<sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(est1);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est1<sp/>=<sp/><ref refid="bot_8h_1ac0fd6f5e226ae2b83bd77a8927ec2b39" kindref="member">cpEst</ref>(est);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>free(est1);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m[r];</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="Projeto/bot.c"/>
+    <location file="projeto/bot.c"/>
   </compounddef>
 </doxygen>

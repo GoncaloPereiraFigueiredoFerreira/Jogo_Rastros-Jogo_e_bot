@@ -6,12 +6,21 @@
     <includes local="no">stdlib.h</includes>
     <includes local="no">stdio.h</includes>
     <includes local="no">time.h</includes>
-    <includedby refid="interface_8h" local="yes">Projeto/interface.h</includedby>
-    <includedby refid="bot_8h" local="yes">Projeto/bot.h</includedby>
-    <includedby refid="funcoes_8c" local="yes">Projeto/funcoes.c</includedby>
+    <includedby refid="interface_8h" local="yes">projeto/interface.h</includedby>
+    <includedby refid="bot_8h" local="yes">projeto/bot.h</includedby>
+    <includedby refid="funcoes_8c" local="yes">projeto/funcoes.c</includedby>
     <incdepgraph>
-      <node id="51">
-        <label>stdlib.h</label>
+      <node id="49">
+        <label>projeto/funcoes.h</label>
+        <link refid="funcoes_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
       </node>
       <node id="50">
         <label>dados.h</label>
@@ -25,24 +34,6 @@
         <childnode refid="54" relation="include">
         </childnode>
       </node>
-      <node id="49">
-        <label>Projeto/funcoes.h</label>
-        <link refid="funcoes_8h"/>
-        <childnode refid="50" relation="include">
-        </childnode>
-        <childnode refid="51" relation="include">
-        </childnode>
-        <childnode refid="52" relation="include">
-        </childnode>
-        <childnode refid="55" relation="include">
-        </childnode>
-      </node>
-      <node id="55">
-        <label>time.h</label>
-      </node>
-      <node id="54">
-        <label>math.h</label>
-      </node>
       <node id="53">
         <label>listasligadas.h</label>
         <link refid="listasligadas_8h"/>
@@ -51,27 +42,36 @@
         <childnode refid="51" relation="include">
         </childnode>
       </node>
+      <node id="51">
+        <label>stdlib.h</label>
+      </node>
+      <node id="55">
+        <label>time.h</label>
+      </node>
+      <node id="54">
+        <label>math.h</label>
+      </node>
       <node id="52">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="58">
-        <label>Projeto/bot.h</label>
-        <link refid="bot_8h"/>
-        <childnode refid="57" relation="include">
-        </childnode>
-      </node>
       <node id="56">
-        <label>Projeto/funcoes.h</label>
+        <label>projeto/funcoes.h</label>
         <link refid="funcoes_8h"/>
         <childnode refid="57" relation="include">
         </childnode>
         <childnode refid="58" relation="include">
         </childnode>
       </node>
+      <node id="58">
+        <label>projeto/bot.h</label>
+        <link refid="bot_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
       <node id="57">
-        <label>Projeto/interface.h</label>
+        <label>projeto/interface.h</label>
         <link refid="interface_8h"/>
         <childnode refid="58" relation="include">
         </childnode>
@@ -112,7 +112,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/funcoes.h" line="18" column="1" bodyfile="Projeto/funcoes.c" bodystart="3" bodyend="12"/>
+        <location file="projeto/funcoes.h" line="18" column="1" bodyfile="projeto/funcoes.c" bodystart="3" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="funcoes_8h_1ad49c493a1ae3d5dd0c2d44c09f98fd33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -148,7 +148,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/funcoes.h" line="25" column="1" bodyfile="Projeto/funcoes.c" bodystart="14" bodyend="21"/>
+        <location file="projeto/funcoes.h" line="25" column="1" bodyfile="projeto/funcoes.c" bodystart="14" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="funcoes_8h_1a433bebe3fe9f478b4c3fc0d1d21e0b11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -184,7 +184,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/funcoes.h" line="32" column="1" bodyfile="Projeto/funcoes.c" bodystart="23" bodyend="42"/>
+        <location file="projeto/funcoes.h" line="32" column="1" bodyfile="projeto/funcoes.c" bodystart="23" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="funcoes_8h_1aa191a437ab6d7a7f61cd775190ff85fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -209,7 +209,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/funcoes.h" line="38" column="1" bodyfile="Projeto/funcoes.c" bodystart="45" bodyend="49"/>
+        <location file="projeto/funcoes.h" line="38" column="1" bodyfile="projeto/funcoes.c" bodystart="45" bodyend="49"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -217,14 +217,15 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PL6_4_FUNCOES_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PL6_4_FUNCOES_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dados_8h" kindref="compound">dados.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="preprocessor">#ifndef<sp/>PL6_4_FUNCOES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PL6_4_FUNCOES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dados_8h" kindref="compound">dados.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="funcoes_8h_1aaddc8a7b9788aa1b3296c3109434eeff" kindref="member">atualizaEstado</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="funcoes_8h_1ad49c493a1ae3d5dd0c2d44c09f98fd33" kindref="member">jogar</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est,<sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>c);</highlight></codeline>
@@ -235,6 +236,6 @@
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="Projeto/funcoes.h"/>
+    <location file="projeto/funcoes.h"/>
   </compounddef>
 </doxygen>

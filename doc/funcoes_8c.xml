@@ -4,23 +4,8 @@
     <compoundname>funcoes.c</compoundname>
     <includes refid="funcoes_8h" local="yes">funcoes.h</includes>
     <incdepgraph>
-      <node id="43">
-        <label>stdlib.h</label>
-      </node>
-      <node id="42">
-        <label>dados.h</label>
-        <link refid="dados_8h"/>
-        <childnode refid="43" relation="include">
-        </childnode>
-        <childnode refid="44" relation="include">
-        </childnode>
-        <childnode refid="45" relation="include">
-        </childnode>
-        <childnode refid="46" relation="include">
-        </childnode>
-      </node>
       <node id="40">
-        <label>Projeto/funcoes.c</label>
+        <label>projeto/funcoes.c</label>
         <link refid="funcoes_8c"/>
         <childnode refid="41" relation="include">
         </childnode>
@@ -37,11 +22,17 @@
         <childnode refid="47" relation="include">
         </childnode>
       </node>
-      <node id="47">
-        <label>time.h</label>
-      </node>
-      <node id="46">
-        <label>math.h</label>
+      <node id="42">
+        <label>dados.h</label>
+        <link refid="dados_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
       </node>
       <node id="45">
         <label>listasligadas.h</label>
@@ -50,6 +41,15 @@
         </childnode>
         <childnode refid="43" relation="include">
         </childnode>
+      </node>
+      <node id="43">
+        <label>stdlib.h</label>
+      </node>
+      <node id="47">
+        <label>time.h</label>
+      </node>
+      <node id="46">
+        <label>math.h</label>
       </node>
       <node id="44">
         <label>stdio.h</label>
@@ -90,7 +90,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/funcoes.c" line="3" column="1" bodyfile="Projeto/funcoes.c" bodystart="3" bodyend="12"/>
+        <location file="projeto/funcoes.c" line="3" column="1" bodyfile="projeto/funcoes.c" bodystart="3" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="funcoes_8c_1ad49c493a1ae3d5dd0c2d44c09f98fd33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -126,7 +126,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/funcoes.c" line="14" column="1" bodyfile="Projeto/funcoes.c" bodystart="14" bodyend="21"/>
+        <location file="projeto/funcoes.c" line="14" column="1" bodyfile="projeto/funcoes.c" bodystart="14" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="funcoes_8c_1a433bebe3fe9f478b4c3fc0d1d21e0b11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -162,7 +162,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/funcoes.c" line="23" column="1" bodyfile="Projeto/funcoes.c" bodystart="23" bodyend="42"/>
+        <location file="projeto/funcoes.c" line="23" column="1" bodyfile="projeto/funcoes.c" bodystart="23" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="funcoes_8c_1aa191a437ab6d7a7f61cd775190ff85fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -187,7 +187,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/funcoes.c" line="45" column="1" bodyfile="Projeto/funcoes.c" bodystart="45" bodyend="49"/>
+        <location file="projeto/funcoes.c" line="45" column="1" bodyfile="projeto/funcoes.c" bodystart="45" bodyend="49"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -202,8 +202,8 @@
 <codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y1<sp/>=<sp/>est-&gt;<ref refid="structESTADO_1ab1bb13e4a70f2464766c57e64b9c78f9" kindref="member">pos</ref>.<ref refid="structCOORDENADA_1a5d8fd9d119daf634ccd5ff7b8b37d16b" kindref="member">y</ref>;</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab1bb13e4a70f2464766c57e64b9c78f9" kindref="member">pos</ref>.<ref refid="structCOORDENADA_1a04df39e5db6a15fc3891becabc22fbe2" kindref="member">x</ref><sp/>=<sp/>c.<ref refid="structCOORDENADA_1a04df39e5db6a15fc3891becabc22fbe2" kindref="member">x</ref>;</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab1bb13e4a70f2464766c57e64b9c78f9" kindref="member">pos</ref>.<ref refid="structCOORDENADA_1a5d8fd9d119daf634ccd5ff7b8b37d16b" kindref="member">y</ref><sp/>=<sp/>c.<ref refid="structCOORDENADA_1a5d8fd9d119daf634ccd5ff7b8b37d16b" kindref="member">y</ref>;</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[x1][y1]<sp/>=<sp/>PRETA;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[c.<ref refid="structCOORDENADA_1a04df39e5db6a15fc3891becabc22fbe2" kindref="member">x</ref>][c.<ref refid="structCOORDENADA_1a5d8fd9d119daf634ccd5ff7b8b37d16b" kindref="member">y</ref>]<sp/>=<sp/>BRANCA;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[x1][y1]<sp/>=<sp/><ref refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039a007278eb3827d19891b47cdd3ac8846d" kindref="member">PRETA</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[c.<ref refid="structCOORDENADA_1a04df39e5db6a15fc3891becabc22fbe2" kindref="member">x</ref>][c.<ref refid="structCOORDENADA_1a5d8fd9d119daf634ccd5ff7b8b37d16b" kindref="member">y</ref>]<sp/>=<sp/><ref refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5" kindref="member">BRANCA</ref>;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[est-&gt;<ref refid="structESTADO_1a261495728744647e618b4e623f5a4b7a" kindref="member">num_jogadas</ref>++]<sp/>=<sp/>c;</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" kindref="member">jogador_atual</ref><sp/>=<sp/>((est-&gt;<ref refid="structESTADO_1a261495728744647e618b4e623f5a4b7a" kindref="member">num_jogadas</ref>)<sp/>%<sp/>2<sp/>+<sp/>1);</highlight></codeline>
 <codeline lineno="12"><highlight class="normal">}</highlight></codeline>
@@ -224,13 +224,13 @@
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(jog*2<sp/>&gt;i)<sp/>{</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1a261495728744647e618b4e623f5a4b7a" kindref="member">num_jogadas</ref>=<sp/>jog*2;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;i&lt;(est-&gt;<ref refid="structESTADO_1a261495728744647e618b4e623f5a4b7a" kindref="member">num_jogadas</ref>)-1;i++)</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].x]<sp/>[est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].y]<sp/>=PRETA;}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].x]<sp/>[est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].y]<sp/>=<ref refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039a007278eb3827d19891b47cdd3ac8846d" kindref="member">PRETA</ref>;}</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(jog*2<sp/>&lt;=i){</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1a261495728744647e618b4e623f5a4b7a" kindref="member">num_jogadas</ref><sp/>=<sp/>jog*2;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;i&gt;=(est-&gt;<ref refid="structESTADO_1a261495728744647e618b4e623f5a4b7a" kindref="member">num_jogadas</ref>);i--)</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].x]<sp/>[est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].y]<sp/>=VAZIO;}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].x]<sp/>[est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].y]<sp/>=<ref refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113" kindref="member">VAZIO</ref>;}</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].x]<sp/>[est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].y]<sp/>=<sp/>BRANCA;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].x]<sp/>[est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].y]<sp/>=<sp/><ref refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5" kindref="member">BRANCA</ref>;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab1bb13e4a70f2464766c57e64b9c78f9" kindref="member">pos</ref>.<ref refid="structCOORDENADA_1a04df39e5db6a15fc3891becabc22fbe2" kindref="member">x</ref><sp/>=<sp/>est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].x;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab1bb13e4a70f2464766c57e64b9c78f9" kindref="member">pos</ref>.<ref refid="structCOORDENADA_1a5d8fd9d119daf634ccd5ff7b8b37d16b" kindref="member">y</ref><sp/>=<sp/>est-&gt;<ref refid="structESTADO_1afae43b87a488fad0f2b56a18bad31d18" kindref="member">jogadas</ref>[i].y;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" kindref="member">jogador_atual</ref><sp/>=<sp/>1;</highlight></codeline>
@@ -295,6 +295,6 @@
 <codeline lineno="98"><highlight class="comment">}</highlight></codeline>
 <codeline lineno="99"><highlight class="comment">*/</highlight></codeline>
     </programlisting>
-    <location file="Projeto/funcoes.c"/>
+    <location file="projeto/funcoes.c"/>
   </compounddef>
 </doxygen>

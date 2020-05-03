@@ -4,11 +4,8 @@
     <compoundname>dados.c</compoundname>
     <includes refid="dados_8h" local="yes">dados.h</includes>
     <incdepgraph>
-      <node id="26">
-        <label>stdlib.h</label>
-      </node>
       <node id="24">
-        <label>Projeto/dados.c</label>
+        <label>projeto/dados.c</label>
         <link refid="dados_8c"/>
         <childnode refid="25" relation="include">
         </childnode>
@@ -25,9 +22,6 @@
         <childnode refid="29" relation="include">
         </childnode>
       </node>
-      <node id="29">
-        <label>math.h</label>
-      </node>
       <node id="28">
         <label>listasligadas.h</label>
         <link refid="listasligadas_8h"/>
@@ -35,6 +29,12 @@
         </childnode>
         <childnode refid="26" relation="include">
         </childnode>
+      </node>
+      <node id="26">
+        <label>stdlib.h</label>
+      </node>
+      <node id="29">
+        <label>math.h</label>
       </node>
       <node id="27">
         <label>stdio.h</label>
@@ -64,7 +64,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.c" line="3" column="1" bodyfile="Projeto/dados.c" bodystart="3" bodyend="13"/>
+        <location file="projeto/dados.c" line="3" column="1" bodyfile="projeto/dados.c" bodystart="3" bodyend="13"/>
       </memberdef>
       <memberdef kind="function" id="dados_8c_1a303cbcfe5e2680baf24b96075827b16e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -100,7 +100,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.c" line="14" column="1" bodyfile="Projeto/dados.c" bodystart="14" bodyend="19"/>
+        <location file="projeto/dados.c" line="14" column="1" bodyfile="projeto/dados.c" bodystart="14" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="dados_8c_1aee107ab0b8442caeaac72be171f20fc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -136,10 +136,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.c" line="21" column="1" bodyfile="Projeto/dados.c" bodystart="21" bodyend="28"/>
+        <location file="projeto/dados.c" line="21" column="1" bodyfile="projeto/dados.c" bodystart="21" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="dados_8c_1ac27ab41d705f6107cf34c5c3fbf8bf2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="structlligada" kindref="compound">LISTA</ref></type>
+        <type><ref refid="listasligadas_8h_1a33bb3e566d9b1082bbc8b6e18115b028" kindref="member">LISTA</ref></type>
         <definition>LISTA jogPoss</definition>
         <argsstring>(ESTADO *est)</argsstring>
         <name>jogPoss</name>
@@ -152,16 +152,16 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>Apontador</parametername>
+<parametername>est</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>para o estado </para></parameterdescription>
+<para>Apontador para o estado </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.c" line="30" column="1" bodyfile="Projeto/dados.c" bodystart="30" bodyend="47"/>
+        <location file="projeto/dados.c" line="30" column="1" bodyfile="projeto/dados.c" bodystart="30" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="dados_8c_1a74469889c470bfe2bc9d32d65e851313" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -198,7 +198,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.c" line="49" column="1" bodyfile="Projeto/dados.c" bodystart="49" bodyend="61"/>
+        <location file="projeto/dados.c" line="49" column="1" bodyfile="projeto/dados.c" bodystart="49" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="dados_8c_1a2a73885e5d652f9186c670e43cbc741b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -223,7 +223,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.c" line="63" column="1" bodyfile="Projeto/dados.c" bodystart="63" bodyend="73"/>
+        <location file="projeto/dados.c" line="63" column="1" bodyfile="projeto/dados.c" bodystart="63" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="dados_8c_1a7c119b132d591342cecf42ca1d64e39b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
@@ -248,7 +248,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.c" line="75" column="1" bodyfile="Projeto/dados.c" bodystart="75" bodyend="86"/>
+        <location file="projeto/dados.c" line="75" column="1" bodyfile="projeto/dados.c" bodystart="75" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="dados_8c_1a75c0c242b6cefa2bfbec1297a3228023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -260,12 +260,20 @@
           <declname>a</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Função que calcula a distancia euclidiana. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Apontador para a coordenada </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.c" line="88" column="1" bodyfile="Projeto/dados.c" bodystart="88" bodyend="90"/>
+        <location file="projeto/dados.c" line="88" column="1" bodyfile="projeto/dados.c" bodystart="88" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="dados_8c_1aea7a5f8f2b2fca969f836448ea8a469c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref></type>
@@ -290,7 +298,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/dados.c" line="92" column="1" bodyfile="Projeto/dados.c" bodystart="92" bodyend="111"/>
+        <location file="projeto/dados.c" line="92" column="1" bodyfile="projeto/dados.c" bodystart="92" bodyend="111"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -304,10 +312,10 @@
 <codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,j;</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;i&lt;8;i++)</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(j<sp/>=<sp/>0;j&lt;8;j++)</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[i][j]<sp/>=<sp/>VAZIO;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[i][j]<sp/>=<sp/><ref refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039abc711f491a56ec7af7a688be508c5113" kindref="member">VAZIO</ref>;</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab1bb13e4a70f2464766c57e64b9c78f9" kindref="member">pos</ref>.<ref refid="structCOORDENADA_1a04df39e5db6a15fc3891becabc22fbe2" kindref="member">x</ref><sp/>=<sp/>4;</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab1bb13e4a70f2464766c57e64b9c78f9" kindref="member">pos</ref>.<ref refid="structCOORDENADA_1a5d8fd9d119daf634ccd5ff7b8b37d16b" kindref="member">y</ref><sp/>=<sp/>3;</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[4][3]<sp/>=<sp/>BRANCA;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[4][3]<sp/>=<sp/><ref refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5" kindref="member">BRANCA</ref>;</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1a261495728744647e618b4e623f5a4b7a" kindref="member">num_jogadas</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>est-&gt;<ref refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" kindref="member">jogador_atual</ref><sp/>=<sp/>1;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal">}</highlight></codeline>
@@ -324,7 +332,7 @@
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>c.<ref refid="structCOORDENADA_1a04df39e5db6a15fc3891becabc22fbe2" kindref="member">x</ref>;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>c.<ref refid="structCOORDENADA_1a5d8fd9d119daf634ccd5ff7b8b37d16b" kindref="member">y</ref>;</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039" kindref="member">CASA</ref><sp/>novaCasa<sp/>=<sp/>est-&gt;<ref refid="structESTADO_1ab56f0f1be16954d3768b4174d14c087d" kindref="member">tab</ref>[x][y];<sp/></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(abs(x1-x)&lt;=1<sp/>&amp;&amp;<sp/>abs(y1-y)&lt;=1<sp/>&amp;&amp;<sp/>novaCasa<sp/>!=<sp/>BRANCA<sp/>&amp;&amp;<sp/>novaCasa<sp/>!=<sp/>PRETA);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(abs(x1-x)&lt;=1<sp/>&amp;&amp;<sp/>abs(y1-y)&lt;=1<sp/>&amp;&amp;<sp/>novaCasa<sp/>!=<sp/><ref refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039ad24485fddec75419fd4a0cc9edda0ca5" kindref="member">BRANCA</ref><sp/>&amp;&amp;<sp/>novaCasa<sp/>!=<sp/><ref refid="dados_8h_1aba91601f16d4c485b2d9b8c429f27039a007278eb3827d19891b47cdd3ac8846d" kindref="member">PRETA</ref>);</highlight></codeline>
 <codeline lineno="28"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><ref refid="structlligada" kindref="compound">LISTA</ref><sp/><ref refid="dados_8h_1ac27ab41d705f6107cf34c5c3fbf8bf2e" kindref="member">jogPoss</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est){</highlight></codeline>
@@ -375,37 +383,37 @@
 <codeline lineno="75"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="dados_8h_1a7c119b132d591342cecf42ca1d64e39b" kindref="member">jog</ref>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est){</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c,c1;</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlligada" kindref="compound">LISTA</ref><sp/>l<sp/>=<sp/><ref refid="dados_8h_1ac27ab41d705f6107cf34c5c3fbf8bf2e" kindref="member">jogPoss</ref>(est);</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>c<sp/>=<sp/>(l-&gt;valor);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>c<sp/>=<sp/>(l-&gt;<ref refid="structlligada_1a64449f0259fb452865ae4989609b7af8" kindref="member">valor</ref>);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>c1.<ref refid="structCOORDENADA_1a04df39e5db6a15fc3891becabc22fbe2" kindref="member">x</ref><sp/>=<sp/>c-&gt;<ref refid="structCOORDENADA_1a04df39e5db6a15fc3891becabc22fbe2" kindref="member">x</ref>;</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>c1.<ref refid="structCOORDENADA_1a5d8fd9d119daf634ccd5ff7b8b37d16b" kindref="member">y</ref><sp/>=<sp/>c-&gt;<ref refid="structCOORDENADA_1a5d8fd9d119daf634ccd5ff7b8b37d16b" kindref="member">y</ref>;<sp/></highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="listasligadas_8h_1a2d9ffede1de9e074793fbe23bb37ca0a" kindref="member">vazia</ref>(l)){</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(l-&gt;valor);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(l-&gt;<ref refid="structlligada_1a64449f0259fb452865ae4989609b7af8" kindref="member">valor</ref>);</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l<sp/>=<sp/><ref refid="listasligadas_8h_1a70069e763001b14092476ee48d6aee58" kindref="member">removeH</ref>(l);</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c1;</highlight></codeline>
 <codeline lineno="86"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist1<sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*a){</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="dados_8h_1a75c0c242b6cefa2bfbec1297a3228023" kindref="member">dist1</ref><sp/>(<ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*a){</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(sqrt<sp/>(<sp/>pow(7-(a-&gt;<ref refid="structCOORDENADA_1a04df39e5db6a15fc3891becabc22fbe2" kindref="member">x</ref>),2)<sp/>+<sp/>pow(0-(a-&gt;<ref refid="structCOORDENADA_1a5d8fd9d119daf634ccd5ff7b8b37d16b" kindref="member">y</ref>),2)));<sp/></highlight></codeline>
 <codeline lineno="90"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/><ref refid="dados_8h_1aea7a5f8f2b2fca969f836448ea8a469c" kindref="member">jog2</ref><sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est){</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlligada" kindref="compound">LISTA</ref><sp/>L<sp/>=<sp/><ref refid="dados_8h_1ac27ab41d705f6107cf34c5c3fbf8bf2e" kindref="member">jogPoss</ref>(est);</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCOORDENADA" kindref="compound">COORDENADA</ref><sp/>*c,<sp/>c1;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>c<sp/>=<sp/>(L-&gt;valor);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>c<sp/>=<sp/>(L-&gt;<ref refid="structlligada_1a64449f0259fb452865ae4989609b7af8" kindref="member">valor</ref>);</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>c1=*c;</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>dist1<sp/>(&amp;est-&gt;<ref refid="structESTADO_1ab1bb13e4a70f2464766c57e64b9c78f9" kindref="member">pos</ref>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a<sp/>=<sp/><ref refid="dados_8h_1a75c0c242b6cefa2bfbec1297a3228023" kindref="member">dist1</ref><sp/>(&amp;est-&gt;<ref refid="structESTADO_1ab1bb13e4a70f2464766c57e64b9c78f9" kindref="member">pos</ref>);</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(L){</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(est-&gt;<ref refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" kindref="member">jogador_atual</ref><sp/>==<sp/>1<sp/>&amp;&amp;<sp/>dist1(c)&gt;a){</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(est-&gt;<ref refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" kindref="member">jogador_atual</ref><sp/>==<sp/>1<sp/>&amp;&amp;<sp/><ref refid="dados_8h_1a75c0c242b6cefa2bfbec1297a3228023" kindref="member">dist1</ref>(c)&gt;a){</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c1=*c;</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a=dist1(c);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a=<ref refid="dados_8h_1a75c0c242b6cefa2bfbec1297a3228023" kindref="member">dist1</ref>(c);</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(est-&gt;<ref refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" kindref="member">jogador_atual</ref><sp/>==<sp/>2<sp/>&amp;&amp;<sp/>dist1(c)&lt;a){</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(est-&gt;<ref refid="structESTADO_1a5dd28e2e68b7aef2b6b7ea88e02eff58" kindref="member">jogador_atual</ref><sp/>==<sp/>2<sp/>&amp;&amp;<sp/><ref refid="dados_8h_1a75c0c242b6cefa2bfbec1297a3228023" kindref="member">dist1</ref>(c)&lt;a){</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c1=*c;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a=dist1(c);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a=<ref refid="dados_8h_1a75c0c242b6cefa2bfbec1297a3228023" kindref="member">dist1</ref>(c);</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>L=L-&gt;prox;</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(L)<sp/>c=L-&gt;valor;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>L=L-&gt;<ref refid="structlligada_1ae620cb307892f22905d79e0d5013f9e3" kindref="member">prox</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(L)<sp/>c=L-&gt;<ref refid="structlligada_1a64449f0259fb452865ae4989609b7af8" kindref="member">valor</ref>;</highlight></codeline>
 <codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c1;</highlight></codeline>
 <codeline lineno="111"><highlight class="normal">}</highlight></codeline>
@@ -461,6 +469,6 @@
 <codeline lineno="161"><highlight class="comment"></highlight></codeline>
 <codeline lineno="162"><highlight class="comment">*/</highlight></codeline>
     </programlisting>
-    <location file="Projeto/dados.c"/>
+    <location file="projeto/dados.c"/>
   </compounddef>
 </doxygen>

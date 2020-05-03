@@ -5,8 +5,17 @@
     <includes refid="interface_8h" local="yes">interface.h</includes>
     <includes local="no">stdlib.h</includes>
     <incdepgraph>
-      <node id="100">
-        <label>stdlib.h</label>
+      <node id="98">
+        <label>funcoes.h</label>
+        <link refid="funcoes_8h"/>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
       </node>
       <node id="99">
         <label>dados.h</label>
@@ -18,6 +27,25 @@
         <childnode refid="102" relation="include">
         </childnode>
         <childnode refid="103" relation="include">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>listasligadas.h</label>
+        <link refid="listasligadas_8h"/>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>stdlib.h</label>
+      </node>
+      <node id="96">
+        <label>projeto/main.c</label>
+        <link refid="main_8c"/>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
         </childnode>
       </node>
       <node id="105">
@@ -35,31 +63,11 @@
       <node id="106">
         <label>string.h</label>
       </node>
-      <node id="98">
-        <label>funcoes.h</label>
-        <link refid="funcoes_8h"/>
-        <childnode refid="99" relation="include">
-        </childnode>
-        <childnode refid="100" relation="include">
-        </childnode>
-        <childnode refid="101" relation="include">
-        </childnode>
-        <childnode refid="104" relation="include">
-        </childnode>
-      </node>
       <node id="104">
         <label>time.h</label>
       </node>
       <node id="103">
         <label>math.h</label>
-      </node>
-      <node id="102">
-        <label>listasligadas.h</label>
-        <link refid="listasligadas_8h"/>
-        <childnode refid="101" relation="include">
-        </childnode>
-        <childnode refid="100" relation="include">
-        </childnode>
       </node>
       <node id="97">
         <label>interface.h</label>
@@ -73,14 +81,6 @@
         <childnode refid="106" relation="include">
         </childnode>
       </node>
-      <node id="96">
-        <label>Projeto/main.c</label>
-        <link refid="main_8c"/>
-        <childnode refid="97" relation="include">
-        </childnode>
-        <childnode refid="100" relation="include">
-        </childnode>
-      </node>
       <node id="101">
         <label>stdio.h</label>
       </node>
@@ -92,12 +92,12 @@
         <argsstring>()</argsstring>
         <name>main</name>
         <briefdescription>
-        </briefdescription>
+<para>Main. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Projeto/main.c" line="3" column="1" bodyfile="Projeto/main.c" bodystart="3" bodyend="13"/>
+        <location file="projeto/main.c" line="7" column="1" bodyfile="projeto/main.c" bodystart="7" bodyend="17"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -107,26 +107,19 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interface_8h" kindref="compound">interface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()<sp/>{</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est<sp/>=<sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structESTADO" kindref="compound">ESTADO</ref>));</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a64da8cb7611cf3d5aba6a4414a0abb92" kindref="member">inicia</ref>(est);</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a303cbcfe5e2680baf24b96075827b16e" kindref="member">limpaArr</ref>(est,0);</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_8h_1a1318510ca4827045197f9ae29e18a4ff" kindref="member">desenhoInicial</ref><sp/>();</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_8h_1af8f213930dd748165466fb2c6fd5743f" kindref="member">desenha</ref>(est);</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="interface_8h_1ac4418f2830ec7ff843aa763cf3f92a95" kindref="member">interpretador</ref>(est));</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>free(est);</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>system<sp/>(</highlight><highlight class="stringliteral">&quot;pause&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*Ideias:</highlight></codeline>
-<codeline lineno="15"><highlight class="comment">Regras<sp/>de<sp/>GameOver;</highlight></codeline>
-<codeline lineno="16"><highlight class="comment">Sans;</highlight></codeline>
-<codeline lineno="17"><highlight class="comment">Por<sp/>tabuleiro<sp/>a<sp/>meio<sp/>do<sp/>ecran;</highlight></codeline>
-<codeline lineno="18"><highlight class="comment">Limpar<sp/>a<sp/>consola;</highlight></codeline>
-<codeline lineno="19"><highlight class="comment">Interface<sp/>Melhor;</highlight></codeline>
-<codeline lineno="20"><highlight class="comment"></highlight></codeline>
-<codeline lineno="21"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*est<sp/>=<sp/>(<ref refid="structESTADO" kindref="compound">ESTADO</ref><sp/>*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structESTADO" kindref="compound">ESTADO</ref>));</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a64da8cb7611cf3d5aba6a4414a0abb92" kindref="member">inicia</ref>(est);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dados_8h_1a303cbcfe5e2680baf24b96075827b16e" kindref="member">limpaArr</ref>(est,0);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_8h_1a1318510ca4827045197f9ae29e18a4ff" kindref="member">desenhoInicial</ref><sp/>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_8h_1af8f213930dd748165466fb2c6fd5743f" kindref="member">desenha</ref>(est);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="interface_8h_1ac4418f2830ec7ff843aa763cf3f92a95" kindref="member">interpretador</ref>(est));</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>free(est);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>system<sp/>(</highlight><highlight class="stringliteral">&quot;pause&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="Projeto/main.c"/>
+    <location file="projeto/main.c"/>
   </compounddef>
 </doxygen>
