@@ -8,10 +8,12 @@
 @file listasligadas.h
 */
 
-
+/**
+\brief Struct das listas 
+*/
 typedef struct lligada {
-void* valor;
-struct lligada *prox;
+void* valor; /**< Valor*/
+struct lligada *prox; /**< Apontador para a próxima lista*/
 } *LISTA,Nodo;
 
 /**

@@ -1,5 +1,3 @@
-//Camada de Dados
-
 #ifndef _DADOS
 #define _DADOS
 
@@ -24,7 +22,11 @@
 /**
 \brief Dados das varias casas 
 */
-typedef enum {VAZIO = '.', BRANCA = '*', PRETA = '#'} CASA;
+typedef enum {
+VAZIO = '.', /**< Casa vazia*/
+BRANCA = '*', /**< Casa branca*/
+PRETA = '#' /**< Casa preta*/
+} CASA;
 
 /**
 \brief Dados das coordenadas 
@@ -101,5 +103,9 @@ COORDENADA jog2(ESTADO *est);
 */
 void limpaArr(ESTADO *est,int i);
 
+/**
+\brief Função que calcula a distancia euclidiana 
+@param a Apontador para a coordenada 
+*/
 double dist1 (COORDENADA *a);
 #endif
