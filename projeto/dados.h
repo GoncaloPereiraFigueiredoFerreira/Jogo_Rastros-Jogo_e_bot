@@ -1,11 +1,3 @@
-#ifndef _DADOS
-#define _DADOS
-
-#include <stdlib.h>
-#include <stdio.h>
-#include "listasligadas.h"
-#include <math.h>
-
 /*! \mainpage Index
 * 
 * \section intro_sec Intruduction
@@ -18,6 +10,14 @@
 /**
 @file dados.h
 */
+
+#ifndef _DADOS
+#define _DADOS
+
+#include <stdlib.h>
+#include <stdio.h>
+#include "listasligadas.h"
+#include <math.h>
 
 /**
 \brief Dados das varias casas 

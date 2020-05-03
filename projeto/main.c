@@ -1,7 +1,9 @@
 #include "interface.h"
 #include <stdlib.h>
 
-
+/**
+\brief Main
+*/
 int main() {
 	ESTADO *est = (ESTADO *) malloc(sizeof(ESTADO));
 	inicia(est);

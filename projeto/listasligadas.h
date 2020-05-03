@@ -1,12 +1,12 @@
+/**
+@file listasligadas.h
+*/
+
 #ifndef _LLig
 #define _LLig
 
 #include <stdio.h>
 #include <stdlib.h>
-
-/**
-@file listasligadas.h
-*/
 
 /**
 \brief Struct das listas 

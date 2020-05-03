@@ -1,3 +1,7 @@
+/**
+@file funcoes.h
+*/
+
 #ifndef PL6_4_FUNCOES_H
 #define PL6_4_FUNCOES_H
 
@@ -5,10 +9,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-
-/**
-@file funcoes.h
-*/
 
 /**
 \brief Atualiza o estado após receber a coordenada

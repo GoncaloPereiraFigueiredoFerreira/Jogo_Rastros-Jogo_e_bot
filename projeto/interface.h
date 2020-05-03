@@ -1,3 +1,7 @@
+/**
+@file interface.h
+*/
+
 #ifndef PL6_4_IMPRIMIR_H
 #define PL6_4_IMPRIMIR_H
 
@@ -6,12 +10,15 @@
 #include <stdio.h>
 #include <string.h>
 
+/**
+\brief Valor máximo para o fget
+*/
 #define MAX 100
-#define BUF_SIZE 1024
 
 /**
-@file interface.h
+\brief Tamanho máximo que conseguimos guardar 
 */
+#define BUF_SIZE 1024
 
 /**
 \brief Escreve na consola a cordenada dada à função

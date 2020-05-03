@@ -1,3 +1,7 @@
+/**
+@file bot.h
+*/
+
 #ifndef PL6_4_BOT_H
 #define PL6_4_BOT_H
 
@@ -5,13 +9,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funcoes.h"
-#define DEPTH 20
-#define MSCORE 100000
-
 
 /**
-@file bot.h
+\brief Numero de jogadas à frente
 */
+#define DEPTH 20
+
+/**
+\brief Score máximo que conseguiu encontrar 
+*/
+#define MSCORE 100000
 
 /**
 \brief Função que dado um estado cria um novo e copia a informação do estado dado
