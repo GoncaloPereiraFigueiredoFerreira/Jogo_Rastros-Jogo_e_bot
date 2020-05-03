@@ -1,8 +1,8 @@
 #ifndef PL6_4_IMPRIMIR_H
 #define PL6_4_IMPRIMIR_H
 
-#include "../Logica/funcoes.h"
-#include "../bot/bot.h"
+#include "funcoes.h"
+#include "bot.h"
 #include <stdio.h>
 #include <string.h>
 
