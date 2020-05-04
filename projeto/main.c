@@ -12,6 +12,5 @@ int main() {
 	desenha(est);
 	while (interpretador(est));
 	free(est);
-	system ("pause");
 	return 0;
 }
