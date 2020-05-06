@@ -94,7 +94,7 @@ int read(char cam[],ESTADO *est){
 	if (f != NULL){
 		for (i = 0;i<8;i++){
 			if (fgets(cam,MAX,f)){
-			for(i1 = 0;cam[i1]!='\n';i1++){
+			for(i1 = 0;cam[i1]!='\n' &&cam[i1]!='\0' ;i1++){
 				if (cam[i1] == '1' || cam[i1] == '2') est->tab[i][i1] = '.'; // atençao a isto em caso de mudar vazia
 				else { est->tab[i1][i] = cam [i1];
 					if (cam[i1] == '*') {
@@ -108,7 +108,7 @@ int read(char cam[],ESTADO *est){
 	}
 
 		while (fgets(cam,BUF_SIZE,f) != NULL){
-			for(i1 = 3;cam[i1]!='\0';i1++){
+			for(i1 = 0;cam[i1]!='\0';i1++){
 				if(cam[i1]>='a'&&cam[i1]<'i'){
 					est->jogadas[c].x = cam[i1]-'a';
 					est->jogadas[c++].y = 7-(cam[++i1]-'1');
