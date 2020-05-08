@@ -40,7 +40,7 @@ int read(char cam[],ESTADO *est){
 			if (fgets(cam1,MAX,f)){
 			for(i1 = 0;cam1[i1]!='\n' && cam1[i1]!='\0' ;i1++){
 				if (cam1[i1] == '1' || cam1[i1] == '2') est->tab[i][i1] = '.'; // atençao a isto em caso de mudar vazia
-				else { est->tab[i1][i] = cam [i1];
+				else { est->tab[i1][i] = cam1 [i1];
 					if (cam1[i1] == '*') {
 						est->pos.x = i1;
 						est->pos.y = i;
