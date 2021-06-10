@@ -14,3 +14,5 @@ estratégia alpha-beta pruning, que reduz bastante o tempo de processamento. Par
 jogadas no algoritmo, criamos um algoritmo baseado no flood fill para nos indicar, as distâncias de cada casa ao
 bot e se as era possivel alcançar. Por fim a profundidade do minmax, é também adaptativa, aumentando consoante o jogo
 se desenrola, de forma a ganhar performance.
+
+Nota Final : 17
